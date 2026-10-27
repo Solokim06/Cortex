@@ -1,0 +1,92 @@
+{#
+  Base email layout.
+
+  Design notes:
+    - Table-based layout (email clients are ancient)
+    - Dark theme matching Cortex's UI
+    - Inline CSS only — most clients strip <style> blocks
+    - 600px max width — the safest choice across clients
+    - No external images by default (avatars/logos omitted for deliverability)
+
+  Child templates extend this and fill:
+    {% block title %}     — inside <title> tag
+    {% block heading %}   — big line at the top of the card
+    {% block body %}      — main content
+    {% block cta %}       — optional call-to-action button
+    {% block footer %}    — optional extra footer content
+#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="supported-color-schemes" content="dark" />
+  <title>{% block title %}Cortex{% endblock %}</title>
+</head>
+<body style="margin:0;padding:0;background:#0a0a0a;color:#e5e5e5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:1.55;">
+
+  <!-- Outer wrapper -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#0a0a0a;padding:32px 16px;">
+    <tr>
+      <td align="center">
+
+        <!-- Card -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background:#141414;border:1px solid #262626;border-radius:14px;overflow:hidden;">
+
+          <!-- Header -->
+          <tr>
+            <td style="padding:24px 28px 8px 28px;border-bottom:1px solid #1f1f1f;">
+              <span style="display:inline-block;font-size:15px;font-weight:600;color:#fafafa;letter-spacing:-0.01em;">
+                <span style="color:#6366f1;">●</span> Cortex
+              </span>
+            </td>
+          </tr>
+
+          <!-- Heading -->
+          <tr>
+            <td style="padding:22px 28px 0 28px;">
+              <h1 style="margin:0 0 6px 0;font-size:20px;font-weight:600;color:#fafafa;letter-spacing:-0.01em;">
+                {% block heading %}{% endblock %}
+              </h1>
+              {% block subheading %}{% endblock %}
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:16px 28px 8px 28px;">
+              {% block body %}{% endblock %}
+            </td>
+          </tr>
+
+          <!-- CTA -->
+          {% block cta %}{% endblock %}
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:24px 28px 22px 28px;border-top:1px solid #1f1f1f;color:#737373;font-size:12px;">
+              {% block footer %}
+                You&rsquo;re receiving this because you&rsquo;re an admin or agent in Cortex.
+                <a href="{{ web_url }}/admin/settings/prefs" style="color:#8b8b8b;text-decoration:underline;">Manage notification preferences</a>.
+              {% endblock %}
+            </td>
+          </tr>
+
+        </table>
+
+        <!-- Below-card small print -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;">
+          <tr>
+            <td align="center" style="padding:14px 8px 0 8px;color:#525252;font-size:11px;">
+              Cortex &mdash; the external mind
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

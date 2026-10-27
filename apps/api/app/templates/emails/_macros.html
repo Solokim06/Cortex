@@ -1,0 +1,127 @@
+{#
+  Shared macros for email templates.
+
+  Use:
+    {% from "_macros.html" import button, badge, kv_row, card, ticket_summary %}
+#}
+
+{# ─── Primary CTA button ──────────────────────────────────────── #}
+{% macro button(href, label, tone="primary") %}
+  {% if tone == "primary" %}
+    {% set bg = "#6366f1" %}
+    {% set fg = "#ffffff" %}
+    {% set border = "#6366f1" %}
+  {% elif tone == "ghost" %}
+    {% set bg = "transparent" %}
+    {% set fg = "#a3a3a3" %}
+    {% set border = "#333333" %}
+  {% elif tone == "danger" %}
+    {% set bg = "#ef4444" %}
+    {% set fg = "#ffffff" %}
+    {% set border = "#ef4444" %}
+  {% endif %}
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:22px 0 4px 0;">
+    <tr>
+      <td style="border-radius:8px;background:{{ bg }};border:1px solid {{ border }};">
+        <a href="{{ href }}"
+           style="display:inline-block;padding:11px 22px;color:{{ fg }};font-size:13px;font-weight:600;text-decoration:none;letter-spacing:0.01em;">
+          {{ label }}
+        </a>
+      </td>
+    </tr>
+  </table>
+{% endmacro %}
+
+
+{# ─── Inline pill badge ───────────────────────────────────────── #}
+{% macro badge(text, tone="neutral") %}
+  {% if tone == "open" %}
+    {% set fg = "#f59e0b" %}{% set bg = "rgba(245,158,11,0.08)" %}{% set bd = "rgba(245,158,11,0.35)" %}
+  {% elif tone == "progress" %}
+    {% set fg = "#0ea5e9" %}{% set bg = "rgba(14,165,233,0.08)" %}{% set bd = "rgba(14,165,233,0.35)" %}
+  {% elif tone == "resolved" %}
+    {% set fg = "#10b981" %}{% set bg = "rgba(16,185,129,0.08)" %}{% set bd = "rgba(16,185,129,0.35)" %}
+  {% elif tone == "urgent" %}
+    {% set fg = "#ef4444" %}{% set bg = "rgba(239,68,68,0.08)" %}{% set bd = "rgba(239,68,68,0.35)" %}
+  {% elif tone == "high" %}
+    {% set fg = "#f97316" %}{% set bg = "rgba(249,115,22,0.08)" %}{% set bd = "rgba(249,115,22,0.35)" %}
+  {% else %}
+    {% set fg = "#a3a3a3" %}{% set bg = "rgba(163,163,163,0.08)" %}{% set bd = "rgba(163,163,163,0.3)" %}
+  {% endif %}
+  <span style="display:inline-block;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:{{ fg }};background:{{ bg }};border:1px solid {{ bd }};margin-right:4px;">
+    {{ text }}
+  </span>
+{% endmacro %}
+
+
+{# ─── Key/value row ───────────────────────────────────────────── #}
+{% macro kv_row(key, value, mono=False) %}
+  <tr>
+    <td style="padding:5px 0;color:#737373;font-size:12px;width:110px;vertical-align:top;">
+      {{ key }}
+    </td>
+    <td style="padding:5px 0;color:#e5e5e5;font-size:13px;{% if mono %}font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;{% endif %}">
+      {{ value }}
+    </td>
+  </tr>
+{% endmacro %}
+
+
+{# ─── Bordered content card ───────────────────────────────────── #}
+{#
+  Supports both call styles:
+    {% call card("warning") %}...block content...{% endcall %}  ← preferred
+    {{ card("<p>raw html</p>", "warning") }}                    ← inline HTML
+#}
+{% macro card(content_or_tone="default", tone=None) %}
+  {% if caller is defined %}
+    {% set body_content = caller() %}
+    {% set card_tone = content_or_tone if tone is none else tone %}
+  {% else %}
+    {% set body_content = content_or_tone %}
+    {% set card_tone = tone if tone is not none else "default" %}
+  {% endif %}
+
+  {% if card_tone == "danger" %}
+    {% set bd = "rgba(239,68,68,0.35)" %}{% set bg = "rgba(239,68,68,0.05)" %}
+  {% elif card_tone == "warning" %}
+    {% set bd = "rgba(245,158,11,0.35)" %}{% set bg = "rgba(245,158,11,0.05)" %}
+  {% else %}
+    {% set bd = "#262626" %}{% set bg = "#181818" %}
+  {% endif %}
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:14px 0;">
+    <tr>
+      <td style="padding:14px 16px;background:{{ bg }};border:1px solid {{ bd }};border-radius:10px;">
+        {{ body_content }}
+      </td>
+    </tr>
+  </table>
+{% endmacro %}
+
+
+{# ─── Ticket summary block (used by every ticket-related email) ── #}
+{% macro ticket_summary(ticket, filer=None) %}
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+    {{ kv_row("Subject", ticket.subject) }}
+    {{ kv_row("Category", ticket.category|capitalize) }}
+    {{ kv_row("Priority", ticket.priority|capitalize) }}
+    {{ kv_row("Status", ticket.status|replace("_", " ")|capitalize) }}
+    {% if filer %}
+      {{ kv_row("From", filer.name ~ " <" ~ filer.email ~ ">" if filer.name else filer.email) }}
+    {% endif %}
+  </table>
+{% endmacro %}
+
+
+{# ─── Status badge helper based on a status string ────────────── #}
+{% macro status_badge(status) %}
+  {% if status == "open" %}
+    {{ badge("Open", "open") }}
+  {% elif status == "in_progress" %}
+    {{ badge("In progress", "progress") }}
+  {% elif status == "resolved" %}
+    {{ badge("Resolved", "resolved") }}
+  {% else %}
+    {{ badge(status|replace("_", " "), "neutral") }}
+  {% endif %}
+{% endmacro %}

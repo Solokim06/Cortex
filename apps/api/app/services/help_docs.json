@@ -1,0 +1,362 @@
+[
+  {
+    "id": "what-is-cortex",
+    "title": "What is Cortex?",
+    "category": "Getting started",
+    "tags": ["intro", "overview", "concept"],
+    "body": "Cortex is a personal cognition system — an external mind that grows with you. You capture thoughts, links, files, and voice notes; Cortex extracts concepts, connects them into a knowledge graph, and lets you think with that graph through chat, decisions, learning goals, and reflections. Everything you capture stays yours. Cortex answers questions by citing your own captured knowledge, and falls back to general knowledge only when your graph doesn't cover the topic (and it marks those answers clearly).",
+    "related": ["first-capture", "first-chat", "install-extension"]
+  },
+  {
+    "id": "first-capture",
+    "title": "Capturing your first thought",
+    "category": "Getting started",
+    "tags": ["capture", "onboarding", "text", "voice", "file"],
+    "body": "Go to Capture from the sidebar. You have three ways to capture: (1) Type a thought directly in the main box, add an optional title, and press Capture or Cmd/Ctrl+Enter. (2) Click the paperclip to attach a file, image, or PDF — Cortex extracts the text automatically. (3) Use the Voice card to record your voice; Cortex transcribes it with Whisper and lets you review the transcript before saving. Every capture becomes a node in your knowledge graph.",
+    "related": ["capture-file", "capture-voice", "capture-url", "install-extension"]
+  },
+  {
+    "id": "first-chat",
+    "title": "Asking Cortex your first question",
+    "category": "Getting started",
+    "tags": ["chat", "onboarding", "ask"],
+    "body": "Open Chat from the sidebar. Type your question at the bottom and press Enter. Cortex searches your captured knowledge first, grounds its answer in what you've captured, and cites specific nodes by title in square brackets. If your graph doesn't cover the question, Cortex says so briefly and then answers from general knowledge, clearly marked as such. Every reply shows a list of sources from your mind that were used.",
+    "related": ["chat-sources", "memory-search", "how-answers-work"]
+  },
+  {
+    "id": "install-extension",
+    "title": "Installing the browser extension",
+    "category": "Browser extension",
+    "tags": ["extension", "install", "setup", "chrome", "firefox"],
+    "body": "Go to Settings → Extension. Click Generate connect code. The code is a single-use Clerk sign-in token valid for a few minutes — copy it. Install the Cortex extension from the Chrome Web Store or Firefox Add-ons, open its options page (right-click the extension icon → Options), and paste the code. The extension then shows your email so you know it's connected. From then on, you can capture any page, quote, or thought directly from the browser without switching tabs.",
+    "related": ["extension-usage", "extension-troubleshoot", "connect-code-expired"]
+  },
+  {
+    "id": "extension-usage",
+    "title": "Using the browser extension",
+    "category": "Browser extension",
+    "tags": ["extension", "usage", "capture"],
+    "body": "Right-click any page → Capture to Cortex to save the whole page. Select text first → Capture to Cortex to save just the selection. Right-click any link → Capture link to Cortex to capture the linked article. The extension also has a side panel and a popup with memory search — click the extension icon to open it. Everything you capture through the extension appears in Cortex within a few seconds.",
+    "related": ["install-extension", "capture-url", "memory-search"]
+  },
+  {
+    "id": "capture-file",
+    "title": "Capturing a file",
+    "category": "Capture",
+    "tags": ["capture", "file", "pdf", "docx", "extraction"],
+    "body": "In Capture, click the paperclip → Upload file. Cortex supports PDF, DOCX, XLSX, CSV, plain text, images, audio, and video (up to 100 MB). Text is extracted automatically. If extraction fails, the resulting node still exists — you'll see a 'partial' status badge and a short error message. You can also drag a file onto the capture box or paste one from your clipboard.",
+    "related": ["first-capture", "extraction-failed"]
+  },
+  {
+    "id": "capture-voice",
+    "title": "Capturing by voice",
+    "category": "Capture",
+    "tags": ["capture", "voice", "recording", "transcription"],
+    "body": "In Capture, scroll to the Voice card. Pick a language (or leave it on Auto-detect) and click Record. Cortex records up to 5 minutes, shows a live waveform, and lets you pause or stop. When you stop, it transcribes via Whisper and shows the transcript for review. Edit the text if you want — edited transcripts are saved as text nodes. Unedited recordings are saved as voice nodes so you keep the original audio.",
+    "related": ["first-capture", "mic-denied", "voice-language"]
+  },
+  {
+    "id": "capture-url",
+    "title": "Capturing a link",
+    "category": "Capture",
+    "tags": ["capture", "url", "link", "article", "extraction"],
+    "body": "In Capture, click the paperclip → Add a link, or paste a URL directly into the main text box. Cortex fetches the page, extracts the article text and key ideas, and adds it as a node. YouTube links are transcribed as well. If the page has no readable content (paywall, JS-only), the extraction fails but the link is still saved as a bookmark so you can find it later.",
+    "related": ["first-capture", "install-extension", "extraction-failed"]
+  },
+  {
+    "id": "chat-sources",
+    "title": "Where do Cortex's answers come from?",
+    "category": "Chat",
+    "tags": ["chat", "sources", "citations", "grounding"],
+    "body": "Every answer Cortex gives follows one of two patterns. If your captured knowledge covers the question, Cortex grounds its answer in it and cites specific nodes by title in [square brackets]. If your graph doesn't cover it, Cortex says so briefly, then answers from general knowledge and marks those parts clearly. Below every reply, click 'N sources from your mind' to see which nodes were used. Click any source to open it in a side panel.",
+    "related": ["how-answers-work", "chat-edit", "chat-regenerate"]
+  },
+  {
+    "id": "chat-edit",
+    "title": "Editing a message",
+    "category": "Chat",
+    "tags": ["chat", "edit", "message"],
+    "body": "Hover any user message and click the pencil icon. Edit the text and press Enter (or Shift+Enter for a newline). Cortex treats your edit as a fresh message and replies again. Only the last user message in a conversation can be edited — earlier messages are locked because re-running them would invalidate the context the assistant already used.",
+    "related": ["chat-regenerate", "chat-copy"]
+  },
+  {
+    "id": "chat-regenerate",
+    "title": "Regenerating a reply",
+    "category": "Chat",
+    "tags": ["chat", "regenerate", "refresh"],
+    "body": "Hover the last assistant reply and click the refresh icon. Cortex reruns the same question with the same knowledge and produces a new answer. This is useful when the first reply misses something or when you want a different angle. Earlier assistant replies can't be regenerated because the conversation has moved on.",
+    "related": ["chat-edit", "chat-copy"]
+  },
+  {
+    "id": "chat-copy",
+    "title": "Copying a reply",
+    "category": "Chat",
+    "tags": ["chat", "copy", "clipboard"],
+    "body": "Hover any message and click the copy icon. The message text is copied to your clipboard as plain markdown — ready to paste into another app. You'll see a 'Copied to clipboard' toast.",
+    "related": ["chat-edit", "chat-regenerate"]
+  },
+  {
+    "id": "memory-search",
+    "title": "Searching your memory",
+    "category": "Memory",
+    "tags": ["memory", "search", "semantic", "hybrid"],
+    "body": "Go to Memory. Type a question or a description — Cortex searches by meaning, not just keywords. Two modes: Semantic (meaning only, best for conceptual questions) and Hybrid (meaning + keyword matches, best when you remember a specific word). Switch with the dropdown next to the search box. Results show a match score ring: Strong (>75%), Good (60–75%), Weak, or Keyword-only.",
+    "related": ["memory-filters", "memory-reindex", "memory-weak-matches"]
+  },
+  {
+    "id": "memory-filters",
+    "title": "Filtering memory results by type",
+    "category": "Memory",
+    "tags": ["memory", "filter", "type"],
+    "body": "Below the search bar you can filter results by type: All, Thoughts, Concepts, Decisions, or Reflections. Click any chip to narrow the view. The chip shows a count of how many results match that type. Combined with search, this lets you find, say, only decisions about a topic.",
+    "related": ["memory-search", "memory-reindex"]
+  },
+  {
+    "id": "memory-reindex",
+    "title": "Reindexing your graph",
+    "category": "Memory",
+    "tags": ["memory", "reindex", "embeddings"],
+    "body": "If search misses recent captures or feels stale, click Reindex in the top right of Memory. Cortex regenerates embeddings for every node that needs one. This usually takes under a minute for a few hundred nodes. You'll get a toast when it completes telling you how many nodes were indexed. Reindexing never deletes anything — it just rebuilds the search index.",
+    "related": ["memory-search", "memory-weak-matches"]
+  },
+  {
+    "id": "memory-weak-matches",
+    "title": "Why does search say 'no strong matches'?",
+    "category": "Memory",
+    "tags": ["memory", "search", "weak", "no-results"],
+    "body": "If everything Cortex found scored below 72%, it shows 'No strong matches'. Two things to try: (1) Rephrase with different words — semantic search is sensitive to phrasing. (2) Switch from Semantic to Hybrid mode using the dropdown — Hybrid includes keyword matches, which catch cases where meaning-based search missed. If your graph is empty or very small, there may genuinely be nothing to find yet.",
+    "related": ["memory-search", "memory-reindex"]
+  },
+  {
+    "id": "learning-create-goal",
+    "title": "Creating a learning goal",
+    "category": "Learning",
+    "tags": ["learning", "goal", "plan"],
+    "body": "Go to Learning and click New goal. Enter a title (e.g. 'Learn Rust') and an optional description explaining why you want it and what your starting point is. Cortex decomposes the goal into phases, milestones, and concrete actions — grounded in what you've already captured. Generation takes 10–30 seconds. When it finishes, your plan opens ready to work through.",
+    "related": ["learning-milestones", "learning-phases"]
+  },
+  {
+    "id": "learning-milestones",
+    "title": "Working through milestones",
+    "category": "Learning",
+    "tags": ["learning", "milestone", "progress"],
+    "body": "In a goal's detail view, click the circle next to any milestone to mark it done. Cortex saves your progress immediately and animates the phase progress bar. Click the milestone title to expand its suggested actions. When all milestones in a phase are done, the phase is complete. When all milestones are done, the goal is complete and Cortex celebrates with a toast.",
+    "related": ["learning-create-goal", "learning-phases"]
+  },
+  {
+    "id": "learning-phases",
+    "title": "How Cortex structures a learning plan",
+    "category": "Learning",
+    "tags": ["learning", "plan", "phases"],
+    "body": "Every plan has 3–5 phases (Foundation, Application, Depth, Mastery, typically). Each phase contains 2–4 milestones. Each milestone contains 2–4 concrete actions. The current phase is highlighted. A 'Today's first action' banner at the top of the plan suggests the single most useful thing to do next — click it to mark it started. You can revisit any phase at any time.",
+    "related": ["learning-create-goal", "learning-milestones"]
+  },
+  {
+    "id": "decisions-analyze",
+    "title": "Analyzing a decision",
+    "category": "Decisions",
+    "tags": ["decisions", "analyze", "options"],
+    "body": "Go to Decisions and click New decision. Describe the decision in the question field, add context if helpful, and press Analyze. Cortex searches your knowledge and past decisions, then returns: a framing of the core choice, 2–5 options with pros/cons, trade-offs, patterns from your past decisions, blind spots to watch, and questions to ask yourself. Analysis takes 10–25 seconds.",
+    "related": ["decisions-commit", "decisions-outcome", "decisions-patterns"]
+  },
+  {
+    "id": "decisions-commit",
+    "title": "Committing to a decision",
+    "category": "Decisions",
+    "tags": ["decisions", "commit", "decide"],
+    "body": "After analysis, click Decide now. Choose one of the suggested options or write your own under 'Something else'. Add your reasoning and what you expect to happen — Cortex uses this later when reviewing the outcome. Pick when to review (7, 14, 30, 60, or 90 days) and click Commit. The decision moves to the Decided column and appears in your Due reviews rail when the review date arrives.",
+    "related": ["decisions-analyze", "decisions-outcome", "decisions-review"]
+  },
+  {
+    "id": "decisions-outcome",
+    "title": "Recording what actually happened",
+    "category": "Decisions",
+    "tags": ["decisions", "outcome", "lesson", "review"],
+    "body": "When a decision is due for review, you'll see it in the amber 'decisions due' rail. Open it and click Record outcome. Describe what actually happened in your own words — accuracy here means better lessons later. Cortex compares your expectation to the reality, extracts a lesson, notes what your thinking got right and what it missed, and gives you a recommendation for similar future decisions.",
+    "related": ["decisions-commit", "decisions-patterns", "reflections-lessons"]
+  },
+  {
+    "id": "decisions-patterns",
+    "title": "Seeing patterns across your decisions",
+    "category": "Decisions",
+    "tags": ["decisions", "patterns", "insights"],
+    "body": "Go to Decisions → Patterns tab. Cortex reads your last 20 decisions and surfaces recurring patterns, strengths in your decision-making, and blind spots. Each pattern shows its confidence (low / medium / high) and cites the specific decisions that evidenced it. This view is best after you've committed and reviewed at least 3–5 decisions.",
+    "related": ["decisions-analyze", "decisions-outcome"]
+  },
+  {
+    "id": "decisions-review",
+    "title": "Reviewing a decision",
+    "category": "Decisions",
+    "tags": ["decisions", "review", "reminder"],
+    "body": "When you commit to a decision, you pick a review window (7, 14, 30, 60, or 90 days). On that day, Cortex moves the decision into your Due reviews rail on the Decisions board and shows it in the Home page's 'Decisions due' card. Open the decision, click Record outcome, describe what happened, and Cortex extracts the lesson.",
+    "related": ["decisions-commit", "decisions-outcome"]
+  },
+  {
+    "id": "reflections-lessons",
+    "title": "Where lessons come from",
+    "category": "Reflections",
+    "tags": ["reflections", "lesson", "outcome"],
+    "body": "When you record an outcome on a decision, Cortex compares your expectation to what actually happened and extracts a lesson. That lesson becomes a Reflection of kind 'lesson' and is also saved as a knowledge node — so it shows up in your chat answers and memory search from then on. Lessons are how Cortex helps you compound judgement over time.",
+    "related": ["decisions-outcome", "reflections-report", "reflections-insights"]
+  },
+  {
+    "id": "reflections-report",
+    "title": "Generating a reflection report",
+    "category": "Reflections",
+    "tags": ["reflections", "report", "weekly"],
+    "body": "Go to Reflections → Weekly report tab and click Generate report. Pick a window (7, 30, 90, or 180 days). Cortex reads your decisions from that period and produces: a summary, themes, strengths, blind spots, growth observations, and questions to sit with. Reports are saved under the Weekly report tab and can be reopened any time.",
+    "related": ["reflections-lessons", "reflections-insights"]
+  },
+  {
+    "id": "reflections-insights",
+    "title": "Insights tab",
+    "category": "Reflections",
+    "tags": ["reflections", "insights", "patterns"],
+    "body": "Reflections → Insights gives you three at-a-glance views: a This month digest (how many reflections you've created in the last 30 days), Top lessons (your most significant standalone insights), and From your decisions (reflections traced back to specific choices). Use it as a monthly review ritual.",
+    "related": ["reflections-lessons", "reflections-report"]
+  },
+  {
+    "id": "identity-rebuild",
+    "title": "Rebuilding your identity model",
+    "category": "Identity",
+    "tags": ["identity", "rebuild", "model"],
+    "body": "Go to Identity and click Rebuild identity. Cortex reads your recent captured thoughts, active goals, recent decisions, and reflections — and produces a fresh model of who you are: a narrative, values, patterns, strengths, blind spots, and growth areas. Each rebuild saves a snapshot to your timeline so you can see how you've changed. Identity rebuilds take 15–40 seconds.",
+    "related": ["identity-values", "identity-timeline", "identity-maturity"]
+  },
+  {
+    "id": "identity-values",
+    "title": "What the values list means",
+    "category": "Identity",
+    "tags": ["identity", "values", "patterns"],
+    "body": "Under Identity you'll see Values, Patterns, Strengths, and Blind spots. Each item has a name, an explanation of why Cortex inferred it, and a strength level (low / medium / high). Values are inferred from what you write about, not what you say you value — the evidence line under each one tells you where it came from. You can disagree with any of them; the model is a mirror, not a verdict.",
+    "related": ["identity-rebuild", "identity-maturity"]
+  },
+  {
+    "id": "identity-timeline",
+    "title": "Your identity timeline",
+    "category": "Identity",
+    "tags": ["identity", "timeline", "milestones"],
+    "body": "Every time you rebuild, Cortex saves a snapshot. The Timeline card at the bottom of Identity shows them chronologically, each labeled with an AI-generated milestone title — 'Attention theme solidifies', 'Boundary setting emerges', and so on. Cortex preserves the names of items across rebuilds so you can track whether the same values and patterns persist over months.",
+    "related": ["identity-rebuild", "identity-maturity"]
+  },
+  {
+    "id": "identity-maturity",
+    "title": "What the maturity score means",
+    "category": "Identity",
+    "tags": ["identity", "maturity", "score"],
+    "body": "Identity Maturity is a 0–100 score reflecting how rich and interconnected your knowledge graph is. It's computed from your node count, concept count, active goals, decisions, reflections, and identity snapshots. The tier ('Emerging', 'Forming', 'Building', 'Grounding', 'Deep') describes the stage. It's a signal of graph depth, not of personal worth — capturing and reflecting are what move it.",
+    "related": ["identity-rebuild", "identity-values"]
+  },
+  {
+    "id": "settings-language",
+    "title": "Changing the interface language",
+    "category": "Settings",
+    "tags": ["settings", "language", "locale", "i18n"],
+    "body": "Settings → General → Language. Pick any of the six supported languages: English, Spanish, French, German, Arabic (right-to-left), or Kiswahili. The whole interface switches immediately. Your choice is remembered in a cookie. Cortex also uses the current language when answering questions — so switching to French means new chats, decisions, learning plans, reflections, and identity rebuilds will be generated in French.",
+    "related": ["settings-theme", "settings-data", "existing-data-language"]
+  },
+  {
+    "id": "settings-theme",
+    "title": "Changing the theme",
+    "category": "Settings",
+    "tags": ["settings", "theme", "dark", "light"],
+    "body": "Settings → General → Theme. Three choices: Light, Dark, or System (follows your OS). Cortex remembers your choice. Dark is the default and the design is optimized for it — Light is a work-in-progress.",
+    "related": ["settings-language", "settings-voice"]
+  },
+  {
+    "id": "settings-voice",
+    "title": "Choosing a voice",
+    "category": "Settings",
+    "tags": ["settings", "voice", "audio"],
+    "body": "Settings → General → Voice. Choose the default voice Cortex uses for voice capture playback. Options: Mira, Aria, Atlas, Lyra, Orion. Changing this affects playback in the Capture → Voice card and any audio you replay from your captures.",
+    "related": ["settings-theme", "capture-voice"]
+  },
+  {
+    "id": "settings-data",
+    "title": "Exporting or deleting your data",
+    "category": "Privacy & data",
+    "tags": ["privacy", "data", "export", "delete"],
+    "body": "Settings → Data. You can export all your data as a JSON bundle (every node, decision, goal, and reflection), delete all chats (keeps your captures and graph intact), or delete your entire account permanently. Deletion is irreversible. Your captured knowledge always belongs to you.",
+    "related": ["privacy-overview", "settings-language"]
+  },
+  {
+    "id": "privacy-overview",
+    "title": "Privacy and what Cortex stores",
+    "category": "Privacy & data",
+    "tags": ["privacy", "security", "data"],
+    "body": "Cortex stores everything you capture in your own Postgres database and a Neo4j graph owned by your account. Nothing is shared with other users. Cortex does not train any model on your content — your captures are only used to answer your own questions. Exports and deletions are one click in Settings → Data. Account management (email, password, sessions) is handled by Clerk.",
+    "related": ["settings-data"]
+  },
+  {
+    "id": "existing-data-language",
+    "title": "Why is some of my old content still in English?",
+    "category": "Troubleshooting",
+    "tags": ["language", "translation", "existing", "content"],
+    "body": "Content you generated before switching to a new language stays in the language it was originally created in. The UI translates immediately, and any new chat replies, decisions, learning plans, reflections, or identity rebuilds come out in your current language. For Identity, click 'Translate to current language' to regenerate the model and translate its item names. For decisions and goals, the plan is generated once — to re-generate in a new language, use the Translate button where available.",
+    "related": ["settings-language", "identity-rebuild"]
+  },
+  {
+    "id": "mic-denied",
+    "title": "Microphone access denied",
+    "category": "Troubleshooting",
+    "tags": ["mic", "microphone", "voice", "permission"],
+    "body": "If Chrome or Firefox blocks mic access, you'll see 'Microphone access denied'. Click the padlock icon in the URL bar → Site settings → Microphone → Allow. Then reload the page. On macOS, also check System Settings → Privacy & Security → Microphone and confirm your browser is checked. Cortex never records without your explicit click.",
+    "related": ["capture-voice", "no-microphone"]
+  },
+  {
+    "id": "no-microphone",
+    "title": "No microphone detected",
+    "category": "Troubleshooting",
+    "tags": ["mic", "microphone", "voice", "hardware"],
+    "body": "If Cortex says 'No microphone found', check that a mic is plugged in (or that your laptop's built-in mic is enabled in your OS settings). Refresh the page after connecting one. On some Windows machines, the mic is disabled by default — check Settings → Privacy → Microphone and enable access for desktop apps and for your browser.",
+    "related": ["capture-voice", "mic-denied"]
+  },
+  {
+    "id": "extraction-failed",
+    "title": "Content Extraction Failure",
+    "category": "Troubleshooting",
+    "tags": ["extraction", "error", "url", "file", "pdf"],
+    "body": "If Cortex can't extract readable content from a URL or file, you'll see a 'partial' status badge on the resulting node. Common causes: the page requires login, it's JavaScript-only, it's behind a paywall, or the file format isn't fully supported. The node still exists — you have the link or filename saved as a bookmark — but the full text couldn't be read. Try a different source or paste the text manually.",
+    "related": ["capture-url", "capture-file"]
+  },
+  {
+    "id": "extension-troubleshoot",
+    "title": "The extension won't connect",
+    "category": "Troubleshooting",
+    "tags": ["extension", "connect", "error", "token"],
+    "body": "If the extension shows 'not connected' after you pasted the code, the most likely cause is that the connect code expired before you used it. Codes expire after a few minutes. Go back to Settings → Extension, click Regenerate, and paste the new code immediately. If it still fails, right-click the extension icon → Options to reopen the settings page and paste again. Make sure the API URL in your .env.local matches the one the extension was built with.",
+    "related": ["install-extension", "connect-code-expired"]
+  },
+  {
+    "id": "connect-code-expired",
+    "title": "My connect code expired",
+    "category": "Troubleshooting",
+    "tags": ["extension", "code", "expired", "token"],
+    "body": "Connect codes are single-use Clerk sign-in tokens valid for a few minutes. If you didn't paste yours in time, go back to Settings → Extension, click Regenerate, and paste the new code into the extension's options page right away. The old code is dead — there's no way to revive it, and that's by design (it's a security guarantee).",
+    "related": ["install-extension", "extension-troubleshoot"]
+  },
+  {
+    "id": "how-answers-work",
+    "title": "How Cortex decides what to say",
+    "category": "How Cortex works",
+    "tags": ["architecture", "answers", "grounding", "llm"],
+    "body": "When you ask a question in chat, Cortex: (1) searches your captured knowledge using semantic similarity, (2) sends the top results to a language model along with a strict system prompt that says 'ground your answer in the user's knowledge when possible, and mark general knowledge clearly when not', (3) returns the reply with the specific nodes it drew from. This is why Cortex never invents facts about you — it can only cite what you've actually captured.",
+    "related": ["chat-sources", "first-chat", "privacy-overview"]
+  },
+  {
+    "id": "voice-language",
+    "title": "Recording in a language other than English",
+    "category": "Capture",
+    "tags": ["voice", "language", "transcription", "whisper"],
+    "body": "In the Capture → Voice card, click the language dropdown next to the Record button. Choose Auto-detect to let Whisper figure it out, or pick a specific language (English, French, Spanish, German, Portuguese, Italian). Whisper is accurate on all of them. If your audio is mixed-language, Auto-detect usually handles the dominant one well.",
+    "related": ["capture-voice", "settings-language"]
+  },
+  {
+    "id": "keyboard-shortcuts",
+    "title": "Keyboard shortcuts",
+    "category": "Getting started",
+    "tags": ["keyboard", "shortcuts", "power-user"],
+    "body": "Cmd/Ctrl+K opens the command palette (search + navigate + change language). / focuses the page search on Memory, Learning, Decisions, and Reflections. Arrow keys navigate results. Enter opens the highlighted item. Esc clears the search or closes the palette. Cmd/Ctrl+Enter submits the current input. Cmd/Ctrl+, opens Settings from anywhere.",
+    "related": ["first-capture", "settings-language"]
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "version": "0.1.0",
+  "description": "__MSG_extDescription__",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqVgH5KGNDuqiTW+hOvHhxedQGfrSUQs0a3rNCkCSpBJxol7VS8s0m9k2cC+xxQfrzuHhRbhpwPNAU7nINoEVn7MppiUAeJqehcQOEw+beDHTE77dWzHEw22ljfikeFXlEgyUSeQ+O95RoXuniFvglG1OZqigvAiNSEnneNKoKIr5gcxrN/8Y7TI5QxBPoBVnJTE9ltRpX2kSOoIBYC/JmjwrMvIsZAwFuySZtwanp9fdhwL7AfHi5/jYp6+35OP9Wwl/SwfWckvh0bCVCc6UmM76tdaSiu3Bnceniw0DYkr1PrAKSvKP6lzQ4DRsI/vG269gdn/Qb3Tlz5afrMkKPwIDAQAB",
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "__MSG_actionTitle__",
+    "default_icon": {
+      "16": "icons2/icon-16.png",
+      "32": "icons2/icon-32.png",
+      "48": "icons2/icon-48.png",
+      "128": "icons2/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons2/icon-16.png",
+    "32": "icons2/icon-32.png",
+    "48": "icons2/icon-48.png",
+    "128": "icons2/icon-128.png"
+  },
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/content.ts"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "src/options/index.html",
+  "side_panel": {
+    "default_path": "src/sidepanel/index.html"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "contextMenus",
+    "scripting",
+    "sidePanel",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "http://127.0.0.1:8000/*",
+    "https://api.clerk.com/*",
+    "https://clerk.cortex.local/*"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "__MSG_commandOpenQuickCapture__"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons2/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cortex@cortex.local",
+      "strict_min_version": "115.0"
+    }
+  },
+  "default_locale": "en"
+}

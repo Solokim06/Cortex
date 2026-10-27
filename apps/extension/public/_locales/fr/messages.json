@@ -1,0 +1,185 @@
+{
+  "extName": {
+    "message": "Cortex — L'esprit externe"
+  },
+  "extDescription": {
+    "message": "Capturez tout ce que vous voyez sur le web dans votre graphe de connaissances Cortex."
+  },
+  "actionTitle": {
+    "message": "Cortex"
+  },
+  "commandOpenQuickCapture": {
+    "message": "Ouvrir la capture rapide Cortex"
+  },
+  "loading": {
+    "message": "Chargement…"
+  },
+  "extHeading": {
+    "message": "Extension Cortex"
+  },
+  "extSubtitle": {
+    "message": "L'esprit externe — directement depuis votre navigateur."
+  },
+  "sectionConnection": {
+    "message": "Connexion"
+  },
+  "connectIntro": {
+    "message": "Pour connecter cette extension à votre compte Cortex :"
+  },
+  "connectStep1Before": {
+    "message": "Ouvrez Cortex et allez dans"
+  },
+  "connectStep1Link": {
+    "message": "Paramètres"
+  },
+  "connectStep2Before": {
+    "message": "Cliquez sur"
+  },
+  "connectStep2Bold": {
+    "message": "Générer un code de connexion"
+  },
+  "connectStep3": {
+    "message": "Copiez le code et collez-le ci-dessous."
+  },
+  "labelConnectCode": {
+    "message": "Code de connexion"
+  },
+  "placeholderPasteCode": {
+    "message": "Collez votre code ici…"
+  },
+  "btnConnect": {
+    "message": "Connecter"
+  },
+  "btnConnecting": {
+    "message": "Connexion…"
+  },
+  "signedInAs": {
+    "message": "Connecté en tant que"
+  },
+  "labelEmail": {
+    "message": "E-mail"
+  },
+  "labelTokenExpires": {
+    "message": "Le jeton expire"
+  },
+  "btnOpenSidePanel": {
+    "message": "Ouvrir le panneau latéral"
+  },
+  "btnDisconnect": {
+    "message": "Déconnecter"
+  },
+  "sectionPreferences": {
+    "message": "Préférences"
+  },
+  "prefNotificationsTitle": {
+    "message": "Afficher les notifications"
+  },
+  "prefNotificationsDesc": {
+    "message": "Afficher une petite notification système après chaque capture."
+  },
+  "prefOpenAfterCaptureTitle": {
+    "message": "Ouvrir Cortex après la capture"
+  },
+  "prefOpenAfterCaptureDesc": {
+    "message": "Après une capture, ouvrir Cortex dans un nouvel onglet pour voir le résultat."
+  },
+  "footerVersion": {
+    "message": "Extension Cortex · v0.1.0"
+  },
+  "defaultUser": {
+    "message": "Utilisateur Cortex"
+  },
+  "errPasteFirst": {
+    "message": "Collez d'abord un code de connexion."
+  },
+  "errCouldNotSignIn": {
+    "message": "Impossible de se connecter."
+  },
+  "popupSignedOut": {
+    "message": "Vous n'êtes pas connecté. Générez un code de connexion depuis les Paramètres de Cortex, puis collez-le dans la page d'options de l'extension."
+  },
+  "btnOpenOptions": {
+    "message": "Ouvrir les options"
+  },
+  "defaultSignedIn": {
+    "message": "Connecté"
+  },
+  "placeholderQuickCapture": {
+    "message": "Capture rapide — notez une pensée…"
+  },
+  "btnSave": {
+    "message": "Enregistrer"
+  },
+  "btnSaving": {
+    "message": "Enregistrement…"
+  },
+  "btnSidePanel": {
+    "message": "Panneau latéral"
+  },
+  "btnSearch": {
+    "message": "Rechercher"
+  },
+  "savedPrefix": {
+    "message": "Enregistré :"
+  },
+  "recentTitle": {
+    "message": "Récent"
+  },
+  "recentEmpty": {
+    "message": "Aucune capture pour le moment."
+  },
+  "untitled": {
+    "message": "(sans titre)"
+  },
+  "footerOptions": {
+    "message": "Options"
+  },
+  "footerSettings": {
+    "message": "Paramètres"
+  },
+  "errCaptureFailed": {
+    "message": "Échec de la capture"
+  },
+  "spSignedOut": {
+    "message": "Vous n'êtes pas connecté. Ouvrez la page d'options de l'extension et collez un code de connexion."
+  },
+  "spThisPage": {
+    "message": "Cette page"
+  },
+  "spNoActivePage": {
+    "message": "Aucune page active."
+  },
+  "spBadgeSaved": {
+    "message": "Déjà dans votre graphe"
+  },
+  "spBtnSavePage": {
+    "message": "Enregistrer la page"
+  },
+  "spSectionSearch": {
+    "message": "Cherchez dans votre esprit"
+  },
+  "placeholderAskAnything": {
+    "message": "Demandez ce que vous voulez…"
+  },
+  "spSearching": {
+    "message": "Recherche…"
+  },
+  "spNoMatches": {
+    "message": "Aucune correspondance."
+  },
+  "spSectionRecent": {
+    "message": "Captures récentes"
+  },
+  "spNothingCaptured": {
+    "message": "Rien capturé pour l'instant."
+  },
+  "spBtnOpenCortex": {
+    "message": "Ouvrir Cortex"
+  },
+  "spNoTitle": {
+    "message": "(sans titre)"
+  },
+  "errSearchFailed": {
+    "message": "Échec de la recherche"
+  }
+}

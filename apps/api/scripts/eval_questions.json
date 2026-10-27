@@ -1,0 +1,184 @@
+[
+  {
+    "id": "q01",
+    "question": "Did I change my mind about memory and retrieval?",
+    "expected_titles": [
+      "Actually, retrieval speed matters more than long-term memory. If I can't find th",
+      "Long-term memory matters more than retrieval speed. If the graph doesn't hold on"
+    ],
+    "category": "contradiction",
+    "note": "Should surface the reversal note and its original"
+  },
+  {
+    "id": "q02",
+    "question": "What's my current view on recording quality?",
+    "expected_titles": [
+      "Actually, I no longer think recording quality matters. What matters is capturing",
+      "Recording quality",
+      "Audio Quality Procrastination"
+    ],
+    "category": "contradiction",
+    "note": "Reversal capture + its supporting concepts"
+  },
+  {
+    "id": "q03",
+    "question": "Where have I contradicted myself?",
+    "expected_titles": [
+      "Actually, retrieval speed matters more than long-term memory. If I can't find th",
+      "Long-term memory matters more than retrieval speed. If the graph doesn't hold on",
+      "Actually, I no longer think recording quality matters. What matters is capturing"
+    ],
+    "category": "contradiction",
+    "note": "Both contradiction pairs"
+  },
+  {
+    "id": "q04",
+    "question": "What's the relationship between retrieval speed and long-term memory?",
+    "expected_titles": [
+      "Long-term memory",
+      "Retrieval speed"
+    ],
+    "category": "concept_relationship",
+    "note": "Canonical concepts"
+  },
+  {
+    "id": "q05",
+    "question": "What do I say about the value of access?",
+    "expected_titles": [
+      "Value of access",
+      "Data accumulation"
+    ],
+    "category": "concept_relationship",
+    "note": "Paired concepts"
+  },
+  {
+    "id": "q06",
+    "question": "How do I think about memory storage and knowledge retention?",
+    "expected_titles": [
+      "Long-term memory",
+      "Knowledge graph retention"
+    ],
+    "category": "concept_relationship"
+  },
+  {
+    "id": "q07",
+    "question": "Tell me about my recording-quality concept.",
+    "expected_titles": [
+      "Recording quality",
+      "Audio Quality Procrastination"
+    ],
+    "category": "concept_relationship"
+  },
+  {
+    "id": "q08",
+    "question": "What did I capture about delightful days?",
+    "expected_titles": [
+      "what a delightful day it was?",
+      "Delight",
+      "Am very delighted today"
+    ],
+    "category": "thought_concept"
+  },
+  {
+    "id": "q09",
+    "question": "Why did I write about self-expression?",
+    "expected_titles": [
+      "Self-Expression",
+      "what a delightful day it was?",
+      "my project is really going well now"
+    ],
+    "category": "thought_concept"
+  },
+  {
+    "id": "q10",
+    "question": "What's my relationship with project progress?",
+    "expected_titles": [
+      "my project is really going well now",
+      "Project progress"
+    ],
+    "category": "thought_concept"
+  },
+  {
+    "id": "q11",
+    "question": "Tell me about the Google Meet capture.",
+    "expected_titles": [
+      "Meet - mtw-erck-xqf",
+      "Google Meet"
+    ],
+    "category": "contains"
+  },
+  {
+    "id": "q12",
+    "question": "What have I captured about browser compatibility?",
+    "expected_titles": [
+      "Supported browsers",
+      "Google Meet"
+    ],
+    "category": "contains"
+  },
+  {
+    "id": "q13",
+    "question": "What do my captures say about Cortex's identity?",
+    "expected_titles": [
+      "Cortex — The external mind",
+      "who are you cortex",
+      "Cortex Project Overview - DeepSeek"
+    ],
+    "category": "contains"
+  },
+  {
+    "id": "q14",
+    "question": "What are the failure patterns I've captured?",
+    "expected_titles": [
+      "Content Extraction Failure",
+      "URL Fetching Error",
+      "Empty document"
+    ],
+    "category": "cluster"
+  },
+  {
+    "id": "q15",
+    "question": "What didn't work when I captured things?",
+    "expected_titles": [
+      "Content Extraction Failure",
+      "URL Fetching Error",
+      "Empty document"
+    ],
+    "category": "cluster",
+    "note": "Rephrasing — same cluster"
+  },
+  {
+    "id": "q16",
+    "question": "What's my process for iterative refinement?",
+    "expected_titles": [
+      "Iterative Refinement"
+    ],
+    "category": "precision"
+  },
+  {
+    "id": "q17",
+    "question": "What have I learned about thought capture?",
+    "expected_titles": [
+      "Thought capture"
+    ],
+    "category": "precision"
+  },
+  {
+    "id": "q18",
+    "question": "What is the capital of France?",
+    "expected_titles": [],
+    "category": "fallback"
+  },
+  {
+    "id": "q19",
+    "question": "How do I bake sourdough bread?",
+    "expected_titles": [],
+    "category": "fallback"
+  },
+  {
+    "id": "q20",
+    "question": "What's the weather going to be like this weekend?",
+    "expected_titles": [],
+    "category": "fallback"
+  }
+]

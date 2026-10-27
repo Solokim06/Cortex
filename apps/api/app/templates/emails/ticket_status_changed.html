@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% from "_macros.html" import button, card %}
+
+{% block title %}Status update on your ticket{% endblock %}
+
+{% block heading %}
+  {%- if to_status == "in_progress" -%}
+    We're on it
+  {%- elif to_status == "resolved" -%}
+    Your ticket was resolved
+  {%- elif to_status == "closed" -%}
+    Your ticket was closed
+  {%- elif to_status == "open" -%}
+    Your ticket was reopened
+  {%- else -%}
+    Status update on your ticket
+  {%- endif -%}
+{% endblock %}
+
+{% block subheading %}
+  <p style="margin:0;color:#8b8b8b;font-size:13px;">
+    {%- if to_status == "in_progress" -%}
+      Our team has started working on &ldquo;{{ ticket.subject }}&rdquo;.
+    {%- elif to_status == "resolved" -%}
+      We believe we've resolved &ldquo;{{ ticket.subject }}&rdquo;. Let us know if the issue persists.
+    {%- elif to_status == "closed" -%}
+      &ldquo;{{ ticket.subject }}&rdquo; has been closed.
+    {%- elif to_status == "open" -%}
+      &ldquo;{{ ticket.subject }}&rdquo; has been reopened.
+    {%- else -%}
+      The status of &ldquo;{{ ticket.subject }}&rdquo; has changed.
+    {%- endif -%}
+  </p>
+{% endblock %}
+
+{% block body %}
+
+  {# Status transition card #}
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:14px 0;">
+    <tr>
+      <td style="padding:14px 16px;background:{% if to_status == 'resolved' %}rgba(16,185,129,0.05){% elif to_status == 'in_progress' %}rgba(14,165,233,0.05){% else %}#181818{% endif %};border:1px solid {% if to_status == 'resolved' %}rgba(16,185,129,0.35){% elif to_status == 'in_progress' %}rgba(14,165,233,0.35){% else %}#262626{% endif %};border-radius:10px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+          <tr>
+            <td style="padding:4px 0;color:#737373;font-size:12px;width:110px;vertical-align:top;">Previous</td>
+            <td style="padding:4px 0;color:#a3a3a3;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;">
+              {{ from_status|replace("_", " ") }}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:4px 0;color:#737373;font-size:12px;vertical-align:top;">Current</td>
+            <td style="padding:4px 0;color:{% if to_status == 'resolved' %}#10b981{% elif to_status == 'in_progress' %}#0ea5e9{% else %}#e5e5e5{% endif %};font-size:13px;font-weight:600;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;">
+              {{ to_status|replace("_", " ") }}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  {# Original message excerpt #}
+  {% if ticket.description %}
+    <p style="margin:18px 0 6px 0;color:#8b8b8b;font-size:13px;">
+      Your original message:
+    </p>
+    <div style="padding:10px 12px;background:#181818;border:1px solid #262626;border-radius:8px;color:#a3a3a3;font-size:12px;white-space:pre-wrap;line-height:1.5;max-height:200px;overflow:hidden;">{{ ticket.description }}</div>
+  {% endif %}
+
+  {# Ticket meta #}
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;">
+    <tr>
+      <td>
+        {% call card() %}
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+            <tr>
+              <td style="padding:4px 0;color:#737373;font-size:12px;width:110px;vertical-align:top;">Subject</td>
+              <td style="padding:4px 0;color:#e5e5e5;font-size:13px;">{{ ticket.subject }}</td>
+            </tr>
+            <tr>
+              <td style="padding:4px 0;color:#737373;font-size:12px;vertical-align:top;">Category</td>
+              <td style="padding:4px 0;color:#e5e5e5;font-size:13px;">{{ ticket.category|capitalize }}</td>
+            </tr>
+            <tr>
+              <td style="padding:4px 0;color:#737373;font-size:12px;vertical-align:top;">Priority</td>
+              <td style="padding:4px 0;color:#e5e5e5;font-size:13px;">{{ ticket.priority|capitalize }}</td>
+            </tr>
+            <tr>
+              <td style="padding:4px 0;color:#737373;font-size:12px;vertical-align:top;">Ticket ID</td>
+              <td style="padding:4px 0;color:#e5e5e5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;">#{{ ticket.id[:8] }}</td>
+            </tr>
+          </table>
+        {% endcall %}
+      </td>
+    </tr>
+  </table>
+
+{% endblock %}
+
+{% block cta %}
+  {% if to_status == "resolved" %}
+    {{ button(web_url ~ "/help?ticket=" ~ ticket.id, "Still not fixed? Reopen it →") }}
+  {% else %}
+    {{ button(web_url ~ "/help?ticket=" ~ ticket.id, "View ticket in Cortex →") }}
+  {% endif %}
+{% endblock %}
+
+{% block footer %}
+  You&rsquo;re receiving this because you filed a ticket on Cortex.
+  <a href="{{ unsubscribe_url }}" style="color:#8b8b8b;text-decoration:underline;">Unsubscribe from ticket emails</a>
+  &middot;
+  <a href="{{ web_url }}/settings" style="color:#8b8b8b;text-decoration:underline;">Manage notifications</a>
+{% endblock %}

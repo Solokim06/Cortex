@@ -1,0 +1,15 @@
+ASSIGNED TO YOU
+===============
+
+{% if assigner %}{{ assigner.name or assigner.email }} put this on your plate.{% else %}This ticket is now yours.{% endif %}
+
+Subject:  {{ ticket.subject }}
+Category: {{ ticket.category }}
+Priority: {{ ticket.priority }}
+Status:   {{ ticket.status }}
+
+Open ticket: {{ web_url }}/admin/tickets/{{ ticket.id }}
+
+---
+You're receiving this because you're an admin or agent in Cortex.
+Manage notification preferences: {{ web_url }}/admin/settings/prefs

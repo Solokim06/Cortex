@@ -1,0 +1,29 @@
+SLA BREACHED
+============
+
+{% if category == "first_response" %}
+This ticket hasn't received a first response yet.
+{% elif category == "resolution" %}
+This ticket hasn't been resolved within its SLA window.
+{% else %}
+An SLA window on this ticket has been exceeded.
+{% endif %}
+
+Breach details
+--------------
+Category:  {{ category|replace("_", " ") }}
+Priority:  {{ priority }}
+
+Ticket summary
+--------------
+Subject:  {{ ticket.subject }}
+Category: {{ ticket.category }}
+Priority: {{ ticket.priority }}
+Status:   {{ ticket.status }}
+{% if filer %}From:     {{ filer.name ~ " <" ~ filer.email ~ ">" if filer.name else filer.email }}{% endif %}
+
+Triage now: {{ web_url }}/admin/tickets/{{ ticket.id }}
+
+---
+You're receiving this because you're an admin or agent in Cortex.
+Manage notification preferences: {{ web_url }}/admin/settings/prefs

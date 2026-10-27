@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "_macros.html" import button, ticket_summary, card %}
+
+{% block title %}New ticket: {{ ticket.subject }}{% endblock %}
+
+{% block heading %}New support ticket{% endblock %}
+
+{% block subheading %}
+  <p style="margin:0;color:#8b8b8b;font-size:13px;">
+    {{ filer.name or filer.email if filer else "A user" }} just filed a ticket. Triage it when you can.
+  </p>
+{% endblock %}
+
+{% block body %}
+
+  {% call card() %}
+    {{ ticket_summary(ticket, filer) }}
+  {% endcall %}
+
+  <p style="margin:14px 0 0 0;color:#8b8b8b;font-size:13px;">
+    Description:
+  </p>
+  <div style="margin:6px 0 0 0;padding:12px 14px;background:#0f0f0f;border-radius:8px;border-left:3px solid #6366f1;color:#d4d4d4;font-size:13px;white-space:pre-wrap;line-height:1.55;">{{ ticket.description }}</div>
+
+{% endblock %}
+
+{% block cta %}
+  {{ button(web_url ~ "/admin/tickets/" ~ ticket.id, "Open in admin →") }}
+{% endblock %}

@@ -1,0 +1,60 @@
+{
+  "name": "Cortex — The external mind",
+  "short_name": "Cortex",
+  "description": "Capture everything you learn, connect it intelligently, and think with an external mind that grows with you.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Capture",
+      "short_name": "Capture",
+      "description": "Capture a new note, link, or image",
+      "url": "/capture",
+      "icons": [
+        { "src": "/icons/icon-192.png", "sizes": "192x192" }
+      ]
+    },
+    {
+      "name": "Chat",
+      "short_name": "Chat",
+      "description": "Ask Cortex a question",
+      "url": "/chat",
+      "icons": [
+        { "src": "/icons/icon-192.png", "sizes": "192x192" }
+      ]
+    },
+    {
+      "name": "Memory",
+      "short_name": "Memory",
+      "description": "Browse your memory graph",
+      "url": "/memory",
+      "icons": [
+        { "src": "/icons/icon-192.png", "sizes": "192x192" }
+      ]
+    }
+  ]
+}

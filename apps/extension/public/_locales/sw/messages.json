@@ -1,0 +1,185 @@
+{
+  "extName": {
+    "message": "Cortex — Akili ya nje"
+  },
+  "extDescription": {
+    "message": "Nasa chochote unachokiona kwenye wavuti kwenye grafu yako ya maarifa ya Cortex."
+  },
+  "actionTitle": {
+    "message": "Cortex"
+  },
+  "commandOpenQuickCapture": {
+    "message": "Fungua unasa wa haraka wa Cortex"
+  },
+  "loading": {
+    "message": "Inapakia…"
+  },
+  "extHeading": {
+    "message": "Kiendelezi cha Cortex"
+  },
+  "extSubtitle": {
+    "message": "Akili ya nje — moja kwa moja kutoka kivinjari chako."
+  },
+  "sectionConnection": {
+    "message": "Muunganisho"
+  },
+  "connectIntro": {
+    "message": "Ili kuunganisha kiendelezi hiki na akaunti yako ya Cortex:"
+  },
+  "connectStep1Before": {
+    "message": "Fungua Cortex na uende kwenye"
+  },
+  "connectStep1Link": {
+    "message": "Mipangilio"
+  },
+  "connectStep2Before": {
+    "message": "Bofya"
+  },
+  "connectStep2Bold": {
+    "message": "Tengeneza msimbo wa kuunganisha"
+  },
+  "connectStep3": {
+    "message": "Nakili msimbo na ubandike hapa chini."
+  },
+  "labelConnectCode": {
+    "message": "Msimbo wa kuunganisha"
+  },
+  "placeholderPasteCode": {
+    "message": "Bandika msimbo wako hapa…"
+  },
+  "btnConnect": {
+    "message": "Unganisha"
+  },
+  "btnConnecting": {
+    "message": "Inaunganisha…"
+  },
+  "signedInAs": {
+    "message": "Umeingia kama"
+  },
+  "labelEmail": {
+    "message": "Barua pepe"
+  },
+  "labelTokenExpires": {
+    "message": "Tokeni inaisha"
+  },
+  "btnOpenSidePanel": {
+    "message": "Fungua paneli ya kando"
+  },
+  "btnDisconnect": {
+    "message": "Tenganisha"
+  },
+  "sectionPreferences": {
+    "message": "Mapendeleo"
+  },
+  "prefNotificationsTitle": {
+    "message": "Onyesha arifa"
+  },
+  "prefNotificationsDesc": {
+    "message": "Onyesha arifa ndogo ya mfumo baada ya kila unasa."
+  },
+  "prefOpenAfterCaptureTitle": {
+    "message": "Fungua Cortex baada ya unasa"
+  },
+  "prefOpenAfterCaptureDesc": {
+    "message": "Baada ya unasa, fungua Cortex kwenye kichupo kipya kuona matokeo."
+  },
+  "footerVersion": {
+    "message": "Kiendelezi cha Cortex · v0.1.0"
+  },
+  "defaultUser": {
+    "message": "Mtumiaji wa Cortex"
+  },
+  "errPasteFirst": {
+    "message": "Bandika msimbo wa kuunganisha kwanza."
+  },
+  "errCouldNotSignIn": {
+    "message": "Imeshindwa kuingia."
+  },
+  "popupSignedOut": {
+    "message": "Hujaingia. Tengeneza msimbo wa kuunganisha kutoka Mipangilio ya Cortex, kisha ubandike kwenye ukurasa wa chaguzi za kiendelezi."
+  },
+  "btnOpenOptions": {
+    "message": "Fungua chaguzi"
+  },
+  "defaultSignedIn": {
+    "message": "Umeingia"
+  },
+  "placeholderQuickCapture": {
+    "message": "Unasa wa haraka — andika wazo…"
+  },
+  "btnSave": {
+    "message": "Hifadhi"
+  },
+  "btnSaving": {
+    "message": "Inahifadhi…"
+  },
+  "btnSidePanel": {
+    "message": "Paneli ya kando"
+  },
+  "btnSearch": {
+    "message": "Tafuta"
+  },
+  "savedPrefix": {
+    "message": "Imehifadhiwa:"
+  },
+  "recentTitle": {
+    "message": "Hivi karibuni"
+  },
+  "recentEmpty": {
+    "message": "Hakuna unasa bado."
+  },
+  "untitled": {
+    "message": "(bila kichwa)"
+  },
+  "footerOptions": {
+    "message": "Chaguzi"
+  },
+  "footerSettings": {
+    "message": "Mipangilio"
+  },
+  "errCaptureFailed": {
+    "message": "Unasa umeshindwa"
+  },
+  "spSignedOut": {
+    "message": "Hujaingia. Fungua ukurasa wa chaguzi za kiendelezi na ubandike msimbo wa kuunganisha."
+  },
+  "spThisPage": {
+    "message": "Ukurasa huu"
+  },
+  "spNoActivePage": {
+    "message": "Hakuna ukurasa unaotumika."
+  },
+  "spBadgeSaved": {
+    "message": "Iko tayari kwenye grafu yako"
+  },
+  "spBtnSavePage": {
+    "message": "Hifadhi ukurasa"
+  },
+  "spSectionSearch": {
+    "message": "Tafuta kwenye akili yako"
+  },
+  "placeholderAskAnything": {
+    "message": "Uliza chochote…"
+  },
+  "spSearching": {
+    "message": "Inatafuta…"
+  },
+  "spNoMatches": {
+    "message": "Hakuna mechi."
+  },
+  "spSectionRecent": {
+    "message": "Unasa za hivi karibuni"
+  },
+  "spNothingCaptured": {
+    "message": "Hakuna kilichonaswa bado."
+  },
+  "spBtnOpenCortex": {
+    "message": "Fungua Cortex"
+  },
+  "spNoTitle": {
+    "message": "(bila kichwa)"
+  },
+  "errSearchFailed": {
+    "message": "Utafutaji umeshinduka"
+  }
+}

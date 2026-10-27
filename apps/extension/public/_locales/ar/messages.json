@@ -1,0 +1,185 @@
+{
+  "extName": {
+    "message": "Cortex — العقل الخارجي"
+  },
+  "extDescription": {
+    "message": "التقط أي شيء تراه على الويب في رسم Cortex البياني لمعرفتك."
+  },
+  "actionTitle": {
+    "message": "Cortex"
+  },
+  "commandOpenQuickCapture": {
+    "message": "فتح الالتقاط السريع في Cortex"
+  },
+  "loading": {
+    "message": "جارٍ التحميل…"
+  },
+  "extHeading": {
+    "message": "إضافة Cortex"
+  },
+  "extSubtitle": {
+    "message": "العقل الخارجي — مباشرة من متصفحك."
+  },
+  "sectionConnection": {
+    "message": "الاتصال"
+  },
+  "connectIntro": {
+    "message": "لربط هذه الإضافة بحسابك في Cortex:"
+  },
+  "connectStep1Before": {
+    "message": "افتح Cortex واذهب إلى"
+  },
+  "connectStep1Link": {
+    "message": "الإعدادات"
+  },
+  "connectStep2Before": {
+    "message": "انقر على"
+  },
+  "connectStep2Bold": {
+    "message": "إنشاء رمز الاتصال"
+  },
+  "connectStep3": {
+    "message": "انسخ الرمز والصقه أدناه."
+  },
+  "labelConnectCode": {
+    "message": "رمز الاتصال"
+  },
+  "placeholderPasteCode": {
+    "message": "الصق الرمز هنا…"
+  },
+  "btnConnect": {
+    "message": "اتصال"
+  },
+  "btnConnecting": {
+    "message": "جارٍ الاتصال…"
+  },
+  "signedInAs": {
+    "message": "مسجّل الدخول بصفة"
+  },
+  "labelEmail": {
+    "message": "البريد"
+  },
+  "labelTokenExpires": {
+    "message": "انتهاء صلاحية الرمز"
+  },
+  "btnOpenSidePanel": {
+    "message": "فتح اللوحة الجانبية"
+  },
+  "btnDisconnect": {
+    "message": "قطع الاتصال"
+  },
+  "sectionPreferences": {
+    "message": "التفضيلات"
+  },
+  "prefNotificationsTitle": {
+    "message": "إظهار الإشعارات"
+  },
+  "prefNotificationsDesc": {
+    "message": "إظهار إشعار نظام صغير بعد كل التقاط."
+  },
+  "prefOpenAfterCaptureTitle": {
+    "message": "فتح Cortex بعد الالتقاط"
+  },
+  "prefOpenAfterCaptureDesc": {
+    "message": "بعد الالتقاط، افتح Cortex في تبويب جديد لعرض النتيجة."
+  },
+  "footerVersion": {
+    "message": "إضافة Cortex · الإصدار 0.1.0"
+  },
+  "defaultUser": {
+    "message": "مستخدم Cortex"
+  },
+  "errPasteFirst": {
+    "message": "الصق رمز الاتصال أولًا."
+  },
+  "errCouldNotSignIn": {
+    "message": "تعذّر تسجيل الدخول."
+  },
+  "popupSignedOut": {
+    "message": "لم تسجّل الدخول. أنشئ رمز اتصال من إعدادات Cortex، ثم الصقه في صفحة خيارات الإضافة."
+  },
+  "btnOpenOptions": {
+    "message": "فتح الخيارات"
+  },
+  "defaultSignedIn": {
+    "message": "مسجّل الدخول"
+  },
+  "placeholderQuickCapture": {
+    "message": "التقاط سريع — دوّن فكرة…"
+  },
+  "btnSave": {
+    "message": "حفظ"
+  },
+  "btnSaving": {
+    "message": "جارٍ الحفظ…"
+  },
+  "btnSidePanel": {
+    "message": "اللوحة الجانبية"
+  },
+  "btnSearch": {
+    "message": "بحث"
+  },
+  "savedPrefix": {
+    "message": "تم الحفظ:"
+  },
+  "recentTitle": {
+    "message": "الأحدث"
+  },
+  "recentEmpty": {
+    "message": "لا توجد التقاطات بعد."
+  },
+  "untitled": {
+    "message": "(بدون عنوان)"
+  },
+  "footerOptions": {
+    "message": "الخيارات"
+  },
+  "footerSettings": {
+    "message": "الإعدادات"
+  },
+  "errCaptureFailed": {
+    "message": "فشل الالتقاط"
+  },
+  "spSignedOut": {
+    "message": "لم تسجّل الدخول. افتح صفحة خيارات الإضافة والصق رمز اتصال."
+  },
+  "spThisPage": {
+    "message": "هذه الصفحة"
+  },
+  "spNoActivePage": {
+    "message": "لا توجد صفحة نشطة."
+  },
+  "spBadgeSaved": {
+    "message": "موجودة بالفعل في رسمك"
+  },
+  "spBtnSavePage": {
+    "message": "حفظ الصفحة"
+  },
+  "spSectionSearch": {
+    "message": "ابحث في عقلك"
+  },
+  "placeholderAskAnything": {
+    "message": "اسأل أي شيء…"
+  },
+  "spSearching": {
+    "message": "جارٍ البحث…"
+  },
+  "spNoMatches": {
+    "message": "لا توجد نتائج."
+  },
+  "spSectionRecent": {
+    "message": "الالتقاطات الأخيرة"
+  },
+  "spNothingCaptured": {
+    "message": "لم يتم التقاط أي شيء بعد."
+  },
+  "spBtnOpenCortex": {
+    "message": "فتح Cortex"
+  },
+  "spNoTitle": {
+    "message": "(بدون عنوان)"
+  },
+  "errSearchFailed": {
+    "message": "فشل البحث"
+  }
+}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% from "_macros.html" import button, card, badge %}
+
+{% block title %}New reply on your ticket{% endblock %}
+
+{% block heading %}Your ticket has a reply{% endblock %}
+
+{% block subheading %}
+  <p style="margin:0;color:#8b8b8b;font-size:13px;">
+    Someone from the Cortex team responded to &ldquo;{{ ticket.subject }}&rdquo;.
+  </p>
+{% endblock %}
+
+{% block body %}
+
+  <p style="margin:0 0 6px 0;color:#8b8b8b;font-size:13px;">
+    Reply:
+  </p>
+  <div style="padding:12px 14px;background:#0f0f0f;border-radius:8px;border-left:3px solid #6366f1;color:#d4d4d4;font-size:13px;white-space:pre-wrap;line-height:1.55;">{{ reply.content }}</div>
+
+  {% if ticket.description %}
+    <p style="margin:18px 0 6px 0;color:#8b8b8b;font-size:13px;">
+      Your original message:
+    </p>
+    <div style="padding:10px 12px;background:#181818;border:1px solid #262626;border-radius:8px;color:#a3a3a3;font-size:12px;white-space:pre-wrap;line-height:1.5;max-height:200px;overflow:hidden;">{{ ticket.description }}</div>
+  {% endif %}
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:18px;">
+    <tr>
+      <td>
+        {% call card() %}
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+            <tr>
+              <td style="padding:4px 0;color:#737373;font-size:12px;width:110px;vertical-align:top;">Status</td>
+              <td style="padding:4px 0;color:#e5e5e5;font-size:13px;">
+                {{ badge(ticket.status|replace("_", " "), "open") }}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:4px 0;color:#737373;font-size:12px;vertical-align:top;">Ticket ID</td>
+              <td style="padding:4px 0;color:#e5e5e5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;">
+                #{{ ticket.id[:8] }}
+              </td>
+            </tr>
+          </table>
+        {% endcall %}
+      </td>
+    </tr>
+  </table>
+
+{% endblock %}
+
+{% block cta %}
+  {{ button(web_url ~ "/help?ticket=" ~ ticket.id, "View and reply in Cortex →") }}
+  <p style="margin:6px 0 0 0;color:#737373;font-size:11px;">
+    Or reply by emailing us back &mdash; your reply will be added to the ticket automatically.
+  </p>
+{% endblock %}
+
+{% block footer %}
+  You&rsquo;re receiving this because you filed a ticket on Cortex.
+  <a href="{{ unsubscribe_url }}" style="color:#8b8b8b;text-decoration:underline;">Unsubscribe from ticket emails</a>
+  &middot;
+  <a href="{{ web_url }}/settings" style="color:#8b8b8b;text-decoration:underline;">Manage notifications</a>
+{% endblock %}

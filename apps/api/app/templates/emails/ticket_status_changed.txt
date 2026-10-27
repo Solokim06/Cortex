@@ -1,0 +1,31 @@
+{% if to_status == "in_progress" %}WE'RE ON IT{% elif to_status == "resolved" %}YOUR TICKET WAS RESOLVED{% elif to_status == "closed" %}YOUR TICKET WAS CLOSED{% elif to_status == "open" %}YOUR TICKET WAS REOPENED{% else %}STATUS UPDATE ON YOUR TICKET{% endif %}
+{{ "=" * 40 }}
+
+{% if to_status == "in_progress" %}Our team has started working on your ticket.
+{% elif to_status == "resolved" %}We believe we've resolved your ticket. Let us know if the issue persists.
+{% elif to_status == "closed" %}Your ticket has been closed.
+{% elif to_status == "open" %}Your ticket has been reopened.
+{% else %}The status of your ticket has changed.
+{% endif %}
+
+Ticket: {{ ticket.subject }}
+Previous status: {{ from_status|replace("_", " ") }}
+Current status:  {{ to_status|replace("_", " ") }}
+
+{% if ticket.description %}
+Your original message:
+------------------------
+{{ ticket.description }}
+{% endif %}
+
+Ticket ID: #{{ ticket.id[:8] }}
+Category:  {{ ticket.category }}
+Priority:  {{ ticket.priority }}
+
+View in Cortex:
+{{ web_url }}/help?ticket={{ ticket.id }}
+
+---
+You're receiving this because you filed a ticket on Cortex.
+Unsubscribe from ticket emails: {{ unsubscribe_url }}
+Manage notifications: {{ web_url }}/settings

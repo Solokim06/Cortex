@@ -1,0 +1,705 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  CORTEX — PROJECT STRUCTURE                                                  ║
+║  As of 2026-10-27 (Post-Session 4 & Polish)                                  ║
+║  Full tree with all files. Nothing abbreviated.                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Cortex/
+│
+├── .env
+├── .gitignore
+├── CORTEX_Master_Blueprint_v1_0.pdf
+├── pnpm-workspace.yaml
+│
+├── .vscode/
+│   └── settings.json
+│
+├── credentials/
+│   └── neo4j-credentials.txt
+│
+├── docs/
+│   ├── agentic_actions.md
+│   ├── Cortex — Project Scope & Structure.txt
+│   ├── Cortex — Project Structure.txt                ← this file (updated)
+│   └── known-bugs.md                                 ★ Phase 4: A11y tracking
+│
+├── scripts/
+│   └── (empty)
+│
+└── apps/
+    │
+    ├── api/  ─────────────────────── FastAPI backend
+    │   ├── .env
+    │   ├── .pre-commit-config.yaml
+    │   ├── check_clerk_jwt.py
+    │   ├── main.py
+    │   ├── requirements.txt
+    │   │
+    │   ├── apps/
+    │   │   └── api/
+    │   │       └── docs/                             (empty — stray dir)
+    │   │
+    │   ├── private_images/                           Tier 5.4 storage
+    │   │   └── <user_id>/
+    │   │       └── <node_id>.png
+    │   │
+    │   ├── private_videos/                           Tier 5.3 storage
+    │   │   └── <user_id>/
+    │   │       └── <node_id>.mp4
+    │   │
+    │   ├── uploads/
+    │   │   ├── feedback/                             public static
+    │   │   └── videos/
+    │   │
+    │   ├── scripts/
+    │   │   ├── backfill_canonicalization.py
+    │   │   ├── backfill_conversation_titles.py
+    │   │   ├── backfill_edges.py
+    │   │   ├── check_no_stale_settings.py
+    │   │   ├── dev.py
+    │   │   ├── eval_graph_reasoning.py
+    │   │   ├── eval_questions.json
+    │   │   ├── migrate_add_agent_actions.py
+    │   │   ├── migrate_add_ai_processing_pref.py     ★ Cookie Consent
+    │   │   ├── migrate_add_canonicalization.py
+    │   │   ├── migrate_add_conversation_summary.py
+    │   │   ├── migrate_add_edge_checks.py
+    │   │   ├── migrate_add_embedding_queue.py
+    │   │   ├── migrate_add_feedback.py
+    │   │   ├── migrate_add_graph_health.py
+    │   │   ├── migrate_add_insights.py
+    │   │   ├── migrate_add_locale.py
+    │   │   ├── migrate_add_message_edges.py
+    │   │   ├── migrate_add_message_embeddings.py
+    │   │   ├── migrate_add_topic_syntheses.py
+    │   │   ├── migrate_add_user_model.py
+    │   │   ├── migrate_admin_tier3.py
+    │   │   ├── migrate_drop_ivfflat_index.py
+    │   │   ├── migrate_editable_replies.py
+    │   │   ├── migrate_email_settings.py
+    │   │   ├── migrate_email_system.py
+    │   │   ├── migrate_notifications.py
+    │   │   ├── migrate_soft_delete.py
+    │   │   ├── migrate_user_notif_prefs.py
+    │   │   ├── migrate_user_prefs.py
+    │   │   └── migrate_wave_bc.py
+    │   │
+    │   ├── app/
+    │   │   ├── __init__.py
+    │   │   ├── i18n.py
+    │   │   │
+    │   │   ├── auth/
+    │   │   │   ├── __init__.py
+    │   │   │   ├── clerk.py
+    │   │   │   └── deps.py
+    │   │   │
+    │   │   ├── config/
+    │   │   │   ├── __init__.py
+    │   │   │   └── settings.py
+    │   │   │
+    │   │   ├── db/
+    │   │   │   ├── __init__.py
+    │   │   │   ├── base.py
+    │   │   │   ├── models.py
+    │   │   │   └── session.py
+    │   │   │
+    │   │   ├── graph/
+    │   │   │   ├── __init__.py
+    │   │   │   └── client.py
+    │   │   │
+    │   │   ├── routers/
+    │   │   │   ├── __init__.py
+    │   │   │   ├── admin.py
+    │   │   │   ├── agent.py
+    │   │   │   ├── capture.py
+    │   │   │   ├── chat.py
+    │   │   │   ├── decision.py
+    │   │   │   ├── extension.py
+    │   │   │   ├── files.py                          ★ Tier 5.3/5.4
+    │   │   │   ├── help.py                           ★ + anonymous tickets
+    │   │   │   ├── identity.py
+    │   │   │   ├── inbound_email.py
+    │   │   │   ├── learning.py
+    │   │   │   ├── memory.py
+    │   │   │   ├── public.py
+    │   │   │   ├── reflection.py
+    │   │   │   ├── topics.py
+    │   │   │   ├── user.py
+    │   │   │   └── voice.py
+    │   │   │
+    │   │   ├── services/
+    │   │   │   ├── __init__.py
+    │   │   │   ├── agents.py
+    │   │   │   ├── ai.py
+    │   │   │   ├── analytics.py
+    │   │   │   ├── annotations.py                    ★ Tier 5.4
+    │   │   │   ├── api_tokens.py
+    │   │   │   ├── canonicalization.py
+    │   │   │   ├── capture.py
+    │   │   │   ├── capture_kind.py                   ★ Tier 5
+    │   │   │   ├── chat.py
+    │   │   │   ├── clerk.py
+    │   │   │   ├── consent.py                        ★ Cookie Consent
+    │   │   │   ├── conversations.py
+    │   │   │   ├── decision.py
+    │   │   │   ├── edges.py
+    │   │   │   ├── email.py
+    │   │   │   ├── email_retry.py
+    │   │   │   ├── embeddings.py
+    │   │   │   ├── export.py
+    │   │   │   ├── extract.py
+    │   │   │   ├── extractor.py
+    │   │   │   ├── feedback.py
+    │   │   │   ├── graph_health.py
+    │   │   │   ├── graph_reasoning.py
+    │   │   │   ├── help.py
+    │   │   │   ├── help_docs.json
+    │   │   │   ├── help_docs_i18n.json
+    │   │   │   ├── identity.py
+    │   │   │   ├── image_storage.py                  ★ Tier 5.4
+    │   │   │   ├── impersonation.py
+    │   │   │   ├── inbound_email.py
+    │   │   │   ├── insights.py
+    │   │   │   ├── learning.py
+    │   │   │   ├── macros.py
+    │   │   │   ├── maintenance.py
+    │   │   │   ├── memory.py
+    │   │   │   ├── notifications.py
+    │   │   │   ├── prefs.py
+    │   │   │   ├── prefs_user.py
+    │   │   │   ├── pubsub.py
+    │   │   │   ├── rate_limit.py
+    │   │   │   ├── recall.py
+    │   │   │   ├── reflection.py
+    │   │   │   ├── roles.py
+    │   │   │   ├── sla.py
+    │   │   │   ├── sla_jobs.py
+    │   │   │   ├── stale.py
+    │   │   │   ├── status.py
+    │   │   │   ├── ticket_events.py
+    │   │   │   ├── topic_synthesis.py
+    │   │   │   ├── triage.py
+    │   │   │   ├── uploads.py
+    │   │   │   ├── user_model.py
+    │   │   │   ├── users.py
+    │   │   │   ├── video.py
+    │   │   │   ├── video_storage.py                  ★ Tier 5.3
+    │   │   │   ├── vision.py
+    │   │   │   ├── voice.py
+    │   │   │   ├── webhook_retry.py
+    │   │   │   ├── webhooks.py
+    │   │   │   │
+    │   │   │   └── actions/                          Tier 4
+    │   │   │       ├── __init__.py
+    │   │   │       ├── base.py
+    │   │   │       ├── dispatcher.py
+    │   │   │       ├── find_orphans.py
+    │   │   │       ├── merge_concepts.py
+    │   │   │       ├── place_url.py
+    │   │   │       ├── reorganize.py
+    │   │   │       ├── suggest_links.py
+    │   │   │       ├── tool_runner.py
+    │   │   │       └── undo.py
+    │   │   │
+    │   │   └── templates/
+    │   │       └── emails/
+    │   │           ├── _macros.html
+    │   │           ├── assignment.html
+    │   │           ├── assignment.txt
+    │   │           ├── base.html
+    │   │           ├── new_ticket.html
+    │   │           ├── new_ticket.txt
+    │   │           ├── sla_breach.html
+    │   │           ├── sla_breach.txt
+    │   │           ├── ticket_reply_to_user.html
+    │   │           ├── ticket_reply_to_user.txt
+    │   │           ├── ticket_status_changed.html
+    │   │           ├── ticket_status_changed.txt
+    │   │           ├── user_reply.html
+    │   │           └── user_reply.txt
+    │   │
+    │   └── (no other top-level files)
+    │
+    │
+    ├── web/  ─────────────────────── Next.js frontend
+    │   ├── .env.local
+    │   ├── .gitignore
+    │   ├── AGENTS.md
+    │   ├── CLAUDE.md
+    │   ├── README.md
+    │   ├── components.json
+    │   ├── eslint.config.mjs
+    │   ├── i18n-report.json
+    │   ├── middleware.ts                             ★ + /features, /contact
+    │   ├── next.config.ts                            ★ devIndicators disabled
+    │   ├── next-env.d.ts
+    │   ├── package.json                              ★ test:pwa script, v0.4.0
+    │   ├── playwright.config.ts                      ★ Phase 4: WebKit testing
+    │   ├── pnpm-lock.yaml
+    │   ├── postcss.config.mjs
+    │   ├── tsconfig.json
+    │   │
+    │   ├── types/
+    │   │   └── globals.d.ts
+    │   │
+    │   ├── i18n/
+    │   │   ├── config.ts
+    │   │   ├── navigation.ts
+    │   │   ├── request.ts
+    │   │   └── routing.ts
+    │   │
+    │   ├── messages/                                 6 locales
+    │   │   ├── ar.json                               ★ version key removed
+    │   │   ├── de.json                               ★ version key removed
+    │   │   ├── en.json                               ★ version key removed
+    │   │   ├── es.json                               ★ version key removed
+    │   │   ├── fr.json                               ★ version key removed
+    │   │   └── sw.json                               ★ version key removed
+    │   │
+    │   ├── public/
+    │   │   ├── brand/                                ★ Phase 1: PWA
+    │   │   │   └── cortex-logo.svg
+    │   │   ├── icons/                                ★ Phase 1: PWA
+    │   │   │   ├── apple-touch-icon.png
+    │   │   │   ├── icon-192.png
+    │   │   │   ├── icon-512.png
+    │   │   │   └── icon-maskable-512.png
+    │   │   ├── manifest.webmanifest                  ★ Phase 1: PWA
+    │   │   ├── sw.js                                 ★ Phase 2: Service Worker
+    │   │   ├── file.svg
+    │   │   ├── globe.svg
+    │   │   ├── next.svg
+    │   │   ├── vercel.svg
+    │   │   └── window.svg
+    │   │
+    │   ├── scripts/
+    │   │   ├── add-help-keys.mjs
+    │   │   ├── add-translate-keys.mjs
+    │   │   ├── check-i18n-parity.mjs
+    │   │   ├── generate-pwa-icons.mjs                ★ Phase 1: Icon generator
+    │   │   └── i18n-scan.mjs
+    │   │
+    │   ├── tests/                                    ★ Phase 4: Playwright
+    │   │   └── pwa/
+    │   │       ├── accessibility.spec.ts             ★ axe-core a11y tests
+    │   │       ├── a11y-report.spec.ts               ★ a11y diagnostic tool
+    │   │       └── safe-areas.spec.ts                ★ iPhone/Android layout tests
+    │   │
+    │   ├── app/
+    │   │   ├── favicon.ico
+    │   │   ├── globals.css                           ★ safe-area vars, a11y hex colors, dev-indicators
+    │   │   ├── layout.tsx
+    │   │   ├── providers.tsx                         ★ + InstallPrompt, OfflineIndicator, SW register
+    │   │   │
+    │   │   └── [locale]/
+    │   │       ├── error.tsx
+    │   │       ├── layout.tsx                        ★ metadata, viewport, appleWebApp
+    │   │       ├── not-found.tsx
+    │   │       │
+    │   │       ├── (app)/
+    │   │       │   ├── layout.tsx                    ★ h-[100dvh], pb-24
+    │   │       │   ├── loading.tsx
+    │   │       │   │
+    │   │       │   ├── admin/
+    │   │       │   │   ├── layout.tsx
+    │   │       │   │   ├── page.tsx
+    │   │       │   │   ├── analytics/page.tsx
+    │   │       │   │   ├── health/page.tsx
+    │   │       │   │   ├── settings/
+    │   │       │   │   │   ├── layout.tsx
+    │   │       │   │   │   ├── page.tsx
+    │   │       │   │   │   ├── emails/page.tsx
+    │   │       │   │   │   ├── macros/page.tsx
+    │   │       │   │   │   ├── prefs/page.tsx
+    │   │       │   │   │   ├── sla/page.tsx
+    │   │       │   │   │   └── webhooks/page.tsx
+    │   │       │   │   └── tickets/
+    │   │       │   │       ├── page.tsx
+    │   │       │   │       └── [id]/page.tsx
+    │   │       │   │
+    │   │       │   ├── capture/page.tsx
+    │   │       │   ├── chat/
+    │   │       │   │   ├── page.tsx
+    │   │       │   │   └── [id]/page.tsx
+    │   │       │   ├── decisions/page.tsx
+    │   │       │   ├── help/page.tsx
+    │   │       │   ├── home/page.tsx
+    │   │       │   ├── identity/page.tsx
+    │   │       │   ├── learning/page.tsx
+    │   │       │   ├── memory/
+    │   │       │   │   ├── page.tsx
+    │   │       │   │   ├── actions/page.tsx
+    │   │       │   │   ├── health/page.tsx
+    │   │       │   │   └── topics/
+    │   │       │   │       ├── page.tsx
+    │   │       │   │       └── [id]/page.tsx
+    │   │       │   ├── reflections/page.tsx
+    │   │       │   └── test-auth/page.tsx
+    │   │       │
+    │   │       ├── (auth)/
+    │   │       │   ├── sign-in/[[...sign-in]]/page.tsx
+    │   │       │   └── sign-up/[[...sign-up]]/page.tsx
+    │   │       │
+    │   │       ├── (public)/
+    │   │       │   ├── layout.tsx
+    │   │       │   ├── page.tsx                      ★ landing (10 hybrid sections)
+    │   │       │   ├── contact/page.tsx              ★ Tier 5.5
+    │   │       │   ├── features/page.tsx             ★ 21-section reference
+    │   │       │   ├── privacy/
+    │   │       │   │   ├── page.tsx
+    │   │       │   │   └── cookies/page.tsx          ★ Cookie policy
+    │   │       │   ├── support/page.tsx
+    │   │       │   └── terms/page.tsx
+    │   │       │
+    │   │       ├── status/page.tsx
+    │   │       └── unsubscribe/page.tsx
+    │   │
+    │   ├── components/
+    │   │   ├── ui/                                   shadcn primitives
+    │   │   │   ├── avatar.tsx
+    │   │   │   ├── badge.tsx
+    │   │   │   ├── button.tsx
+    │   │   │   ├── card.tsx
+    │   │   │   ├── confirm-dialog.tsx
+    │   │   │   ├── dialog.tsx
+    │   │   │   ├── dropdown-menu.tsx
+    │   │   │   ├── input.tsx
+    │   │   │   ├── scroll-area.tsx
+    │   │   │   ├── separator.tsx
+    │   │   │   ├── sheet.tsx
+    │   │   │   ├── skeleton.tsx
+    │   │   │   ├── sonner.tsx
+    │   │   │   ├── tabs.tsx
+    │   │   │   ├── textarea.tsx
+    │   │   │   └── tooltip.tsx
+    │   │   │
+    │   │   ├── pwa/                                  ★ Phase 1-2: PWA components
+    │   │   │   ├── InstallPrompt.tsx                 ★ useSyncExternalStore, dismiss guard
+    │   │   │   └── OfflineIndicator.tsx              ★ useSyncExternalStore, online/offline
+    │   │   │
+    │   │   ├── actions/                              Tier 4
+    │   │   │   ├── ActionsHistory.tsx
+    │   │   │   ├── ProposalCard.tsx                  ★ static-components fix
+    │   │   │   └── ProposalDetail.tsx
+    │   │   │
+    │   │   ├── admin/
+    │   │   │   ├── AdminStreamIndicator.tsx
+    │   │   │   ├── AdminSubNav.tsx
+    │   │   │   ├── AdminToaster.tsx
+    │   │   │   ├── AssigneePicker.tsx
+    │   │   │   ├── BulkActionBar.tsx
+    │   │   │   ├── ConfirmDialog.tsx
+    │   │   │   ├── MacroPicker.tsx
+    │   │   │   ├── NotificationToast.tsx
+    │   │   │   ├── StatsHeader.tsx
+    │   │   │   ├── TicketBadges.tsx
+    │   │   │   ├── TicketFilters.tsx
+    │   │   │   ├── TicketReplyBox.tsx
+    │   │   │   ├── TicketRow.tsx                     ★ purity fix
+    │   │   │   ├── TicketSidebar.tsx                 ★ unused vars cleaned
+    │   │   │   ├── TicketTimeline.tsx
+    │   │   │   ├── TriagePanel.tsx
+    │   │   │   ├── analytics/
+    │   │   │   │   ├── AtRiskTable.tsx
+    │   │   │   │   ├── BreakdownChart.tsx
+    │   │   │   │   ├── RangePicker.tsx
+    │   │   │   │   ├── StatRow.tsx
+    │   │   │   │   └── TicketsOverTimeChart.tsx      ★ purity fix, ChartTooltip props
+    │   │   │   ├── health/
+    │   │   │   │   ├── DataHealthPanel.tsx
+    │   │   │   │   ├── DiagnosticsPanel.tsx          ★ unused vars cleaned
+    │   │   │   │   ├── RecentFailuresPanel.tsx       ★ target display fix
+    │   │   │   │   └── SystemProbes.tsx
+    │   │   │   └── settings/
+    │   │   │       ├── EmailDeliveriesTable.tsx
+    │   │   │       ├── EmailsStatsHeader.tsx
+    │   │   │       ├── EmailSuppressionsList.tsx
+    │   │   │       ├── EmailTestForm.tsx
+    │   │   │       ├── MacroEditorDialog.tsx
+    │   │   │       ├── WebhookDeliveriesDrawer.tsx
+    │   │   │       └── WebhookEditorDialog.tsx
+    │   │   │
+    │   │   ├── attachments/
+    │   │   │   ├── AttachmentButton.tsx
+    │   │   │   ├── AttachmentMenu.tsx
+    │   │   │   └── AttachmentPreview.tsx
+    │   │   │
+    │   │   ├── capture/
+    │   │   │   ├── AnnotatorModal.tsx                ★ Tier 5.4
+    │   │   │   ├── AnnotatorToolbar.tsx              ★ Tier 5.4
+    │   │   │   ├── AudioWaveform.tsx
+    │   │   │   ├── CaptureBox.tsx                    ★ set-state-in-effect fix
+    │   │   │   ├── CaptureResult.tsx
+    │   │   │   ├── ImageAnnotator.tsx                ★ Tier 5.4
+    │   │   │   ├── RecentCaptures.tsx
+    │   │   │   ├── RelatedNodesList.tsx
+    │   │   │   ├── SourceTypeChip.tsx
+    │   │   │   ├── UrlPrompt.tsx
+    │   │   │   └── VoiceRecorder.tsx
+    │   │   │
+    │   │   ├── chat/
+    │   │   │   ├── ChatInput.tsx
+    │   │   │   ├── ChatPanel.tsx                     ★ set-state-in-effect fix (delete effect), ConfirmDialog restored
+    │   │   │   ├── ChatPanel.tsx.pre-fix             ⚠ leftover file (should be removed)
+    │   │   │   ├── ConversationItem.tsx
+    │   │   │   ├── ConversationSidebar.tsx
+    │   │   │   ├── GraphStrip.tsx
+    │   │   │   ├── Markdown.tsx
+    │   │   │   ├── MessageActions.tsx
+    │   │   │   ├── MessageBubble.tsx
+    │   │   │   ├── SourceChip.tsx
+    │   │   │   ├── SourcePanel.tsx
+    │   │   │   ├── SourcePreviewContext.tsx
+    │   │   │   ├── SourcesList.tsx
+    │   │   │   └── StarterPrompts.tsx
+    │   │   │
+    │   │   ├── consent/                              ★ Cookie Consent
+    │   │   │   ├── ConsentBanner.tsx                 ★ Link fix
+    │   │   │   ├── ConsentContext.tsx                ★ set-state-in-effect fix (disable)
+    │   │   │   └── ConsentModal.tsx
+    │   │   │
+    │   │   ├── contact/                              ★ Tier 5.5
+    │   │   │   └── ContactForm.tsx
+    │   │   │
+    │   │   ├── decisions/
+    │   │   │   ├── AnalyzeDialog.tsx
+    │   │   │   ├── DecideDialog.tsx
+    │   │   │   ├── DecisionCard.tsx
+    │   │   │   ├── DecisionDetail.tsx
+    │   │   │   ├── DeleteDialog.tsx
+    │   │   │   ├── OutcomeDialog.tsx
+    │   │   │   └── PatternsView.tsx
+    │   │   │
+    │   │   ├── features/                             ★ Features reference
+    │   │   │   ├── Reference.tsx                     ★ RefTable & RefCode min-w-0, RefKV grid, mobile fixes
+    │   │   │   └── Toc.tsx
+    │   │   │
+    │   │   ├── help/
+    │   │   │   ├── AskPanel.tsx
+    │   │   │   ├── CitationChip.tsx
+    │   │   │   ├── ConversationPreview.tsx
+    │   │   │   ├── ExamplePrompts.tsx
+    │   │   │   ├── FeedbackDialog.tsx
+    │   │   │   ├── HelpAssistant.tsx
+    │   │   │   ├── HelpDocDrawer.tsx
+    │   │   │   ├── QuickTopics.tsx
+    │   │   │   ├── ScreenshotDropzone.tsx
+    │   │   │   ├── TicketDrawer.tsx                  ★ purity fix
+    │   │   │   ├── TopicGrid.tsx
+    │   │   │   └── YourTickets.tsx
+    │   │   │
+    │   │   ├── home/
+    │   │   │   ├── ActivityStats.tsx
+    │   │   │   ├── BriefingCard.tsx
+    │   │   │   ├── DecisionsDue.tsx
+    │   │   │   ├── HomeGreeting.tsx                  ★ purity fix
+    │   │   │   ├── IdentityBanner.tsx
+    │   │   │   ├── LatestLesson.tsx
+    │   │   │   ├── QuickCapture.tsx
+    │   │   │   ├── RecentCapturesFeed.tsx
+    │   │   │   ├── StatTile.tsx
+    │   │   │   └── TodayFocus.tsx
+    │   │   │
+    │   │   ├── identity/
+    │   │   │   ├── ConfidenceBar.tsx
+    │   │   │   ├── DeltaBadge.tsx
+    │   │   │   ├── IdentityNarrative.tsx
+    │   │   │   ├── MaturityScore.tsx
+    │   │   │   ├── MilestoneCard.tsx
+    │   │   │   ├── PatternsList.tsx
+    │   │   │   ├── RebuildButton.tsx
+    │   │   │   ├── SignatureQuote.tsx
+    │   │   │   ├── TimelineList.tsx                  ★ unused enabled prop removed
+    │   │   │   ├── ValuesList.tsx
+    │   │   │   └── ValuesRadar.tsx
+    │   │   │
+    │   │   ├── landing/                              ★ hybrid landing
+    │   │   │   ├── Faq.tsx
+    │   │   │   ├── FeatureCard.tsx
+    │   │   │   ├── FinalCtaDemo.tsx                  ★ set-state-in-effect fix (disable)
+    │   │   │   ├── GraphStrip.tsx
+    │   │   │   ├── HowItWorks.tsx                    ★ set-state-in-effect fix (disable)
+    │   │   │   ├── LiveAskDemo.tsx                   ★ aria-label fix
+    │   │   │   ├── OpenCookiePreferencesLink.tsx
+    │   │   │   ├── StatsBand.tsx
+    │   │   │   ├── TrustBand.tsx
+    │   │   │   └── WhoItsFor.tsx
+    │   │   │
+    │   │   ├── layout/
+    │   │   │   ├── Bell.tsx
+    │   │   │   ├── ChatsSection.tsx
+    │   │   │   ├── CommandPalette.tsx
+    │   │   │   ├── KeyboardShortcuts.tsx
+    │   │   │   ├── Sidebar.tsx                       ★ fixed footer (middot, contact), version, removed unused Button
+    │   │   │   └── Topbar.tsx                        ★ fixed footer, version, mobile drawer completeness, unused imports
+    │   │   │
+    │   │   ├── learning/
+    │   │   │   ├── CreateGoalDialog.tsx
+    │   │   │   ├── EmptyState.tsx
+    │   │   │   ├── GoalCard.tsx
+    │   │   │   ├── GoalCardWithProgress.tsx
+    │   │   │   ├── GoalDetail.tsx
+    │   │   │   ├── MilestoneRow.tsx
+    │   │   │   └── StatusFilter.tsx
+    │   │   │
+    │   │   ├── memory/
+    │   │   │   ├── AnnotationOverlay.tsx             ★ Tier 5.4
+    │   │   │   ├── CaptureKindFilter.tsx             ★ Tier 5
+    │   │   │   ├── CitationText.tsx
+    │   │   │   ├── EmptyState.tsx
+    │   │   │   ├── MemorySearchBar.tsx
+    │   │   │   ├── ReindexButton.tsx
+    │   │   │   ├── ResultCard.tsx
+    │   │   │   ├── ResultSkeleton.tsx
+    │   │   │   ├── SourceImageBlock.tsx              ★ Tier 5.4
+    │   │   │   ├── SynthesisView.tsx
+    │   │   │   ├── TopicCard.tsx
+    │   │   │   ├── TypeFilter.tsx
+    │   │   │   ├── VideoResult.tsx                   ★ Tier 5.3
+    │   │   │   └── health/
+    │   │   │       ├── ActivityTimeline.tsx
+    │   │   │       ├── OrphansPanel.tsx
+    │   │   │       ├── OverviewTiles.tsx
+    │   │   │       ├── PendingMergesPanel.tsx
+    │   │   │       ├── StaleConceptsPanel.tsx
+    │   │   │       └── TopologySection.tsx
+    │   │   │
+    │   │   ├── reflections/
+    │   │   │   ├── EmptyState.tsx
+    │   │   │   ├── GenerateReportDialog.tsx
+    │   │   │   ├── InsightsView.tsx
+    │   │   │   ├── KindFilter.tsx
+    │   │   │   ├── ReflectionCard.tsx
+    │   │   │   ├── ReflectionDetail.tsx
+    │   │   │   └── WeeklyReportView.tsx
+    │   │   │
+    │   │   └── settings/
+    │   │       ├── AboutCard.tsx
+    │   │       ├── AccountCard.tsx
+    │   │       ├── DataCard.tsx
+    │   │       ├── ExtensionConnectCard.tsx
+    │   │       ├── Section.tsx
+    │   │       ├── SettingsDialog.tsx                ★ mobile responsive layout, fixed double-X, dynamic version
+    │   │       ├── SettingsNav.tsx
+    │   │       ├── dialogs/
+    │   │       │   ├── ConfirmDeleteAccountDialog.tsx ★ window.location.assign fix
+    │   │       │   └── ConfirmDeleteChatsDialog.tsx
+    │   │       └── panels/
+    │   │           ├── AboutPanel.tsx
+    │   │           ├── AccountPanel.tsx
+    │   │           ├── AgentPanel.tsx
+    │   │           ├── DataPanel.tsx
+    │   │           ├── ExtensionPanel.tsx
+    │   │           ├── GeneralPanel.tsx
+    │   │           ├── NotificationsPanel.tsx
+    │   │           └── PrivacyPanel.tsx              ★ Cookie Consent
+    │   │
+    │   └── lib/
+    │       ├── admin-api.ts
+    │       ├── annotations.ts                        ★ Tier 5.4
+    │       ├── annotations-tldraw.ts                 ★ Tier 5.4
+    │       ├── api.ts                                ⚠ duplicate (unused)
+    │       ├── attachments.ts
+    │       ├── consent.ts                            ★ Cookie Consent
+    │       ├── contact.ts                            ★ Tier 5.5
+    │       ├── cortex.ts                             ★ + X-AI-Consent header
+    │       ├── i18n-enums.ts
+    │       ├── nav.ts
+    │       ├── changelog.ts                          ★ single source of version truth
+    │       ├── user-api.ts
+    │       ├── utils.ts
+    │       │
+    │       └── hooks/
+    │           ├── use-admin-analytics.ts
+    │           ├── use-admin-emails.ts
+    │           ├── use-admin-health.ts
+    │           ├── use-admin-macros.ts
+    │           ├── use-admin-me.ts
+    │           ├── use-admin-notifications.ts
+    │           ├── use-admin-prefs.ts
+    │           ├── use-admin-sla.ts
+    │           ├── use-admin-stats.ts
+    │           ├── use-admin-stream.ts
+    │           ├── use-admin-tickets.ts
+    │           ├── use-admin-webhooks.ts
+    │           ├── use-agent-actions.ts              ★ purity fix
+    │           ├── use-all-tags.ts
+    │           ├── use-cortex.ts
+    │           ├── use-debounced-value.ts
+    │           ├── use-decisions.ts
+    │           ├── use-extension.ts
+    │           ├── use-health.ts
+    │           ├── use-help.ts
+    │           ├── use-learning.ts
+    │           ├── use-notifications.ts
+    │           ├── use-now.ts
+    │           ├── use-reflections.ts
+    │           ├── use-settings-dialog.tsx
+    │           ├── use-topics.ts
+    │           └── use-user-prefs.ts
+    │
+    │
+    └── extension/  ─────────────────  Chrome MV3 extension
+        ├── .env.local
+        ├── package.json
+        ├── pnpm-lock.yaml
+        ├── pnpm-workspace.yaml
+        ├── tsconfig.json
+        ├── vite.config.ts
+        │
+        ├── public/
+        │   ├── _locales/
+        │   │   ├── ar/messages.json
+        │   │   ├── de/messages.json
+        │   │   ├── en/messages.json
+        │   │   ├── es/messages.json
+        │   │   ├── fr/messages.json
+        │   │   └── sw/messages.json
+        │   └── icons2/
+        │       ├── icon-16.png
+        │       ├── icon-32.png
+        │       ├── icon-48.png
+        │       └── icon-128.png
+        │
+        ├── scripts/
+        │   └── generate-icons.mjs
+        │
+        └── src/
+            ├── background.ts
+            ├── content.ts
+            ├── manifest.json
+            ├── manifest.firefox.json
+            ├── vite-env.d.ts
+            │
+            ├── lib/
+            │   ├── api.ts
+            │   ├── auth.ts
+            │   ├── i18n.ts
+            │   ├── runtime.ts
+            │   └── storage.ts
+            │
+            ├── options/
+            │   ├── index.html
+            │   ├── main.tsx
+            │   ├── Options.tsx
+            │   └── options.css
+            │
+            ├── popup/
+            │   ├── index.html
+            │   ├── main.tsx
+            │   ├── Popup.tsx
+            │   └── popup.css
+            │
+            └── sidepanel/
+                ├── index.html
+                ├── main.tsx
+                ├── SidePanel.tsx
+                └── sidepanel.css
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  LEGEND                                                                      ║
+║    ★  Added or significantly changed in Sessions 1-4                         ║
+║    ⚠  Candidate for cleanup (removed from .git tracking)                     ║
+║    (Tier N)  Cross-reference to the roadmap                                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝

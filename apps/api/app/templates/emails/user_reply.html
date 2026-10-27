@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "_macros.html" import button, ticket_summary, card %}
+
+{% block title %}Reply on: {{ ticket.subject }}{% endblock %}
+
+{% block heading %}{{ filer.name or filer.email if filer else "A user" }} replied to a ticket{% endblock %}
+
+{% block subheading %}
+  <p style="margin:0;color:#8b8b8b;font-size:13px;">
+    On &ldquo;{{ ticket.subject }}&rdquo;
+  </p>
+{% endblock %}
+
+{% block body %}
+
+  <p style="margin:0 0 6px 0;color:#8b8b8b;font-size:13px;">
+    Their reply:
+  </p>
+  <div style="padding:12px 14px;background:#0f0f0f;border-radius:8px;border-left:3px solid #6366f1;color:#d4d4d4;font-size:13px;white-space:pre-wrap;line-height:1.55;">{{ reply.content }}</div>
+
+  <div style="margin-top:18px;">
+    {% call card() %}
+      {{ ticket_summary(ticket, filer) }}
+    {% endcall %}
+  </div>
+
+{% endblock %}
+
+{% block cta %}
+  {{ button(web_url ~ "/admin/tickets/" ~ ticket.id, "Reply in admin →") }}
+{% endblock %}

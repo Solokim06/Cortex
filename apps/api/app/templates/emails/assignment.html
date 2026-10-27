@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% from "_macros.html" import button, ticket_summary, card %}
+
+{% block title %}Assigned to you: {{ ticket.subject }}{% endblock %}
+
+{% block heading %}A ticket was assigned to you{% endblock %}
+
+{% block subheading %}
+  <p style="margin:0;color:#8b8b8b;font-size:13px;">
+    {% if assigner %}{{ assigner.name or assigner.email }} put this on your plate.{% else %}This ticket is now yours.{% endif %}
+  </p>
+{% endblock %}
+
+{% block body %}
+
+  {% call card() %}
+    {{ ticket_summary(ticket) }}
+  {% endcall %}
+
+{% endblock %}
+
+{% block cta %}
+  {{ button(web_url ~ "/admin/tickets/" ~ ticket.id, "Open ticket →") }}
+{% endblock %}

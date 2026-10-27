@@ -1,0 +1,185 @@
+{
+  "extName": {
+    "message": "Cortex — The external mind"
+  },
+  "extDescription": {
+    "message": "Capture anything you see on the web into your Cortex knowledge graph."
+  },
+  "actionTitle": {
+    "message": "Cortex"
+  },
+  "commandOpenQuickCapture": {
+    "message": "Open Cortex quick capture"
+  },
+  "loading": {
+    "message": "Loading…"
+  },
+  "extHeading": {
+    "message": "Cortex extension"
+  },
+  "extSubtitle": {
+    "message": "The external mind — right from your browser."
+  },
+  "sectionConnection": {
+    "message": "Connection"
+  },
+  "connectIntro": {
+    "message": "To connect this extension to your Cortex account:"
+  },
+  "connectStep1Before": {
+    "message": "Open Cortex and go to"
+  },
+  "connectStep1Link": {
+    "message": "Settings"
+  },
+  "connectStep2Before": {
+    "message": "Click"
+  },
+  "connectStep2Bold": {
+    "message": "Generate connect code"
+  },
+  "connectStep3": {
+    "message": "Copy the code and paste it below."
+  },
+  "labelConnectCode": {
+    "message": "Connect code"
+  },
+  "placeholderPasteCode": {
+    "message": "Paste your code here…"
+  },
+  "btnConnect": {
+    "message": "Connect"
+  },
+  "btnConnecting": {
+    "message": "Connecting…"
+  },
+  "signedInAs": {
+    "message": "Signed in as"
+  },
+  "labelEmail": {
+    "message": "Email"
+  },
+  "labelTokenExpires": {
+    "message": "Token expires"
+  },
+  "btnOpenSidePanel": {
+    "message": "Open side panel"
+  },
+  "btnDisconnect": {
+    "message": "Disconnect"
+  },
+  "sectionPreferences": {
+    "message": "Preferences"
+  },
+  "prefNotificationsTitle": {
+    "message": "Show notifications"
+  },
+  "prefNotificationsDesc": {
+    "message": "Show a small system notification after each capture."
+  },
+  "prefOpenAfterCaptureTitle": {
+    "message": "Open Cortex after capture"
+  },
+  "prefOpenAfterCaptureDesc": {
+    "message": "After a capture, open Cortex in a new tab to view the result."
+  },
+  "footerVersion": {
+    "message": "Cortex extension · v0.1.0"
+  },
+  "defaultUser": {
+    "message": "Cortex user"
+  },
+  "errPasteFirst": {
+    "message": "Paste a connect code first."
+  },
+  "errCouldNotSignIn": {
+    "message": "Could not sign in."
+  },
+  "popupSignedOut": {
+    "message": "You're not signed in. Generate a connect code from Cortex Settings, then paste it into the extension's options page."
+  },
+  "btnOpenOptions": {
+    "message": "Open options"
+  },
+  "defaultSignedIn": {
+    "message": "Signed in"
+  },
+  "placeholderQuickCapture": {
+    "message": "Quick capture — jot a thought…"
+  },
+  "btnSave": {
+    "message": "Save"
+  },
+  "btnSaving": {
+    "message": "Saving…"
+  },
+  "btnSidePanel": {
+    "message": "Side panel"
+  },
+  "btnSearch": {
+    "message": "Search"
+  },
+  "savedPrefix": {
+    "message": "Saved:"
+  },
+  "recentTitle": {
+    "message": "Recent"
+  },
+  "recentEmpty": {
+    "message": "No captures yet."
+  },
+  "untitled": {
+    "message": "(untitled)"
+  },
+  "footerOptions": {
+    "message": "Options"
+  },
+  "footerSettings": {
+    "message": "Settings"
+  },
+  "errCaptureFailed": {
+    "message": "Capture failed"
+  },
+  "spSignedOut": {
+    "message": "You're not signed in. Open the extension's options page and paste a connect code."
+  },
+  "spThisPage": {
+    "message": "This page"
+  },
+  "spNoActivePage": {
+    "message": "No active page."
+  },
+  "spBadgeSaved": {
+    "message": "Already in your graph"
+  },
+  "spBtnSavePage": {
+    "message": "Save page"
+  },
+  "spSectionSearch": {
+    "message": "Search your mind"
+  },
+  "placeholderAskAnything": {
+    "message": "Ask anything…"
+  },
+  "spSearching": {
+    "message": "Searching…"
+  },
+  "spNoMatches": {
+    "message": "No matches."
+  },
+  "spSectionRecent": {
+    "message": "Recent captures"
+  },
+  "spNothingCaptured": {
+    "message": "Nothing captured yet."
+  },
+  "spBtnOpenCortex": {
+    "message": "Open Cortex"
+  },
+  "spNoTitle": {
+    "message": "(no title)"
+  },
+  "errSearchFailed": {
+    "message": "Search failed"
+  }
+}

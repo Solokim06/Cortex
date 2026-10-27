@@ -1,0 +1,26 @@
+YOUR TICKET HAS A REPLY
+=======================
+
+Someone from the Cortex team responded to your ticket.
+
+Ticket: {{ ticket.subject }}
+{% if ticket.description %}
+Your original message:
+------------------------
+{{ ticket.description }}
+{% endif %}
+
+Reply:
+------
+{{ reply.content }}
+
+Status:   {{ ticket.status }}
+Ticket ID: #{{ ticket.id[:8] }}
+
+View and reply in Cortex:
+{{ web_url }}/help?ticket={{ ticket.id }}
+
+---
+You're receiving this because you filed a ticket on Cortex.
+Unsubscribe from ticket emails: {{ unsubscribe_url }}
+Manage notifications: {{ web_url }}/settings

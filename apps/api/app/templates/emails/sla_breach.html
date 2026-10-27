@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "_macros.html" import button, ticket_summary, card, badge %}
+
+{% block title %}SLA breached: {{ ticket.subject }}{% endblock %}
+
+{% block heading %}SLA breached{% endblock %}
+
+{% block subheading %}
+  <p style="margin:0;color:#ef4444;font-size:13px;font-weight:500;">
+    {% if category == "first_response" %}
+      This ticket hasn't received a first response yet.
+    {% elif category == "resolution" %}
+      This ticket hasn't been resolved within its SLA window.
+    {% else %}
+      An SLA window on this ticket has been exceeded.
+    {% endif %}
+  </p>
+{% endblock %}
+
+{% block body %}
+
+  <p style="margin:0 0 6px 0;color:#8b8b8b;font-size:13px;">
+    Breach details:
+  </p>
+  <div style="padding:12px 14px;background:rgba(239,68,68,0.05);border:1px solid rgba(239,68,68,0.35);border-radius:8px;color:#fca5a5;font-size:13px;line-height:1.55;">
+    <div style="margin-bottom:6px;">
+      {{ badge(category|replace("_", " "), "urgent") }}
+      {{ badge(priority, "urgent") }}
+    </div>
+    The <strong style="color:#f87171;">{{ category|replace("_", " ") }}</strong> SLA on this ticket has been exceeded.
+  </div>
+
+  <div style="margin-top:18px;">
+    {% call card() %}
+      {{ ticket_summary(ticket, filer) }}
+    {% endcall %}
+  </div>
+
+{% endblock %}
+
+{% block cta %}
+  {{ button(web_url ~ "/admin/tickets/" ~ ticket.id, "Triage now →", "danger") }}
+{% endblock %}

@@ -1,0 +1,1137 @@
+{
+  "es": {
+    "what-is-cortex": {
+      "title": "Qué es Cortex",
+      "category": "Primeros pasos",
+      "body": "Cortex es un sistema de cognición personal — una mente externa que crece contigo. Capturas pensamientos, enlaces, archivos y notas de voz; Cortex extrae conceptos, los conecta en un grafo de conocimiento y te permite pensar con ese grafo a través del chat, las decisiones, los objetivos de aprendizaje y las reflexiones. Todo lo que capturas sigue siendo tuyo. Cortex responde preguntas citando tu propio conocimiento capturado y recurre al conocimiento general solo cuando tu grafo no cubre el tema (y marca claramente esas respuestas)."
+    },
+    "first-capture": {
+      "title": "Capturar tu primer pensamiento",
+      "category": "Primeros pasos",
+      "body": "Ve a Capturar desde la barra lateral. Tienes tres formas de capturar: (1) Escribe un pensamiento directamente en el cuadro principal, añade un título opcional y pulsa Capturar o Cmd/Ctrl+Enter. (2) Haz clic en el clip para adjuntar un archivo, imagen o PDF — Cortex extrae el texto automáticamente. (3) Usa la tarjeta de Voz para grabar tu voz; Cortex la transcribe con Whisper y te permite revisar la transcripción antes de guardar. Cada captura se convierte en un nodo de tu grafo de conocimiento."
+    },
+    "first-chat": {
+      "title": "Hacer tu primera pregunta a Cortex",
+      "category": "Primeros pasos",
+      "body": "Abre Chat desde la barra lateral. Escribe tu pregunta abajo y pulsa Enter. Cortex busca primero en tu conocimiento capturado, fundamenta su respuesta en lo que has capturado y cita nodos concretos por su título entre corchetes. Si tu grafo no cubre la pregunta, Cortex lo indica brevemente y luego responde desde conocimiento general, marcándolo claramente como tal. Cada respuesta muestra una lista de las fuentes de tu mente que se utilizaron."
+    },
+    "keyboard-shortcuts": {
+      "title": "Atajos de teclado",
+      "category": "Primeros pasos",
+      "body": "Cmd/Ctrl+K abre la paleta de comandos (buscar + navegar + cambiar idioma). / enfoca la búsqueda de la página en Memoria, Aprendizaje, Decisiones y Reflexiones. Las teclas de flecha navegan por los resultados. Enter abre el elemento resaltado. Esc limpia la búsqueda o cierra la paleta. Cmd/Ctrl+Enter envía la entrada actual. Cmd/Ctrl+, abre Ajustes desde cualquier lugar."
+    },
+    "install-extension": {
+      "title": "Instalar la extensión del navegador",
+      "category": "Extensión del navegador",
+      "body": "Ve a Ajustes → Extensión. Haz clic en Generar código de conexión. El código es un token de inicio de sesión de Clerk de un solo uso, válido unos minutos — cópialo. Instala la extensión de Cortex desde la Chrome Web Store o desde los complementos de Firefox, abre su página de opciones (clic derecho en el icono de la extensión → Opciones) y pega el código. La extensión entonces muestra tu correo para que sepas que está conectada. A partir de ahí podrás capturar cualquier página, cita o pensamiento directamente desde el navegador sin cambiar de pestaña."
+    },
+    "extension-usage": {
+      "title": "Usar la extensión del navegador",
+      "category": "Extensión del navegador",
+      "body": "Clic derecho en cualquier página → Capture to Cortex para guardar la página completa. Selecciona texto primero → Capture to Cortex para guardar solo la selección. Clic derecho en cualquier enlace → Capture link to Cortex para capturar el artículo enlazado. La extensión también tiene un panel lateral y una ventana emergente con búsqueda en la memoria — haz clic en el icono de la extensión para abrirlo. Todo lo que captures a través de la extensión aparece en Cortex en unos segundos."
+    },
+    "capture-file": {
+      "title": "Capturar un archivo",
+      "category": "Captura",
+      "body": "En Capturar, haz clic en el clip → Subir archivo. Cortex admite PDF, DOCX, XLSX, CSV, texto plano, imágenes, audio y vídeo (hasta 100 MB). El texto se extrae automáticamente. Si la extracción falla, el nodo resultante sigue existiendo — verás una insignia de estado 'parcial' y un breve mensaje de error. También puedes arrastrar un archivo al cuadro de captura o pegarlo desde el portapapeles."
+    },
+    "capture-voice": {
+      "title": "Capturar por voz",
+      "category": "Captura",
+      "body": "En Capturar, desplázate hasta la tarjeta de Voz. Elige un idioma (o déjalo en Detección automática) y haz clic en Grabar. Cortex graba hasta 5 minutos, muestra una onda de audio en directo y te permite pausar o detener. Cuando detienes, transcribe con Whisper y muestra la transcripción para que la revises. Edita el texto si quieres — las transcripciones editadas se guardan como nodos de texto. Las grabaciones no editadas se guardan como nodos de voz para que conserves el audio original."
+    },
+    "capture-url": {
+      "title": "Capturar un enlace",
+      "category": "Captura",
+      "body": "En Capturar, haz clic en el clip → Añadir enlace, o pega una URL directamente en el cuadro de texto principal. Cortex obtiene la página, extrae el texto del artículo y las ideas clave, y lo añade como nodo. Los enlaces de YouTube también se transcriben. Si la página no tiene contenido legible (muro de pago, solo JavaScript), la extracción falla pero el enlace se guarda igualmente como marcador para que puedas encontrarlo después."
+    },
+    "voice-language": {
+      "title": "Grabar en un idioma distinto del inglés",
+      "category": "Captura",
+      "body": "En la tarjeta Capturar → Voz, haz clic en el desplegable de idioma junto al botón Grabar. Elige Detección automática para dejar que Whisper lo averigüe, o escoge un idioma concreto (inglés, francés, español, alemán, portugués, italiano). Whisper es preciso en todos ellos. Si tu audio es multilingüe, la Detección automática suele manejar bien el dominante."
+    },
+    "chat-sources": {
+      "title": "¿De dónde vienen las respuestas de Cortex?",
+      "category": "Chat",
+      "body": "Cada respuesta que da Cortex sigue uno de dos patrones. Si tu conocimiento capturado cubre la pregunta, Cortex fundamenta su respuesta en él y cita nodos concretos por su título entre [corchetes]. Si tu grafo no lo cubre, Cortex lo indica brevemente y luego responde desde conocimiento general, marcando claramente esas partes. Debajo de cada respuesta, haz clic en 'N fuentes de tu mente' para ver qué nodos se usaron. Haz clic en cualquier fuente para abrirla en un panel lateral."
+    },
+    "chat-edit": {
+      "title": "Editar un mensaje",
+      "category": "Chat",
+      "body": "Pasa el cursor sobre cualquier mensaje de usuario y haz clic en el icono del lápiz. Edita el texto y pulsa Enter (o Mayús+Enter para un salto de línea). Cortex trata tu edición como un mensaje nuevo y vuelve a responder. Solo se puede editar el último mensaje de usuario de una conversación — los mensajes anteriores están bloqueados porque volver a ejecutarlos invalidaría el contexto que el asistente ya utilizó."
+    },
+    "chat-regenerate": {
+      "title": "Regenerar una respuesta",
+      "category": "Chat",
+      "body": "Pasa el cursor sobre la última respuesta del asistente y haz clic en el icono de actualizar. Cortex vuelve a ejecutar la misma pregunta con el mismo conocimiento y produce una respuesta nueva. Esto es útil cuando la primera respuesta se ha dejado algo o cuando quieres un enfoque distinto. Las respuestas anteriores del asistente no se pueden regenerar porque la conversación ya ha avanzado."
+    },
+    "chat-copy": {
+      "title": "Copiar una respuesta",
+      "category": "Chat",
+      "body": "Pasa el cursor sobre cualquier mensaje y haz clic en el icono de copiar. El texto del mensaje se copia al portapapeles como markdown plano — listo para pegar en otra aplicación. Verás un aviso emergente 'Copiado al portapapeles'."
+    },
+    "memory-search": {
+      "title": "Buscar en tu memoria",
+      "category": "Memoria",
+      "body": "Ve a Memoria. Escribe una pregunta o una descripción — Cortex busca por significado, no solo por palabras clave. Dos modos: Semántico (solo significado, ideal para preguntas conceptuales) e Híbrido (significado + coincidencias por palabra clave, ideal cuando recuerdas una palabra concreta). Cambia con el desplegable junto al cuadro de búsqueda. Los resultados muestran un anillo de puntuación de coincidencia: Fuerte (>75 %), Buena (60–75 %), Débil o Solo por palabra clave."
+    },
+    "memory-filters": {
+      "title": "Filtrar resultados de memoria por tipo",
+      "category": "Memoria",
+      "body": "Debajo de la barra de búsqueda puedes filtrar los resultados por tipo: Todos, Pensamientos, Conceptos, Decisiones o Reflexiones. Haz clic en cualquier chip para acotar la vista. El chip muestra un recuento de cuántos resultados coinciden con ese tipo. Combinado con la búsqueda, esto te permite encontrar, por ejemplo, solo decisiones sobre un tema."
+    },
+    "memory-reindex": {
+      "title": "Reindexar tu grafo",
+      "category": "Memoria",
+      "body": "Si la búsqueda no encuentra capturas recientes o parece desactualizada, haz clic en Reindexar en la esquina superior derecha de Memoria. Cortex regenera los embeddings de cada nodo que lo necesite. Normalmente tarda menos de un minuto para unos cientos de nodos. Recibirás un aviso al terminar indicándote cuántos nodos se indexaron. Reindexar nunca borra nada — solo reconstruye el índice de búsqueda."
+    },
+    "memory-weak-matches": {
+      "title": "¿Por qué la búsqueda dice «sin coincidencias fuertes»?",
+      "category": "Memoria",
+      "body": "Si todo lo que Cortex encontró puntuó por debajo del 72 %, muestra 'Sin coincidencias fuertes'. Dos cosas que probar: (1) Reformula con otras palabras — la búsqueda semántica es sensible a la formulación. (2) Cambia de modo Semántico a Híbrido usando el desplegable — Híbrido incluye coincidencias por palabra clave, que captan casos en los que la búsqueda por significado pasó por alto. Si tu grafo está vacío o es muy pequeño, puede que genuinamente aún no haya nada que encontrar."
+    },
+    "learning-create-goal": {
+      "title": "Crear un objetivo de aprendizaje",
+      "category": "Aprendizaje",
+      "body": "Ve a Aprendizaje y haz clic en Nuevo objetivo. Introduce un título (por ejemplo, 'Aprender Rust') y una descripción opcional explicando por qué lo quieres y cuál es tu punto de partida. Cortex descompone el objetivo en fases, hitos y acciones concretas — fundamentadas en lo que ya has capturado. La generación tarda entre 10 y 30 segundos. Cuando termine, tu plan se abre listo para trabajar con él."
+    },
+    "learning-milestones": {
+      "title": "Trabajar con los hitos",
+      "category": "Aprendizaje",
+      "body": "En la vista de detalle de un objetivo, haz clic en el círculo junto a cualquier hito para marcarlo como completado. Cortex guarda tu progreso inmediatamente y anima la barra de progreso de la fase. Haz clic en el título del hito para expandir sus acciones sugeridas. Cuando todos los hitos de una fase están hechos, la fase está completa. Cuando todos los hitos están hechos, el objetivo está completo y Cortex lo celebra con un aviso."
+    },
+    "learning-phases": {
+      "title": "Cómo estructura Cortex un plan de aprendizaje",
+      "category": "Aprendizaje",
+      "body": "Cada plan tiene de 3 a 5 fases (típicamente Fundamentos, Aplicación, Profundidad, Maestría). Cada fase contiene de 2 a 4 hitos. Cada hito contiene de 2 a 4 acciones concretas. La fase actual está resaltada. Un banner 'Primera acción de hoy' en la parte superior del plan sugiere la cosa más útil que hacer a continuación — haz clic en él para marcarla como iniciada. Puedes revisitar cualquier fase en cualquier momento."
+    },
+    "decisions-analyze": {
+      "title": "Analizar una decisión",
+      "category": "Decisiones",
+      "body": "Ve a Decisiones y haz clic en Nueva decisión. Describe la decisión en el campo de pregunta, añade contexto si es útil y pulsa Analizar. Cortex busca en tu conocimiento y en tus decisiones pasadas, y devuelve: un encuadre de la elección central, de 2 a 5 opciones con pros y contras, compensaciones, patrones de tus decisiones pasadas, puntos ciegos a vigilar y preguntas que hacerte. El análisis tarda entre 10 y 25 segundos."
+    },
+    "decisions-commit": {
+      "title": "Comprometerte con una decisión",
+      "category": "Decisiones",
+      "body": "Tras el análisis, haz clic en Decidir ahora. Elige una de las opciones sugeridas o escribe la tuya bajo 'Algo distinto'. Añade tu razonamiento y qué esperas que ocurra — Cortex usará esto después al revisar el resultado. Elige cuándo revisar (7, 14, 30, 60 o 90 días) y haz clic en Comprometer. La decisión pasa a la columna Decididas y aparece en tu carril de Revisiones pendientes cuando llega la fecha de revisión."
+    },
+    "decisions-outcome": {
+      "title": "Registrar lo que realmente ocurrió",
+      "category": "Decisiones",
+      "body": "Cuando una decisión toca revisión, la verás en el carril ámbar 'decisiones pendientes'. Ábrela y haz clic en Registrar resultado. Describe lo que realmente ocurrió con tus propias palabras — la precisión aquí significa mejores lecciones después. Cortex compara tu expectativa con la realidad, extrae una lección, anota en qué acertó tu razonamiento y qué se le escapó, y te da una recomendación para decisiones futuras similares."
+    },
+    "decisions-patterns": {
+      "title": "Ver patrones en tus decisiones",
+      "category": "Decisiones",
+      "body": "Ve a Decisiones → pestaña Patrones. Cortex lee tus últimas 20 decisiones y saca a la superficie patrones recurrentes, fortalezas en tu toma de decisiones y puntos ciegos. Cada patrón muestra su confianza (baja / media / alta) y cita las decisiones concretas que lo evidencian. Esta vista es mejor después de haber comprometido y revisado al menos 3–5 decisiones."
+    },
+    "decisions-review": {
+      "title": "Revisar una decisión",
+      "category": "Decisiones",
+      "body": "Cuando te comprometes con una decisión, eliges una ventana de revisión (7, 14, 30, 60 o 90 días). Ese día, Cortex mueve la decisión a tu carril de Revisiones pendientes en el tablero de Decisiones y la muestra en la tarjeta 'Decisiones pendientes' de la página de Inicio. Abre la decisión, haz clic en Registrar resultado, describe lo que ocurrió y Cortex extrae la lección."
+    },
+    "reflections-lessons": {
+      "title": "De dónde vienen las lecciones",
+      "category": "Reflexiones",
+      "body": "Cuando registras un resultado en una decisión, Cortex compara tu expectativa con lo que realmente ocurrió y extrae una lección. Esa lección se convierte en una Reflexión de tipo 'lección' y también se guarda como nodo de conocimiento — así aparece en tus respuestas de chat y en la búsqueda de memoria desde entonces. Las lecciones son la forma en que Cortex te ayuda a acumular criterio con el tiempo."
+    },
+    "reflections-report": {
+      "title": "Generar un informe de reflexión",
+      "category": "Reflexiones",
+      "body": "Ve a Reflexiones → pestaña Informe semanal y haz clic en Generar informe. Elige una ventana (7, 30, 90 o 180 días). Cortex lee tus decisiones de ese período y produce: un resumen, temas, fortalezas, puntos ciegos, observaciones de crecimiento y preguntas con las que sentarte a pensar. Los informes se guardan bajo la pestaña Informe semanal y se pueden reabrir en cualquier momento."
+    },
+    "reflections-insights": {
+      "title": "Pestaña Insights",
+      "category": "Reflexiones",
+      "body": "Reflexiones → Perspectivas te da tres vistas de un vistazo: un resumen Este mes (cuántas reflexiones has creado en los últimos 30 días), Lecciones principales (tus ideas autónomas más significativas) y De tus decisiones (reflexiones trazadas hasta elecciones concretas). Úsalo como ritual de revisión mensual."
+    },
+    "identity-rebuild": {
+      "title": "Reconstruir tu modelo de identidad",
+      "category": "Identidad",
+      "body": "Ve a Identidad y haz clic en Reconstruir identidad. Cortex lee tus pensamientos capturados recientes, tus objetivos activos, tus decisiones recientes y tus reflexiones — y produce un modelo nuevo de quién eres: una narrativa, valores, patrones, fortalezas, puntos ciegos y áreas de crecimiento. Cada reconstrucción guarda una instantánea en tu línea de tiempo para que veas cómo has cambiado. Las reconstrucciones de identidad tardan entre 15 y 40 segundos."
+    },
+    "identity-values": {
+      "title": "Qué significa la lista de valores",
+      "category": "Identidad",
+      "body": "Bajo Identidad verás Valores, Patrones, Fortalezas y Puntos ciegos. Cada elemento tiene un nombre, una explicación de por qué Cortex lo infirió y un nivel de fuerza (bajo / medio / alto). Los valores se infieren de aquello sobre lo que escribes, no de lo que dices valorar — la línea de evidencia bajo cada uno te dice de dónde salió. Puedes discrepar de cualquiera de ellos; el modelo es un espejo, no un veredicto."
+    },
+    "identity-timeline": {
+      "title": "Tu línea de tiempo de identidad",
+      "category": "Identidad",
+      "body": "Cada vez que reconstruyes, Cortex guarda una instantánea. La tarjeta Línea de tiempo en la parte inferior de Identidad las muestra cronológicamente, cada una etiquetada con un título de hito generado por IA — 'Se consolida el tema de la atención', 'Surge el establecimiento de límites', y así sucesivamente. Cortex conserva los nombres de los elementos entre reconstrucciones para que puedas rastrear si los mismos valores y patrones persisten durante meses."
+    },
+    "identity-maturity": {
+      "title": "Qué significa la puntuación de madurez",
+      "category": "Identidad",
+      "body": "La Madurez de identidad es una puntuación de 0 a 100 que refleja lo rico e interconectado que está tu grafo de conocimiento. Se calcula a partir de tu número de nodos, número de conceptos, objetivos activos, decisiones, reflexiones e instantáneas de identidad. El nivel ('Emergente', 'En formación', 'En construcción', 'Consolidando', 'Profundo') describe la etapa. Es una señal de profundidad del grafo, no de valor personal — capturar y reflexionar son lo que la mueven."
+    },
+    "settings-language": {
+      "title": "Cambiar el idioma de la interfaz",
+      "category": "Ajustes",
+      "body": "Ajustes → General → Idioma. Elige cualquiera de los seis idiomas admitidos: inglés, español, francés, alemán, árabe (de derecha a izquierda) o kiswahili. Toda la interfaz cambia inmediatamente. Tu elección se guarda en una cookie. Cortex también usa el idioma actual al responder preguntas — así, cambiar a francés significa que los nuevos chats, decisiones, planes de aprendizaje, reflexiones y reconstrucciones de identidad se generarán en francés."
+    },
+    "settings-theme": {
+      "title": "Cambiar el tema",
+      "category": "Ajustes",
+      "body": "Ajustes → General → Tema. Tres opciones: Claro, Oscuro o Sistema (sigue tu sistema operativo). Cortex recuerda tu elección. Oscuro es el predeterminado y el diseño está optimizado para él — Claro es un trabajo en curso."
+    },
+    "settings-voice": {
+      "title": "Elegir una voz",
+      "category": "Ajustes",
+      "body": "Ajustes → General → Voz. Elige la voz predeterminada que Cortex usa para la reproducción de capturas de voz. Opciones: Mira, Aria, Atlas, Lyra, Orion. Cambiar esto afecta a la reproducción en la tarjeta Capturar → Voz y a cualquier audio que reproduzcas desde tus capturas."
+    },
+    "settings-data": {
+      "title": "Exportar o eliminar tus datos",
+      "category": "Privacidad y datos",
+      "body": "Ajustes → Datos. Puedes exportar todos tus datos como un paquete JSON (cada nodo, decisión, objetivo y reflexión), eliminar todos los chats (conserva tus capturas y tu grafo intactos) o eliminar toda tu cuenta permanentemente. La eliminación es irreversible. Tu conocimiento capturado siempre te pertenece."
+    },
+    "privacy-overview": {
+      "title": "Privacidad y qué almacena Cortex",
+      "category": "Privacidad y datos",
+      "body": "Cortex guarda todo lo que capturas en tu propia base de datos Postgres y en un grafo Neo4j de tu cuenta. Nada se comparte con otros usuarios. Cortex no entrena ningún modelo con tu contenido — tus capturas solo se usan para responder a tus propias preguntas. Las exportaciones y eliminaciones son de un clic en Ajustes → Datos. La gestión de la cuenta (correo, contraseña, sesiones) la lleva Clerk."
+    },
+    "existing-data-language": {
+      "title": "¿Por qué parte de mi contenido antiguo sigue en inglés?",
+      "category": "Solución de problemas",
+      "body": "El contenido que generaste antes de cambiar a un idioma nuevo se queda en el idioma en que se creó originalmente. La interfaz se traduce inmediatamente, y cualquier respuesta nueva de chat, decisión, plan de aprendizaje, reflexión o reconstrucción de identidad sale en tu idioma actual. Para Identidad, haz clic en 'Traducir al idioma actual' para regenerar el modelo y traducir los nombres de sus elementos. Para decisiones y objetivos, el plan se genera una sola vez — para regenerarlo en un idioma nuevo, usa el botón Traducir donde esté disponible."
+    },
+    "mic-denied": {
+      "title": "Acceso al micrófono denegado",
+      "category": "Solución de problemas",
+      "body": "Si Chrome o Firefox bloquea el acceso al micrófono, verás 'Acceso al micrófono denegado'. Haz clic en el icono del candado en la barra de direcciones → Configuración del sitio → Micrófono → Permitir. Luego recarga la página. En macOS, comprueba también Ajustes del Sistema → Privacidad y seguridad → Micrófono y confirma que tu navegador está marcado. Cortex nunca graba sin tu clic explícito."
+    },
+    "no-microphone": {
+      "title": "No se detecta ningún micrófono",
+      "category": "Solución de problemas",
+      "body": "Si Cortex dice 'No se encontró micrófono', comprueba que hay un micrófono enchufado (o que el micrófono integrado de tu portátil está activado en los ajustes de tu sistema operativo). Refresca la página después de conectar uno. En algunas máquinas Windows, el micrófono está desactivado por defecto — ve a Configuración → Privacidad → Micrófono y activa el acceso para aplicaciones de escritorio y para tu navegador."
+    },
+    "extraction-failed": {
+      "title": "Fallo al extraer contenido",
+      "category": "Solución de problemas",
+      "body": "Si Cortex no puede extraer contenido legible de una URL o archivo, verás una insignia de estado 'parcial' en el nodo resultante. Causas comunes: la página requiere inicio de sesión, es solo JavaScript, está detrás de un muro de pago, o el formato del archivo no está totalmente admitido. El nodo sigue existiendo — tienes el enlace o el nombre del archivo guardado como marcador — pero el texto completo no se pudo leer. Prueba con otra fuente o pega el texto manualmente."
+    },
+    "extension-troubleshoot": {
+      "title": "La extensión no se conecta",
+      "category": "Solución de problemas",
+      "body": "Si la extensión muestra 'no conectada' después de pegar el código, lo más probable es que el código de conexión caducara antes de que lo usaras. Los códigos caducan a los pocos minutos. Vuelve a Ajustes → Extensión, haz clic en Regenerar y pega el nuevo código inmediatamente. Si aún falla, haz clic derecho en el icono de la extensión → Opciones para reabrir la página de ajustes y pega de nuevo. Asegúrate de que la URL de la API en tu .env.local coincide con la que se usó al compilar la extensión."
+    },
+    "connect-code-expired": {
+      "title": "Mi código de conexión ha caducado",
+      "category": "Solución de problemas",
+      "body": "Los códigos de conexión son tokens de inicio de sesión de Clerk de un solo uso, válidos unos minutos. Si no pegaste el tuyo a tiempo, vuelve a Ajustes → Extensión, haz clic en Regenerar y pega el nuevo código en la página de opciones de la extensión de inmediato. El código antiguo está muerto — no hay forma de revivirlo, y es por diseño (es una garantía de seguridad)."
+    },
+    "how-answers-work": {
+      "title": "Cómo decide Cortex qué decir",
+      "category": "Cómo funciona Cortex",
+      "body": "Cuando haces una pregunta en el chat, Cortex: (1) busca en tu conocimiento capturado usando similitud semántica, (2) envía los mejores resultados a un modelo de lenguaje junto con un prompt de sistema estricto que dice 'fundamenta tu respuesta en el conocimiento del usuario cuando sea posible, y marca claramente el conocimiento general cuando no lo sea', (3) devuelve la respuesta con los nodos concretos de los que se sirvió. Por eso Cortex nunca inventa hechos sobre ti — solo puede citar lo que realmente has capturado."
+    }
+  },
+  "fr": {
+    "what-is-cortex": {
+      "title": "Qu'est-ce que Cortex",
+      "category": "Démarrage",
+      "body": "Cortex est un système de cognition personnelle — un esprit externe qui grandit avec vous. Vous capturez des pensées, des liens, des fichiers et des notes vocales ; Cortex extrait les concepts, les relie dans un graphe de connaissances et vous permet de penser avec ce graphe à travers le chat, les décisions, les objectifs d'apprentissage et les réflexions. Tout ce que vous capturez reste à vous. Cortex répond aux questions en citant vos propres connaissances capturées, et ne se rabat sur les connaissances générales que lorsque votre graphe ne couvre pas le sujet (et il marque clairement ces réponses)."
+    },
+    "first-capture": {
+      "title": "Capturer votre première pensée",
+      "category": "Démarrage",
+      "body": "Allez dans Capture depuis la barre latérale. Vous avez trois façons de capturer : (1) Tapez une pensée directement dans la zone principale, ajoutez un titre facultatif et appuyez sur Capturer ou Cmd/Ctrl+Entrée. (2) Cliquez sur le trombone pour joindre un fichier, une image ou un PDF — Cortex extrait le texte automatiquement. (3) Utilisez la carte Voix pour enregistrer votre voix ; Cortex la transcrit avec Whisper et vous permet de relire la transcription avant d'enregistrer. Chaque capture devient un nœud dans votre graphe de connaissances."
+    },
+    "first-chat": {
+      "title": "Poser votre première question à Cortex",
+      "category": "Démarrage",
+      "body": "Ouvrez le Chat depuis la barre latérale. Tapez votre question en bas et appuyez sur Entrée. Cortex cherche d'abord dans vos connaissances capturées, ancre sa réponse dans ce que vous avez capturé et cite des nœuds précis par leur titre entre crochets. Si votre graphe ne couvre pas la question, Cortex le signale brièvement puis répond à partir de connaissances générales, clairement identifiées comme telles. Chaque réponse affiche une liste des sources issues de votre esprit qui ont été utilisées."
+    },
+    "keyboard-shortcuts": {
+      "title": "Raccourcis clavier",
+      "category": "Démarrage",
+      "body": "Cmd/Ctrl+K ouvre la palette de commandes (recherche + navigation + changement de langue). / met le focus sur la recherche de la page dans Mémoire, Apprentissage, Décisions et Réflexions. Les flèches naviguent dans les résultats. Entrée ouvre l'élément sélectionné. Échap efface la recherche ou ferme la palette. Cmd/Ctrl+Entrée soumet l'entrée en cours. Cmd/Ctrl+, ouvre les Paramètres depuis n'importe où."
+    },
+    "install-extension": {
+      "title": "Installer l'extension du navigateur",
+      "category": "Extension du navigateur",
+      "body": "Allez dans Paramètres → Extension. Cliquez sur Générer un code de connexion. Le code est un jeton de connexion Clerk à usage unique, valable quelques minutes — copiez-le. Installez l'extension Cortex depuis le Chrome Web Store ou les modules Firefox, ouvrez sa page d'options (clic droit sur l'icône de l'extension → Options) et collez le code. L'extension affiche ensuite votre e-mail pour que vous sachiez qu'elle est connectée. À partir de là, vous pouvez capturer n'importe quelle page, citation ou pensée directement depuis le navigateur, sans changer d'onglet."
+    },
+    "extension-usage": {
+      "title": "Utiliser l'extension du navigateur",
+      "category": "Extension du navigateur",
+      "body": "Clic droit sur n'importe quelle page → Capture to Cortex pour enregistrer la page entière. Sélectionnez d'abord du texte → Capture to Cortex pour n'enregistrer que la sélection. Clic droit sur n'importe quel lien → Capture link to Cortex pour capturer l'article lié. L'extension dispose aussi d'un panneau latéral et d'une popup avec recherche dans la mémoire — cliquez sur l'icône de l'extension pour l'ouvrir. Tout ce que vous capturez via l'extension apparaît dans Cortex en quelques secondes."
+    },
+    "capture-file": {
+      "title": "Capturer un fichier",
+      "category": "Capture",
+      "body": "Dans Capture, cliquez sur le trombone → Importer un fichier. Cortex prend en charge PDF, DOCX, XLSX, CSV, texte brut, images, audio et vidéo (jusqu'à 100 Mo). Le texte est extrait automatiquement. Si l'extraction échoue, le nœud résultant existe quand même — vous verrez un badge de statut « partiel » et un court message d'erreur. Vous pouvez aussi faire glisser un fichier dans la zone de capture ou le coller depuis le presse-papiers."
+    },
+    "capture-voice": {
+      "title": "Capturer par la voix",
+      "category": "Capture",
+      "body": "Dans Capture, faites défiler jusqu'à la carte Voix. Choisissez une langue (ou laissez Détection automatique) et cliquez sur Enregistrer. Cortex enregistre jusqu'à 5 minutes, affiche une forme d'onde en direct et vous permet de mettre en pause ou d'arrêter. À l'arrêt, il transcrit via Whisper et affiche la transcription à relire. Modifiez le texte si vous voulez — les transcriptions modifiées sont enregistrées comme nœuds texte. Les enregistrements non modifiés sont enregistrés comme nœuds vocaux afin que vous conserviez l'audio d'origine."
+    },
+    "capture-url": {
+      "title": "Capturer un lien",
+      "category": "Capture",
+      "body": "Dans Capture, cliquez sur le trombone → Ajouter un lien, ou collez directement une URL dans la zone de texte principale. Cortex récupère la page, extrait le texte de l'article et les idées clés, et l'ajoute comme nœud. Les liens YouTube sont aussi transcrits. Si la page n'a pas de contenu lisible (paywall, JavaScript uniquement), l'extraction échoue mais le lien est quand même enregistré comme signet pour que vous puissiez le retrouver plus tard."
+    },
+    "voice-language": {
+      "title": "Enregistrer dans une langue autre que l'anglais",
+      "category": "Capture",
+      "body": "Dans la carte Capture → Voix, cliquez sur la liste déroulante de langue à côté du bouton Enregistrer. Choisissez Détection automatique pour laisser Whisper déterminer, ou sélectionnez une langue précise (anglais, français, espagnol, allemand, portugais, italien). Whisper est précis sur toutes. Si votre audio est multilingue, la Détection automatique gère généralement bien la dominante."
+    },
+    "chat-sources": {
+      "title": "D'où viennent les réponses de Cortex ?",
+      "category": "Chat",
+      "body": "Chaque réponse de Cortex suit l'un de deux schémas. Si vos connaissances capturées couvrent la question, Cortex ancre sa réponse dedans et cite des nœuds précis par leur titre entre [crochets]. Si votre graphe ne la couvre pas, Cortex le signale brièvement, puis répond à partir de connaissances générales et marque clairement ces parties. Sous chaque réponse, cliquez sur « N sources issues de votre esprit » pour voir quels nœuds ont été utilisés. Cliquez sur une source pour l'ouvrir dans un panneau latéral."
+    },
+    "chat-edit": {
+      "title": "Modifier un message",
+      "category": "Chat",
+      "body": "Survolez n'importe quel message utilisateur et cliquez sur l'icône crayon. Modifiez le texte et appuyez sur Entrée (ou Maj+Entrée pour un saut de ligne). Cortex traite votre modification comme un nouveau message et répond à nouveau. Seul le dernier message utilisateur d'une conversation peut être modifié — les messages plus anciens sont verrouillés car les rejouer invaliderait le contexte déjà utilisé par l'assistant."
+    },
+    "chat-regenerate": {
+      "title": "Régénérer une réponse",
+      "category": "Chat",
+      "body": "Survolez la dernière réponse de l'assistant et cliquez sur l'icône d'actualisation. Cortex relance la même question avec les mêmes connaissances et produit une nouvelle réponse. C'est utile quand la première réponse a manqué quelque chose ou quand vous voulez un angle différent. Les réponses plus anciennes de l'assistant ne peuvent pas être régénérées car la conversation a avancé."
+    },
+    "chat-copy": {
+      "title": "Copier une réponse",
+      "category": "Chat",
+      "body": "Survolez n'importe quel message et cliquez sur l'icône de copie. Le texte est copié dans votre presse-papiers en markdown brut — prêt à coller dans une autre application. Une notification « Copié dans le presse-papiers » s'affiche."
+    },
+    "memory-search": {
+      "title": "Rechercher dans votre mémoire",
+      "category": "Mémoire",
+      "body": "Allez dans Mémoire. Tapez une question ou une description — Cortex cherche par sens, pas seulement par mots-clés. Deux modes : Sémantique (sens uniquement, idéal pour les questions conceptuelles) et Hybride (sens + correspondances par mot-clé, idéal quand vous vous souvenez d'un mot précis). Basculez avec la liste déroulante à côté de la barre de recherche. Les résultats affichent un anneau de score de correspondance : Forte (>75 %), Bonne (60–75 %), Faible, ou Mot-clé uniquement."
+    },
+    "memory-filters": {
+      "title": "Filtrer les résultats de mémoire par type",
+      "category": "Mémoire",
+      "body": "Sous la barre de recherche, vous pouvez filtrer les résultats par type : Tous, Pensées, Concepts, Décisions ou Réflexions. Cliquez sur un chip pour affiner la vue. Le chip affiche un compteur du nombre de résultats correspondant à ce type. Combiné à la recherche, cela vous permet de trouver, par exemple, uniquement les décisions sur un sujet."
+    },
+    "memory-reindex": {
+      "title": "Réindexer votre graphe",
+      "category": "Mémoire",
+      "body": "Si la recherche rate des captures récentes ou semble obsolète, cliquez sur Réindexer en haut à droite de Mémoire. Cortex régénère les embeddings de chaque nœud qui en a besoin. Cela prend généralement moins d'une minute pour quelques centaines de nœuds. Une notification vous indique à la fin combien de nœuds ont été indexés. La réindexation ne supprime jamais rien — elle reconstruit simplement l'index de recherche."
+    },
+    "memory-weak-matches": {
+      "title": "Pourquoi la recherche dit-elle « pas de correspondance forte » ?",
+      "category": "Mémoire",
+      "body": "Si tout ce que Cortex a trouvé a obtenu un score inférieur à 72 %, il affiche « Pas de correspondance forte ». Deux choses à essayer : (1) Reformulez avec d'autres mots — la recherche sémantique est sensible à la formulation. (2) Basculez du mode Sémantique au mode Hybride via la liste déroulante — Hybride inclut les correspondances par mot-clé, qui rattrapent les cas où la recherche par sens est passée à côté. Si votre graphe est vide ou très petit, il n'y a peut-être vraiment rien à trouver pour l'instant."
+    },
+    "learning-create-goal": {
+      "title": "Créer un objectif d'apprentissage",
+      "category": "Apprentissage",
+      "body": "Allez dans Apprentissage et cliquez sur Nouvel objectif. Saisissez un titre (par exemple « Apprendre Rust ») et une description facultative expliquant pourquoi vous le voulez et quel est votre point de départ. Cortex décompose l'objectif en phases, jalons et actions concrètes — ancrés dans ce que vous avez déjà capturé. La génération prend 10 à 30 secondes. Une fois terminée, votre plan s'ouvre prêt à être parcouru."
+    },
+    "learning-milestones": {
+      "title": "Travailler les jalons",
+      "category": "Apprentissage",
+      "body": "Dans la vue détaillée d'un objectif, cliquez sur le cercle à côté d'un jalon pour le marquer comme fait. Cortex enregistre immédiatement votre progression et anime la barre de progression de la phase. Cliquez sur le titre du jalon pour développer ses actions suggérées. Quand tous les jalons d'une phase sont faits, la phase est terminée. Quand tous les jalons sont faits, l'objectif est terminé et Cortex le célèbre avec une notification."
+    },
+    "learning-phases": {
+      "title": "Comment Cortex structure un plan d'apprentissage",
+      "category": "Apprentissage",
+      "body": "Chaque plan a 3 à 5 phases (typiquement Fondations, Application, Profondeur, Maîtrise). Chaque phase contient 2 à 4 jalons. Chaque jalon contient 2 à 4 actions concrètes. La phase en cours est mise en évidence. Une bannière « Première action du jour » en haut du plan suggère la chose la plus utile à faire ensuite — cliquez dessus pour la marquer comme commencée. Vous pouvez revenir à n'importe quelle phase à tout moment."
+    },
+    "decisions-analyze": {
+      "title": "Analyser une décision",
+      "category": "Décisions",
+      "body": "Allez dans Décisions et cliquez sur Nouvelle décision. Décrivez la décision dans le champ question, ajoutez du contexte si utile, et appuyez sur Analyser. Cortex cherche dans vos connaissances et vos décisions passées, puis renvoie : une formulation du choix central, 2 à 5 options avec avantages et inconvénients, des compromis, des schémas issus de vos décisions passées, des angles morts à surveiller, et des questions à vous poser. L'analyse prend 10 à 25 secondes."
+    },
+    "decisions-commit": {
+      "title": "Vous engager sur une décision",
+      "category": "Décisions",
+      "body": "Après l'analyse, cliquez sur Décider maintenant. Choisissez l'une des options suggérées ou écrivez la vôtre sous « Autre chose ». Ajoutez votre raisonnement et ce que vous vous attendez à ce qui se passe — Cortex s'en servira plus tard lors de la revue du résultat. Choisissez quand revoir (7, 14, 30, 60 ou 90 jours) et cliquez sur Engager. La décision passe dans la colonne Décidées et apparaît dans votre rail Revues dues quand la date de revue arrive."
+    },
+    "decisions-outcome": {
+      "title": "Enregistrer ce qui s'est réellement passé",
+      "category": "Décisions",
+      "body": "Quand une décision est due pour revue, vous la voyez dans le rail ambre « décisions dues ». Ouvrez-la et cliquez sur Enregistrer le résultat. Décrivez ce qui s'est réellement passé avec vos propres mots — la précision ici signifie de meilleures leçons par la suite. Cortex compare votre attente à la réalité, extrait une leçon, note ce que votre raisonnement a bien vu et ce qu'il a manqué, et vous donne une recommandation pour des décisions futures similaires."
+    },
+    "decisions-patterns": {
+      "title": "Voir les schémas dans vos décisions",
+      "category": "Décisions",
+      "body": "Allez dans Décisions → onglet Schémas. Cortex lit vos 20 dernières décisions et fait remonter des schémas récurrents, des forces dans votre prise de décision et des angles morts. Chaque schéma affiche sa confiance (basse / moyenne / haute) et cite les décisions précises qui l'attestent. Cette vue est optimale après avoir engagé et revu au moins 3 à 5 décisions."
+    },
+    "decisions-review": {
+      "title": "Revoir une décision",
+      "category": "Décisions",
+      "body": "Quand vous vous engagez sur une décision, vous choisissez une fenêtre de revue (7, 14, 30, 60 ou 90 jours). Ce jour-là, Cortex déplace la décision dans votre rail Revues dues sur le tableau Décisions et l'affiche dans la carte « Décisions dues » de la page Accueil. Ouvrez la décision, cliquez sur Enregistrer le résultat, décrivez ce qui s'est passé, et Cortex extrait la leçon."
+    },
+    "reflections-lessons": {
+      "title": "D'où viennent les leçons",
+      "category": "Réflexions",
+      "body": "Quand vous enregistrez un résultat sur une décision, Cortex compare votre attente à ce qui s'est réellement passé et extrait une leçon. Cette leçon devient une Réflexion de type « leçon » et est aussi enregistrée comme nœud de connaissance — elle apparaît donc dès lors dans vos réponses de chat et dans la recherche mémoire. Les leçons sont la façon dont Cortex vous aide à accumuler du jugement au fil du temps."
+    },
+    "reflections-report": {
+      "title": "Générer un rapport de réflexion",
+      "category": "Réflexions",
+      "body": "Allez dans Réflexions → onglet Rapport hebdomadaire et cliquez sur Générer un rapport. Choisissez une fenêtre (7, 30, 90 ou 180 jours). Cortex lit vos décisions de cette période et produit : un résumé, des thèmes, des forces, des angles morts, des observations de croissance et des questions à méditer. Les rapports sont enregistrés sous l'onglet Rapport hebdomadaire et peuvent être rouverts à tout moment."
+    },
+    "reflections-insights": {
+      "title": "Onglet Insights",
+      "category": "Réflexions",
+      "body": "Réflexions → Perspectives vous donne trois vues d'un coup d'œil : un condensé Ce mois-ci (combien de réflexions vous avez créées dans les 30 derniers jours), Leçons principales (vos idées autonomes les plus significatives), et Issues de vos décisions (réflexions remontant à des choix précis). Utilisez-le comme rituel de revue mensuelle."
+    },
+    "identity-rebuild": {
+      "title": "Reconstruire votre modèle d'identité",
+      "category": "Identité",
+      "body": "Allez dans Identité et cliquez sur Reconstruire l'identité. Cortex lit vos pensées capturées récentes, vos objectifs actifs, vos décisions récentes et vos réflexions — et produit un modèle frais de qui vous êtes : un récit, des valeurs, des schémas, des forces, des angles morts et des axes de croissance. Chaque reconstruction enregistre un instantané dans votre chronologie pour que vous voyiez comment vous avez changé. Les reconstructions d'identité prennent 15 à 40 secondes."
+    },
+    "identity-values": {
+      "title": "Ce que signifie la liste de valeurs",
+      "category": "Identité",
+      "body": "Sous Identité vous verrez Valeurs, Schémas, Forces et Angles morts. Chaque élément a un nom, une explication de pourquoi Cortex l'a inféré et un niveau de force (bas / moyen / haut). Les valeurs sont inférées de ce sur quoi vous écrivez, pas de ce que vous dites valoriser — la ligne de preuve sous chacune vous dit d'où elle vient. Vous pouvez être en désaccord avec n'importe laquelle ; le modèle est un miroir, pas un verdict."
+    },
+    "identity-timeline": {
+      "title": "Votre chronologie d'identité",
+      "category": "Identité",
+      "body": "Chaque fois que vous reconstruisez, Cortex enregistre un instantané. La carte Chronologie en bas d'Identité les affiche par ordre chronologique, chacune étiquetée avec un titre de jalon généré par IA — « Le thème de l'attention se solidifie », « La pose de limites émerge », etc. Cortex préserve les noms des éléments entre les reconstructions pour que vous puissiez suivre si les mêmes valeurs et schémas persistent sur des mois."
+    },
+    "identity-maturity": {
+      "title": "Ce que signifie le score de maturité",
+      "category": "Identité",
+      "body": "La Maturité d'identité est un score de 0 à 100 reflétant la richesse et l'interconnexion de votre graphe de connaissances. Il est calculé à partir de votre nombre de nœuds, de concepts, d'objectifs actifs, de décisions, de réflexions et d'instantanés d'identité. Le palier (« Émergent », « En formation », « En construction », « Enracinement », « Profond ») décrit l'étape. C'est un signal de profondeur de graphe, pas de valeur personnelle — capturer et réfléchir sont ce qui le fait bouger."
+    },
+    "settings-language": {
+      "title": "Changer la langue de l'interface",
+      "category": "Paramètres",
+      "body": "Paramètres → Général → Langue. Choisissez l'une des six langues prises en charge : anglais, espagnol, français, allemand, arabe (de droite à gauche) ou kiswahili. Toute l'interface bascule immédiatement. Votre choix est mémorisé dans un cookie. Cortex utilise aussi la langue actuelle pour répondre aux questions — passer au français signifie donc que les nouveaux chats, décisions, plans d'apprentissage, réflexions et reconstructions d'identité seront générés en français."
+    },
+    "settings-theme": {
+      "title": "Changer le thème",
+      "category": "Paramètres",
+      "body": "Paramètres → Général → Thème. Trois choix : Clair, Sombre ou Système (suit votre OS). Cortex mémorise votre choix. Sombre est la valeur par défaut et le design est optimisé pour lui — Clair est en cours de finition."
+    },
+    "settings-voice": {
+      "title": "Choisir une voix",
+      "category": "Paramètres",
+      "body": "Paramètres → Général → Voix. Choisissez la voix par défaut que Cortex utilise pour la lecture des captures vocales. Options : Mira, Aria, Atlas, Lyra, Orion. Changer cela affecte la lecture dans la carte Capture → Voix et tout audio que vous réécoutez depuis vos captures."
+    },
+    "settings-data": {
+      "title": "Exporter ou supprimer vos données",
+      "category": "Confidentialité et données",
+      "body": "Paramètres → Données. Vous pouvez exporter toutes vos données dans un paquet JSON (chaque nœud, décision, objectif et réflexion), supprimer tous les chats (conserve vos captures et votre graphe intacts) ou supprimer définitivement votre compte entier. La suppression est irréversible. Vos connaissances capturées vous appartiennent toujours."
+    },
+    "privacy-overview": {
+      "title": "Confidentialité et ce que Cortex stocke",
+      "category": "Confidentialité et données",
+      "body": "Cortex stocke tout ce que vous capturez dans votre propre base de données Postgres et un graphe Neo4j détenu par votre compte. Rien n'est partagé avec d'autres utilisateurs. Cortex n'entraîne aucun modèle sur votre contenu — vos captures servent uniquement à répondre à vos propres questions. Les exports et suppressions se font en un clic dans Paramètres → Données. La gestion du compte (e-mail, mot de passe, sessions) est assurée par Clerk."
+    },
+    "existing-data-language": {
+      "title": "Pourquoi certains anciens contenus sont-ils encore en anglais ?",
+      "category": "Dépannage",
+      "body": "Le contenu que vous avez généré avant de passer à une nouvelle langue reste dans la langue dans laquelle il a été créé à l'origine. L'interface se traduit immédiatement, et toute nouvelle réponse de chat, décision, plan d'apprentissage, réflexion ou reconstruction d'identité sort dans votre langue actuelle. Pour l'Identité, cliquez sur « Traduire vers la langue actuelle » pour régénérer le modèle et traduire les noms de ses éléments. Pour les décisions et objectifs, le plan est généré une seule fois — pour le régénérer dans une nouvelle langue, utilisez le bouton Traduire là où il est disponible."
+    },
+    "mic-denied": {
+      "title": "Accès au micro refusé",
+      "category": "Dépannage",
+      "body": "Si Chrome ou Firefox bloque l'accès au micro, vous verrez « Accès au micro refusé ». Cliquez sur l'icône cadenas dans la barre d'adresse → Paramètres du site → Microphone → Autoriser. Puis rechargez la page. Sur macOS, vérifiez aussi Réglages Système → Confidentialité et sécurité → Microphone et confirmez que votre navigateur est coché. Cortex n'enregistre jamais sans votre clic explicite."
+    },
+    "no-microphone": {
+      "title": "Aucun microphone détecté",
+      "category": "Dépannage",
+      "body": "Si Cortex affiche « Aucun microphone trouvé », vérifiez qu'un micro est branché (ou que le micro intégré de votre ordinateur portable est activé dans les réglages de votre OS). Actualisez la page après en avoir connecté un. Sur certaines machines Windows, le micro est désactivé par défaut — allez dans Paramètres → Confidentialité → Microphone et activez l'accès pour les applications de bureau et pour votre navigateur."
+    },
+    "extraction-failed": {
+      "title": "Échec de l'extraction du contenu",
+      "category": "Dépannage",
+      "body": "Si Cortex ne peut pas extraire de contenu lisible depuis une URL ou un fichier, vous verrez un badge de statut « partiel » sur le nœud résultant. Causes fréquentes : la page exige une connexion, elle n'est qu'en JavaScript, elle est derrière un paywall, ou le format de fichier n'est pas entièrement pris en charge. Le nœud existe quand même — vous avez le lien ou le nom de fichier enregistré comme signet — mais le texte complet n'a pas pu être lu. Essayez une autre source ou collez le texte manuellement."
+    },
+    "extension-troubleshoot": {
+      "title": "L'extension ne se connecte pas",
+      "category": "Dépannage",
+      "body": "Si l'extension affiche « non connectée » après avoir collé le code, la cause la plus probable est que le code de connexion a expiré avant que vous ne l'utilisiez. Les codes expirent au bout de quelques minutes. Retournez dans Paramètres → Extension, cliquez sur Régénérer, et collez immédiatement le nouveau code. Si cela échoue encore, clic droit sur l'icône de l'extension → Options pour rouvrir la page de réglages et collez à nouveau. Vérifiez que l'URL de l'API dans votre .env.local correspond à celle avec laquelle l'extension a été compilée."
+    },
+    "connect-code-expired": {
+      "title": "Mon code de connexion a expiré",
+      "category": "Dépannage",
+      "body": "Les codes de connexion sont des jetons de connexion Clerk à usage unique, valables quelques minutes. Si vous n'avez pas collé le vôtre à temps, retournez dans Paramètres → Extension, cliquez sur Régénérer et collez le nouveau code dans la page d'options de l'extension immédiatement. L'ancien code est mort — impossible de le réanimer, et c'est voulu (c'est une garantie de sécurité)."
+    },
+    "how-answers-work": {
+      "title": "Comment Cortex décide quoi dire",
+      "category": "Comment fonctionne Cortex",
+      "body": "Quand vous posez une question dans le chat, Cortex : (1) cherche dans vos connaissances capturées en utilisant la similarité sémantique, (2) envoie les meilleurs résultats à un modèle de langage accompagnés d'un prompt système strict qui dit « ancre ta réponse dans les connaissances de l'utilisateur quand c'est possible, et marque clairement les connaissances générales quand ce ne l'est pas », (3) renvoie la réponse avec les nœuds précis dont il s'est servi. C'est pour cela que Cortex n'invente jamais de faits sur vous — il ne peut citer que ce que vous avez réellement capturé."
+    }
+  },
+  "de": {
+    "what-is-cortex": {
+      "title": "Was ist Cortex",
+      "category": "Erste Schritte",
+      "body": "Cortex ist ein persönliches Kognitionssystem — ein externer Verstand, der mit dir wächst. Du erfasst Gedanken, Links, Dateien und Sprachnotizen; Cortex extrahiert Konzepte, verbindet sie zu einem Wissensgraphen und lässt dich mit diesem Graphen über Chat, Entscheidungen, Lernziele und Reflexionen denken. Alles, was du erfasst, bleibt deins. Cortex beantwortet Fragen, indem es dein eigenes erfasstes Wissen zitiert, und greift nur dann auf Allgemeinwissen zurück, wenn dein Graph das Thema nicht abdeckt (und markiert diese Antworten klar)."
+    },
+    "first-capture": {
+      "title": "Deinen ersten Gedanken erfassen",
+      "category": "Erste Schritte",
+      "body": "Gehe in der Seitenleiste zu Erfassung. Du hast drei Wege zu erfassen: (1) Tippe einen Gedanken direkt in das Hauptfeld, füge einen optionalen Titel hinzu und drücke Erfassen oder Cmd/Strg+Enter. (2) Klicke auf die Büroklammer, um eine Datei, ein Bild oder ein PDF anzuhängen — Cortex extrahiert den Text automatisch. (3) Verwende die Sprachkarte, um deine Stimme aufzunehmen; Cortex transkribiert sie mit Whisper und lässt dich die Transkription vor dem Speichern prüfen. Jede Erfassung wird ein Knoten in deinem Wissensgraphen."
+    },
+    "first-chat": {
+      "title": "Cortex deine erste Frage stellen",
+      "category": "Erste Schritte",
+      "body": "Öffne Chat in der Seitenleiste. Tippe deine Frage unten ein und drücke Enter. Cortex durchsucht zuerst dein erfasstes Wissen, verankert seine Antwort darin und zitiert bestimmte Knoten mit ihrem Titel in eckigen Klammern. Wenn dein Graph die Frage nicht abdeckt, sagt Cortex das kurz und antwortet dann aus Allgemeinwissen, klar als solches gekennzeichnet. Jede Antwort zeigt eine Liste der Quellen aus deinem Verstand, die verwendet wurden."
+    },
+    "keyboard-shortcuts": {
+      "title": "Tastaturkürzel",
+      "category": "Erste Schritte",
+      "body": "Cmd/Strg+K öffnet die Befehlspalette (Suche + Navigation + Sprache wechseln). / fokussiert die Seitensuche in Gedächtnis, Lernen, Entscheidungen und Reflexionen. Pfeiltasten navigieren durch die Ergebnisse. Enter öffnet den hervorgehobenen Eintrag. Esc löscht die Suche oder schließt die Palette. Cmd/Strg+Enter sendet die aktuelle Eingabe. Cmd/Strg+, öffnet Einstellungen von überall."
+    },
+    "install-extension": {
+      "title": "Die Browser-Erweiterung installieren",
+      "category": "Browser-Erweiterung",
+      "body": "Gehe zu Einstellungen → Erweiterung. Klicke auf Verbindungscode erzeugen. Der Code ist ein einmaliges Clerk-Anmelde-Token, das einige Minuten gültig ist — kopiere es. Installiere die Cortex-Erweiterung aus dem Chrome Web Store oder den Firefox-Add-ons, öffne ihre Optionsseite (Rechtsklick auf das Erweiterungssymbol → Optionen) und füge den Code ein. Die Erweiterung zeigt dann deine E-Mail an, damit du weißt, dass sie verbunden ist. Ab dann kannst du jede Seite, jedes Zitat oder jeden Gedanken direkt aus dem Browser erfassen, ohne den Tab zu wechseln."
+    },
+    "extension-usage": {
+      "title": "Die Browser-Erweiterung verwenden",
+      "category": "Browser-Erweiterung",
+      "body": "Rechtsklick auf eine beliebige Seite → Capture to Cortex, um die ganze Seite zu speichern. Wähle zuerst Text aus → Capture to Cortex, um nur die Auswahl zu speichern. Rechtsklick auf einen beliebigen Link → Capture link to Cortex, um den verlinkten Artikel zu erfassen. Die Erweiterung hat außerdem ein Seitenpanel und ein Popup mit Gedächtnissuche — klicke auf das Erweiterungssymbol, um es zu öffnen. Alles, was du über die Erweiterung erfasst, erscheint innerhalb weniger Sekunden in Cortex."
+    },
+    "capture-file": {
+      "title": "Eine Datei erfassen",
+      "category": "Erfassung",
+      "body": "Klicke in Erfassung auf die Büroklammer → Datei hochladen. Cortex unterstützt PDF, DOCX, XLSX, CSV, Klartext, Bilder, Audio und Video (bis zu 100 MB). Der Text wird automatisch extrahiert. Wenn die Extraktion fehlschlägt, existiert der resultierende Knoten trotzdem — du siehst ein Statusabzeichen „teilweise“ und eine kurze Fehlermeldung. Du kannst auch eine Datei in das Erfassungsfeld ziehen oder sie aus der Zwischenablage einfügen."
+    },
+    "capture-voice": {
+      "title": "Per Stimme erfassen",
+      "category": "Erfassung",
+      "body": "Scrolle in Erfassung zur Sprachkarte. Wähle eine Sprache (oder lass Automatische Erkennung) und klicke auf Aufnehmen. Cortex nimmt bis zu 5 Minuten auf, zeigt eine Live-Wellenform und lässt dich pausieren oder stoppen. Beim Stopp transkribiert es via Whisper und zeigt die Transkription zur Prüfung. Bearbeite den Text, wenn du möchtest — bearbeitete Transkriptionen werden als Textknoten gespeichert. Unbearbeitete Aufnahmen werden als Sprachknoten gespeichert, damit du das Original-Audio behältst."
+    },
+    "capture-url": {
+      "title": "Einen Link erfassen",
+      "category": "Erfassung",
+      "body": "Klicke in Erfassung auf die Büroklammer → Link hinzufügen, oder füge eine URL direkt in das Haupttextfeld ein. Cortex ruft die Seite ab, extrahiert Artikeltext und Kernaussagen und fügt sie als Knoten hinzu. Auch YouTube-Links werden transkribiert. Wenn die Seite keinen lesbaren Inhalt hat (Paywall, nur JavaScript), schlägt die Extraktion fehl, aber der Link wird trotzdem als Lesezeichen gespeichert, damit du ihn später findest."
+    },
+    "voice-language": {
+      "title": "In einer anderen Sprache als Englisch aufnehmen",
+      "category": "Erfassung",
+      "body": "Klicke in der Karte Erfassung → Stimme auf das Sprach-Dropdown neben dem Aufnahme-Button. Wähle Automatische Erkennung, damit Whisper es herausfindet, oder wähle eine bestimmte Sprache (Englisch, Französisch, Spanisch, Deutsch, Portugiesisch, Italienisch). Whisper ist bei allen präzise. Wenn dein Audio mehrsprachig ist, kommt die Automatische Erkennung meist gut mit der dominierenden Sprache zurecht."
+    },
+    "chat-sources": {
+      "title": "Woher kommen Cortex' Antworten?",
+      "category": "Chat",
+      "body": "Jede Antwort von Cortex folgt einem von zwei Mustern. Wenn dein erfasstes Wissen die Frage abdeckt, verankert Cortex seine Antwort darin und zitiert bestimmte Knoten mit ihrem Titel in [eckigen Klammern]. Wenn dein Graph sie nicht abdeckt, sagt Cortex das kurz, antwortet dann aus Allgemeinwissen und kennzeichnet diese Teile klar. Unter jeder Antwort klicke auf „N Quellen aus deinem Verstand“, um zu sehen, welche Knoten verwendet wurden. Klicke auf eine Quelle, um sie in einem Seitenpanel zu öffnen."
+    },
+    "chat-edit": {
+      "title": "Eine Nachricht bearbeiten",
+      "category": "Chat",
+      "body": "Fahre mit der Maus über eine beliebige Nutzernachricht und klicke auf das Stiftsymbol. Bearbeite den Text und drücke Enter (oder Umschalt+Enter für einen Zeilenumbruch). Cortex behandelt deine Bearbeitung als neue Nachricht und antwortet erneut. Nur die letzte Nutzernachricht einer Unterhaltung kann bearbeitet werden — frühere Nachrichten sind gesperrt, weil ihr erneutes Ausführen den bereits verwendeten Kontext des Assistenten ungültig machen würde."
+    },
+    "chat-regenerate": {
+      "title": "Eine Antwort neu generieren",
+      "category": "Chat",
+      "body": "Fahre mit der Maus über die letzte Assistentenantwort und klicke auf das Aktualisierungssymbol. Cortex führt dieselbe Frage mit demselben Wissen erneut aus und erzeugt eine neue Antwort. Das ist nützlich, wenn die erste Antwort etwas verpasst hat oder wenn du einen anderen Blickwinkel möchtest. Frühere Assistentenantworten können nicht neu generiert werden, weil die Unterhaltung weitergegangen ist."
+    },
+    "chat-copy": {
+      "title": "Eine Antwort kopieren",
+      "category": "Chat",
+      "body": "Fahre mit der Maus über eine beliebige Nachricht und klicke auf das Kopiersymbol. Der Nachrichtentext wird als reines Markdown in die Zwischenablage kopiert — bereit zum Einfügen in eine andere Anwendung. Du siehst ein Toast „In die Zwischenablage kopiert“."
+    },
+    "memory-search": {
+      "title": "In deinem Gedächtnis suchen",
+      "category": "Gedächtnis",
+      "body": "Gehe zu Gedächtnis. Tippe eine Frage oder eine Beschreibung ein — Cortex sucht nach Bedeutung, nicht nur nach Schlüsselwörtern. Zwei Modi: Semantisch (nur Bedeutung, ideal für konzeptuelle Fragen) und Hybrid (Bedeutung + Schlüsselwort-Treffer, ideal, wenn du dich an ein bestimmtes Wort erinnerst). Wechsle mit dem Dropdown neben dem Suchfeld. Ergebnisse zeigen einen Treffer-Score-Ring: Stark (>75 %), Gut (60–75 %), Schwach oder Nur-Schlüsselwort."
+    },
+    "memory-filters": {
+      "title": "Gedächtnis-Ergebnisse nach Typ filtern",
+      "category": "Gedächtnis",
+      "body": "Unter der Suchleiste kannst du Ergebnisse nach Typ filtern: Alle, Gedanken, Konzepte, Entscheidungen oder Reflexionen. Klicke auf einen Chip, um die Ansicht einzuschränken. Der Chip zeigt eine Zahl, wie viele Ergebnisse zu diesem Typ passen. Kombiniert mit der Suche kannst du so etwa nur Entscheidungen zu einem Thema finden."
+    },
+    "memory-reindex": {
+      "title": "Deinen Graphen neu indexieren",
+      "category": "Gedächtnis",
+      "body": "Wenn die Suche aktuelle Erfassungen verpasst oder veraltet wirkt, klicke in Gedächtnis oben rechts auf Neu indexieren. Cortex erzeugt für jeden Knoten, der es braucht, neue Embeddings. Das dauert für ein paar hundert Knoten normalerweise unter einer Minute. Du bekommst ein Toast, wenn es fertig ist, das dir sagt, wie viele Knoten indexiert wurden. Neu indexieren löscht nie etwas — es baut nur den Suchindex neu auf."
+    },
+    "memory-weak-matches": {
+      "title": "Warum sagt die Suche „keine starken Treffer“?",
+      "category": "Gedächtnis",
+      "body": "Wenn alles, was Cortex gefunden hat, unter 72 % bewertet wurde, zeigt es „Keine starken Treffer“. Zwei Dinge zum Ausprobieren: (1) Formuliere mit anderen Worten um — semantische Suche reagiert empfindlich auf Formulierung. (2) Wechsle über das Dropdown von Semantisch zu Hybrid — Hybrid enthält Schlüsselwort-Treffer, die Fälle abfangen, in denen die bedeutungsbasierte Suche daneben lag. Wenn dein Graph leer oder sehr klein ist, gibt es vielleicht wirklich noch nichts zu finden."
+    },
+    "learning-create-goal": {
+      "title": "Ein Lernziel erstellen",
+      "category": "Lernen",
+      "body": "Gehe zu Lernen und klicke auf Neues Ziel. Gib einen Titel ein (z. B. „Rust lernen“) und eine optionale Beschreibung, die erklärt, warum du es willst und wo dein Ausgangspunkt ist. Cortex zerlegt das Ziel in Phasen, Meilensteine und konkrete Aktionen — verankert in dem, was du bereits erfasst hast. Die Generierung dauert 10–30 Sekunden. Wenn sie fertig ist, öffnet sich dein Plan zum Durcharbeiten."
+    },
+    "learning-milestones": {
+      "title": "Meilensteine durcharbeiten",
+      "category": "Lernen",
+      "body": "Klicke in der Detailansicht eines Ziels auf den Kreis neben einem Meilenstein, um ihn als erledigt zu markieren. Cortex speichert deinen Fortschritt sofort und animiert den Fortschrittsbalken der Phase. Klicke auf den Meilenstein-Titel, um seine vorgeschlagenen Aktionen aufzuklappen. Wenn alle Meilensteine einer Phase erledigt sind, ist die Phase abgeschlossen. Wenn alle Meilensteine erledigt sind, ist das Ziel abgeschlossen und Cortex feiert es mit einem Toast."
+    },
+    "learning-phases": {
+      "title": "Wie Cortex einen Lernplan strukturiert",
+      "category": "Lernen",
+      "body": "Jeder Plan hat 3–5 Phasen (typisch: Grundlagen, Anwendung, Tiefe, Meisterschaft). Jede Phase enthält 2–4 Meilensteine. Jeder Meilenstein enthält 2–4 konkrete Aktionen. Die aktuelle Phase ist hervorgehoben. Ein Banner „Erste Aktion heute“ oben im Plan schlägt die nützlichste nächste Sache vor — klicke darauf, um sie als begonnen zu markieren. Du kannst jede Phase jederzeit erneut aufrufen."
+    },
+    "decisions-analyze": {
+      "title": "Eine Entscheidung analysieren",
+      "category": "Entscheidungen",
+      "body": "Gehe zu Entscheidungen und klicke auf Neue Entscheidung. Beschreibe die Entscheidung im Fragefeld, füge bei Bedarf Kontext hinzu und drücke Analysieren. Cortex durchsucht dein Wissen und deine vergangenen Entscheidungen und liefert zurück: eine Rahmung der Kernentscheidung, 2–5 Optionen mit Vor- und Nachteilen, Abwägungen, Muster aus deinen vergangenen Entscheidungen, zu beobachtende blinde Flecken, und Fragen, die du dir stellen solltest. Die Analyse dauert 10–25 Sekunden."
+    },
+    "decisions-commit": {
+      "title": "Sich auf eine Entscheidung festlegen",
+      "category": "Entscheidungen",
+      "body": "Klicke nach der Analyse auf Jetzt entscheiden. Wähle eine der vorgeschlagenen Optionen oder schreibe deine eigene unter „Etwas anderes“. Füge deine Begründung und deine Erwartung hinzu — Cortex nutzt das später bei der Überprüfung des Ergebnisses. Wähle, wann überprüft werden soll (7, 14, 30, 60 oder 90 Tage) und klicke auf Festlegen. Die Entscheidung wandert in die Spalte Entschieden und erscheint in deiner Spalte Fällige Überprüfungen, wenn der Überprüfungstermin kommt."
+    },
+    "decisions-outcome": {
+      "title": "Festhalten, was tatsächlich passiert ist",
+      "category": "Entscheidungen",
+      "body": "Wenn eine Entscheidung zur Überprüfung fällig ist, siehst du sie in der amberfarbenen Spalte „fällige Entscheidungen“. Öffne sie und klicke auf Ergebnis erfassen. Beschreibe in eigenen Worten, was tatsächlich passiert ist — Genauigkeit hier bedeutet bessere Lektionen später. Cortex vergleicht deine Erwartung mit der Realität, extrahiert eine Lektion, notiert, was dein Denken richtig gesehen hat und was nicht, und gibt dir eine Empfehlung für ähnliche zukünftige Entscheidungen."
+    },
+    "decisions-patterns": {
+      "title": "Muster in deinen Entscheidungen sehen",
+      "category": "Entscheidungen",
+      "body": "Gehe zu Entscheidungen → Tab Muster. Cortex liest deine letzten 20 Entscheidungen und bringt wiederkehrende Muster, Stärken in deiner Entscheidungsfindung und blinde Flecken an die Oberfläche. Jedes Muster zeigt seine Konfidenz (niedrig / mittel / hoch) und zitiert die konkreten Entscheidungen, die es belegen. Diese Ansicht ist am besten, nachdem du mindestens 3–5 Entscheidungen festgelegt und überprüft hast."
+    },
+    "decisions-review": {
+      "title": "Eine Entscheidung überprüfen",
+      "category": "Entscheidungen",
+      "body": "Wenn du dich auf eine Entscheidung festlegst, wählst du ein Überprüfungsfenster (7, 14, 30, 60 oder 90 Tage). An diesem Tag verschiebt Cortex die Entscheidung in deine Spalte Fällige Überprüfungen auf dem Entscheidungsboard und zeigt sie in der Karte „Fällige Entscheidungen“ auf der Startseite. Öffne die Entscheidung, klicke auf Ergebnis erfassen, beschreibe, was passiert ist, und Cortex extrahiert die Lektion."
+    },
+    "reflections-lessons": {
+      "title": "Woher Lektionen kommen",
+      "category": "Reflexionen",
+      "body": "Wenn du auf einer Entscheidung ein Ergebnis erfasst, vergleicht Cortex deine Erwartung mit dem, was tatsächlich passiert ist, und extrahiert eine Lektion. Diese Lektion wird eine Reflexion vom Typ „Lektion“ und außerdem als Wissensknoten gespeichert — sie erscheint ab dann in deinen Chat-Antworten und in der Gedächtnissuche. Lektionen sind die Art, wie Cortex dir hilft, Urteilsvermögen über die Zeit aufzubauen."
+    },
+    "reflections-report": {
+      "title": "Einen Reflexionsbericht erstellen",
+      "category": "Reflexionen",
+      "body": "Gehe zu Reflexionen → Tab Wochenbericht und klicke auf Bericht erstellen. Wähle ein Fenster (7, 30, 90 oder 180 Tage). Cortex liest deine Entscheidungen aus diesem Zeitraum und erstellt: eine Zusammenfassung, Themen, Stärken, blinde Flecken, Wachstumsbeobachtungen und Fragen zum Nachdenken. Berichte werden unter dem Tab Wochenbericht gespeichert und können jederzeit wieder geöffnet werden."
+    },
+    "reflections-insights": {
+      "title": "Insights-Tab",
+      "category": "Reflexionen",
+      "body": "Reflexionen → Einblicke gibt dir drei Ansichten auf einen Blick: ein Kompaktüberblick Diesen Monat (wie viele Reflexionen du in den letzten 30 Tagen erstellt hast), Top-Lektionen (deine bedeutendsten eigenständigen Einsichten), und Aus deinen Entscheidungen (Reflexionen, die auf konkrete Entscheidungen zurückgehen). Nutze es als monatliches Überprüfungsritual."
+    },
+    "identity-rebuild": {
+      "title": "Dein Identitätsmodell neu erstellen",
+      "category": "Identität",
+      "body": "Gehe zu Identität und klicke auf Identität neu erstellen. Cortex liest deine jüngsten erfassten Gedanken, aktiven Ziele, jüngsten Entscheidungen und Reflexionen — und erstellt ein frisches Modell davon, wer du bist: eine Erzählung, Werte, Muster, Stärken, blinde Flecken und Wachstumsbereiche. Jede Neuerstellung speichert einen Schnappschuss in deiner Zeitleiste, damit du siehst, wie du dich verändert hast. Identitätsneuerstellungen dauern 15–40 Sekunden."
+    },
+    "identity-values": {
+      "title": "Was die Werte-Liste bedeutet",
+      "category": "Identität",
+      "body": "Unter Identität siehst du Werte, Muster, Stärken und Blinde Flecken. Jeder Eintrag hat einen Namen, eine Erklärung, warum Cortex ihn abgeleitet hat, und eine Stärkestufe (niedrig / mittel / hoch). Werte werden daraus abgeleitet, worüber du schreibst, nicht daraus, was du zu schätzen sagst — die Beweiszeile unter jedem sagt dir, woher er stammt. Du kannst jedem widersprechen; das Modell ist ein Spiegel, kein Urteil."
+    },
+    "identity-timeline": {
+      "title": "Deine Identitäts-Zeitleiste",
+      "category": "Identität",
+      "body": "Jedes Mal, wenn du neu erstellst, speichert Cortex einen Schnappschuss. Die Karte Zeitleiste unten in Identität zeigt sie chronologisch, jede mit einem KI-generierten Meilenstein-Titel versehen — „Aufmerksamkeitsthema festigt sich“, „Grenzsetzung entsteht“ und so weiter. Cortex bewahrt die Namen der Einträge über Neuerstellungen hinweg, damit du verfolgen kannst, ob dieselben Werte und Muster über Monate hinweg bestehen bleiben."
+    },
+    "identity-maturity": {
+      "title": "Was der Reifegrad bedeutet",
+      "category": "Identität",
+      "body": "Identitätsreife ist ein Score von 0–100, der widerspiegelt, wie reich und vernetzt dein Wissensgraph ist. Er wird aus deiner Knotenzahl, Konzeptzahl, aktiven Zielen, Entscheidungen, Reflexionen und Identitätsschnappschüssen berechnet. Die Stufe („Entstehend“, „Im Aufbau“, „Aufbauend“, „Erdend“, „Tief“) beschreibt die Etappe. Es ist ein Signal für Graphentiefe, nicht für persönlichen Wert — Erfassen und Reflektieren sind, was ihn bewegt."
+    },
+    "settings-language": {
+      "title": "Die Sprache der Oberfläche ändern",
+      "category": "Einstellungen",
+      "body": "Einstellungen → Allgemein → Sprache. Wähle eine der sechs unterstützten Sprachen: Englisch, Spanisch, Französisch, Deutsch, Arabisch (von rechts nach links) oder Kiswahili. Die gesamte Oberfläche wechselt sofort. Deine Wahl wird in einem Cookie gespeichert. Cortex verwendet die aktuelle Sprache auch beim Beantworten von Fragen — ein Wechsel zu Französisch bedeutet also, dass neue Chats, Entscheidungen, Lernpläne, Reflexionen und Identitätsneuerstellungen auf Französisch generiert werden."
+    },
+    "settings-theme": {
+      "title": "Das Theme ändern",
+      "category": "Einstellungen",
+      "body": "Einstellungen → Allgemein → Theme. Drei Optionen: Hell, Dunkel oder System (folgt deinem Betriebssystem). Cortex merkt sich deine Wahl. Dunkel ist der Standard und das Design ist darauf optimiert — Hell ist noch in Arbeit."
+    },
+    "settings-voice": {
+      "title": "Eine Stimme wählen",
+      "category": "Einstellungen",
+      "body": "Einstellungen → Allgemein → Stimme. Wähle die Standardstimme, die Cortex für die Wiedergabe von Sprachaufnahmen verwendet. Optionen: Mira, Aria, Atlas, Lyra, Orion. Eine Änderung wirkt sich auf die Wiedergabe in der Karte Erfassung → Stimme und auf jedes Audio aus, das du aus deinen Erfassungen abspielst."
+    },
+    "settings-data": {
+      "title": "Deine Daten exportieren oder löschen",
+      "category": "Datenschutz & Daten",
+      "body": "Einstellungen → Daten. Du kannst alle deine Daten als JSON-Paket exportieren (jeder Knoten, jede Entscheidung, jedes Ziel und jede Reflexion), alle Chats löschen (deine Erfassungen und dein Graph bleiben intakt) oder dein gesamtes Konto dauerhaft löschen. Löschen ist unwiderruflich. Dein erfasstes Wissen gehört immer dir."
+    },
+    "privacy-overview": {
+      "title": "Datenschutz und was Cortex speichert",
+      "category": "Datenschutz & Daten",
+      "body": "Cortex speichert alles, was du erfasst, in deiner eigenen Postgres-Datenbank und einem Neo4j-Graphen, der deinem Konto gehört. Nichts wird mit anderen Nutzern geteilt. Cortex trainiert kein Modell mit deinen Inhalten — deine Erfassungen werden nur verwendet, um deine eigenen Fragen zu beantworten. Exporte und Löschungen erfolgen mit einem Klick in Einstellungen → Daten. Die Kontoverwaltung (E-Mail, Passwort, Sitzungen) übernimmt Clerk."
+    },
+    "existing-data-language": {
+      "title": "Warum sind manche alten Inhalte noch auf Englisch?",
+      "category": "Fehlerbehebung",
+      "body": "Inhalte, die du vor dem Wechsel in eine neue Sprache erstellt hast, bleiben in der Sprache, in der sie ursprünglich erstellt wurden. Die Oberfläche übersetzt sofort, und jede neue Chat-Antwort, Entscheidung, jeder Lernplan, jede Reflexion und jede Identitätsneuerstellung kommt in deiner aktuellen Sprache heraus. Klicke für Identität auf „In aktuelle Sprache übersetzen“, um das Modell neu zu generieren und die Namen seiner Einträge zu übersetzen. Für Entscheidungen und Ziele wird der Plan einmal generiert — um ihn in einer neuen Sprache neu zu generieren, verwende die Schaltfläche Übersetzen, wo sie verfügbar ist."
+    },
+    "mic-denied": {
+      "title": "Mikrofonzugriff verweigert",
+      "category": "Fehlerbehebung",
+      "body": "Wenn Chrome oder Firefox den Mikrofonzugriff blockiert, siehst du „Mikrofonzugriff verweigert“. Klicke auf das Schloss-Symbol in der Adressleiste → Website-Einstellungen → Mikrofon → Zulassen. Lade dann die Seite neu. Prüfe unter macOS auch Systemeinstellungen → Datenschutz & Sicherheit → Mikrofon und bestätige, dass dein Browser angehakt ist. Cortex nimmt nie ohne deinen ausdrücklichen Klick auf."
+    },
+    "no-microphone": {
+      "title": "Kein Mikrofon erkannt",
+      "category": "Fehlerbehebung",
+      "body": "Wenn Cortex „Kein Mikrofon gefunden“ meldet, prüfe, ob ein Mikrofon angeschlossen ist (oder ob das eingebaute Mikrofon deines Laptops in den OS-Einstellungen aktiviert ist). Lade die Seite nach dem Anschließen neu. Auf manchen Windows-Rechnern ist das Mikrofon standardmäßig deaktiviert — gehe zu Einstellungen → Datenschutz → Mikrofon und aktiviere den Zugriff für Desktop-Apps und für deinen Browser."
+    },
+    "extraction-failed": {
+      "title": "Inhaltsextraktion fehlgeschlagen",
+      "category": "Fehlerbehebung",
+      "body": "Wenn Cortex aus einer URL oder Datei keinen lesbaren Inhalt extrahieren kann, siehst du ein Statusabzeichen „teilweise“ am resultierenden Knoten. Häufige Ursachen: die Seite erfordert Anmeldung, ist nur JavaScript, liegt hinter einer Paywall, oder das Dateiformat wird nicht vollständig unterstützt. Der Knoten existiert trotzdem — du hast den Link oder Dateinamen als Lesezeichen gespeichert — aber der volle Text konnte nicht gelesen werden. Versuche eine andere Quelle oder füge den Text manuell ein."
+    },
+    "extension-troubleshoot": {
+      "title": "Die Erweiterung verbindet sich nicht",
+      "category": "Fehlerbehebung",
+      "body": "Wenn die Erweiterung nach dem Einfügen des Codes „nicht verbunden“ zeigt, ist die wahrscheinlichste Ursache, dass der Verbindungscode vor deiner Verwendung abgelaufen ist. Codes laufen nach einigen Minuten ab. Gehe zurück zu Einstellungen → Erweiterung, klicke auf Neu erzeugen und füge den neuen Code sofort ein. Wenn es immer noch fehlschlägt, klicke mit der rechten Maustaste auf das Erweiterungssymbol → Optionen, um die Einstellungsseite erneut zu öffnen, und füge erneut ein. Stelle sicher, dass die API-URL in deiner .env.local mit der übereinstimmt, mit der die Erweiterung gebaut wurde."
+    },
+    "connect-code-expired": {
+      "title": "Mein Verbindungscode ist abgelaufen",
+      "category": "Fehlerbehebung",
+      "body": "Verbindungscodes sind einmalige Clerk-Anmelde-Token, die einige Minuten gültig sind. Wenn du deinen nicht rechtzeitig eingefügt hast, gehe zurück zu Einstellungen → Erweiterung, klicke auf Neu erzeugen und füge den neuen Code sofort in die Optionsseite der Erweiterung ein. Der alte Code ist tot — es gibt keine Möglichkeit, ihn wiederzubeleben, und das ist beabsichtigt (es ist eine Sicherheitsgarantie)."
+    },
+    "how-answers-work": {
+      "title": "Wie Cortex entscheidet, was es sagt",
+      "category": "Wie Cortex funktioniert",
+      "body": "Wenn du im Chat eine Frage stellst, macht Cortex Folgendes: (1) es durchsucht dein erfasstes Wissen mithilfe semantischer Ähnlichkeit, (2) es sendet die besten Treffer zusammen mit einem strengen System-Prompt an ein Sprachmodell, der besagt „verankere deine Antwort, wenn möglich, im Wissen des Nutzers, und kennzeichne Allgemeinwissen klar, wenn nicht“, (3) es liefert die Antwort mit den konkreten Knoten zurück, aus denen es geschöpft hat. Deshalb erfindet Cortex nie Fakten über dich — es kann nur zitieren, was du tatsächlich erfasst hast."
+    }
+  },
+  "ar": {
+    "what-is-cortex": {
+      "title": "ما هو Cortex",
+      "category": "البداية",
+      "body": "‏Cortex نظام إدراك شخصي — عقل خارجي ينمو معك. تلتقط الأفكار والروابط والملفات والملاحظات الصوتية؛ يستخرج Cortex المفاهيم، ويربطها في رسم بياني للمعرفة، ويتيح لك التفكير بهذا الرسم عبر الدردشة والقرارات وأهداف التعلّم والتأملات. كل ما تلتقطه يبقى ملكك. يجيب Cortex عن الأسئلة بالاستشهاد بمعرفتك الملتقطة، ولا يلجأ إلى المعرفة العامة إلا عندما لا يغطي رسمك البياني الموضوع (ويوسم تلك الإجابات بوضوح)."
+    },
+    "first-capture": {
+      "title": "التقاط فكرتك الأولى",
+      "category": "البداية",
+      "body": "انتقل إلى «الالتقاط» من الشريط الجانبي. لديك ثلاث طرق للالتقاط: (١) اكتب فكرة مباشرة في الصندوق الرئيسي، وأضف عنوانًا اختياريًا، ثم اضغط «التقاط» أو Cmd/Ctrl+Enter. (٢) انقر على مشبك الورق لإرفاق ملف أو صورة أو PDF — يستخرج Cortex النص تلقائيًا. (٣) استخدم بطاقة الصوت لتسجيل صوتك؛ ينسخه Cortex عبر Whisper ويتيح لك مراجعة النص قبل الحفظ. كل التقاط يصبح عقدة في رسمك البياني للمعرفة."
+    },
+    "first-chat": {
+      "title": "اطرح سؤالك الأول على Cortex",
+      "category": "البداية",
+      "body": "افتح الدردشة من الشريط الجانبي. اكتب سؤالك في الأسفل واضغط Enter. يبحث Cortex أولًا في معرفتك الملتقطة، ويُرسّخ إجابته فيما التقطته، ويستشهد بعقد معينة بعنوانها بين قوسين مربعين. إذا لم يغطِّ رسمك السؤال، يذكر ذلك بإيجاز ثم يجيب من المعرفة العامة، موسومًا بوضوح كذلك. كل رد يُظهر قائمة بالمصادر من عقلك التي استُخدمت."
+    },
+    "keyboard-shortcuts": {
+      "title": "اختصارات لوحة المفاتيح",
+      "category": "البداية",
+      "body": "‏Cmd/Ctrl+K يفتح لوحة الأوامر (بحث + تنقل + تغيير اللغة). / يُركّز بحث الصفحة في «الذاكرة» و«التعلّم» و«القرارات» و«التأملات». الأسهم تتنقل بين النتائج. Enter يفتح العنصر المُبرَز. Esc يمسح البحث أو يغلق اللوحة. Cmd/Ctrl+Enter يُرسل الإدخال الحالي. Cmd/Ctrl+, يفتح الإعدادات من أي مكان."
+    },
+    "install-extension": {
+      "title": "تثبيت إضافة المتصفح",
+      "category": "إضافة المتصفح",
+      "body": "انتقل إلى الإعدادات ← الإضافة. انقر على «إنشاء رمز الاتصال». الرمز هو رمز تسجيل دخول Clerk لمرة واحدة، صالح لبضع دقائق — انسخه. ثبّت إضافة Cortex من متجر Chrome الإلكتروني أو إضافات Firefox، وافتح صفحة خياراتها (انقر بالزر الأيمن على أيقونة الإضافة ← خيارات)، والصق الرمز. ستعرض الإضافة بريدك الإلكتروني لتعرف أنها متصلة. من ذلك الحين، يمكنك التقاط أي صفحة أو اقتباس أو فكرة مباشرة من المتصفح دون تبديل التبويبات."
+    },
+    "extension-usage": {
+      "title": "استخدام إضافة المتصفح",
+      "category": "إضافة المتصفح",
+      "body": "انقر بالزر الأيمن على أي صفحة ← Capture to Cortex لحفظ الصفحة كاملة. حدّد نصًا أولًا ← Capture to Cortex لحفظ التحديد فقط. انقر بالزر الأيمن على أي رابط ← Capture link to Cortex لالتقاط المقال المرتبط. تحتوي الإضافة أيضًا على لوحة جانبية ونافذة منبثقة مع بحث في الذاكرة — انقر على أيقونة الإضافة لفتحها. كل ما تلتقطه عبر الإضافة يظهر في Cortex في غضون ثوانٍ قليلة."
+    },
+    "capture-file": {
+      "title": "التقاط ملف",
+      "category": "الالتقاط",
+      "body": "في «الالتقاط»، انقر على مشبك الورق ← «تحميل ملف». يدعم Cortex صيغ PDF وDOCX وXLSX وCSV والنص العادي والصور والصوت والفيديو (حتى ١٠٠ ميغابايت). يُستخرج النص تلقائيًا. إذا فشل الاستخراج، تظل العقدة الناتجة موجودة — سترى شارة حالة «جزئي» ورسالة خطأ قصيرة. يمكنك أيضًا سحب ملف إلى صندوق الالتقاط أو لصقه من الحافظة."
+    },
+    "capture-voice": {
+      "title": "الالتقاط بالصوت",
+      "category": "الالتقاط",
+      "body": "في «الالتقاط»، انزل إلى بطاقة الصوت. اختر لغة (أو اترك «الكشف التلقائي») وانقر على «تسجيل». يسجّل Cortex حتى ٥ دقائق، ويعرض موجة صوتية حية، ويتيح لك الإيقاف المؤقت أو الإيقاف. عند الإيقاف، ينسخ عبر Whisper ويعرض النص للمراجعة. حرّر النص إن أردت — تُحفظ النصوص المحرّرة كعقد نصية. تُحفظ التسجيلات غير المحرّرة كعقد صوتية لتحتفظ بالصوت الأصلي."
+    },
+    "capture-url": {
+      "title": "التقاط رابط",
+      "category": "الالتقاط",
+      "body": "في «الالتقاط»، انقر على مشبك الورق ← «إضافة رابط»، أو الصق عنوان URL مباشرة في صندوق النص الرئيسي. يجلب Cortex الصفحة، ويستخرج نص المقال والأفكار الرئيسية، ويضيفها كعقدة. روابط YouTube تُنسخ أيضًا. إذا لم تكن للصفحة محتويات قابلة للقراءة (جدار دفع، JavaScript فقط)، يفشل الاستخراج لكن الرابط يُحفظ كإشارة مرجعية لتجده لاحقًا."
+    },
+    "voice-language": {
+      "title": "التسجيل بلغة غير الإنجليزية",
+      "category": "الالتقاط",
+      "body": "في بطاقة «الالتقاط ← الصوت»، انقر على قائمة اللغات المنسدلة بجانب زر التسجيل. اختر «الكشف التلقائي» ليدركها Whisper، أو اختر لغة محددة (الإنجليزية، الفرنسية، الإسبانية، الألمانية، البرتغالية، الإيطالية). Whisper دقيق في كلها. إذا كان صوتك متعدد اللغات، تتعامل «الكشف التلقائي» عادةً جيدًا مع اللغة السائدة."
+    },
+    "chat-sources": {
+      "title": "من أين تأتي إجابات Cortex؟",
+      "category": "الدردشة",
+      "body": "كل إجابة من Cortex تتبع أحد نمطين. إذا غطت معرفتك الملتقطة السؤال، يُرسّخ Cortex إجابته فيها ويستشهد بعقد معينة بعنوانها بين [أقواس مربعة]. إذا لم يغطِّها رسمك، يذكر ذلك بإيجاز، ثم يجيب من المعرفة العامة ويوسم تلك الأجزاء بوضوح. أسفل كل رد، انقر على «{N} مصادر من عقلك» لترى أي عقد استُخدمت. انقر على أي مصدر لفتحه في لوحة جانبية."
+    },
+    "chat-edit": {
+      "title": "تعديل رسالة",
+      "category": "الدردشة",
+      "body": "مرّر فوق أي رسالة مستخدم وانقر على أيقونة القلم. حرّر النص واضغط Enter (أو Shift+Enter لسطر جديد). يعامل Cortex تحريرك كرسالة جديدة ويجيب مرة أخرى. يمكن تحرير آخر رسالة مستخدم فقط في المحادثة — الرسائل الأقدم مقفلة لأن إعادة تنفيذها ستبطل السياق الذي استخدمه المساعد بالفعل."
+    },
+    "chat-regenerate": {
+      "title": "إعادة توليد رد",
+      "category": "الدردشة",
+      "body": "مرّر فوق آخر رد للمساعد وانقر على أيقونة التحديث. يعيد Cortex تنفيذ السؤال نفسه بالمعرفة نفسها ويُنتج إجابة جديدة. هذا مفيد عندما يفوّت الرد الأول شيئًا أو عندما تريد زاوية مختلفة. لا يمكن إعادة توليد ردود المساعد الأقدم لأن المحادثة قد تقدّمت."
+    },
+    "chat-copy": {
+      "title": "نسخ رد",
+      "category": "الدردشة",
+      "body": "مرّر فوق أي رسالة وانقر على أيقونة النسخ. يُنسخ نص الرسالة إلى الحافظة كـ markdown خام — جاهز للصق في تطبيق آخر. سترى إشعارًا «تم النسخ إلى الحافظة»."
+    },
+    "memory-search": {
+      "title": "البحث في ذاكرتك",
+      "category": "الذاكرة",
+      "body": "انتقل إلى «الذاكرة». اكتب سؤالًا أو وصفًا — يبحث Cortex بالمعنى، لا بالكلمات المفتاحية فقط. وضعان: دلالي (المعنى فقط، الأفضل للأسئلة المفاهيمية) وهجين (المعنى + مطابقات الكلمات المفتاحية، الأفضل عندما تتذكر كلمة محددة). بدّل باستخدام القائمة المنسدلة بجانب صندوق البحث. تُظهر النتائج حلقة نقاط التطابق: قوي (>٧٥٪)، جيد (٦٠–٧٥٪)، ضعيف، أو بالكلمات المفتاحية فقط."
+    },
+    "memory-filters": {
+      "title": "تصفية نتائج الذاكرة حسب النوع",
+      "category": "الذاكرة",
+      "body": "أسفل شريط البحث يمكنك تصفية النتائج حسب النوع: الكل، الأفكار، المفاهيم، القرارات، أو التأملات. انقر على أي شريحة لتضييق العرض. تُظهر الشريحة عددًا للنتائج المطابقة لذلك النوع. بالدمج مع البحث، يتيح لك هذا العثور على، لنقل، القرارات المتعلقة بموضوع فقط."
+    },
+    "memory-reindex": {
+      "title": "إعادة فهرسة الرسم البياني",
+      "category": "الذاكرة",
+      "body": "إذا فات البحث التقاطات حديثة أو بدا قديمًا، انقر على «إعادة الفهرسة» في أعلى يمين «الذاكرة». يعيد Cortex توليد embeddings لكل عقدة تحتاجها. يستغرق عادة أقل من دقيقة لبضع مئات من العقد. ستحصل على إشعار عند الاكتمال يخبرك بعدد العقد المفهرسة. إعادة الفهرسة لا تحذف شيئًا — إنها تبني فهرس البحث من جديد فقط."
+    },
+    "memory-weak-matches": {
+      "title": "لماذا يقول البحث «لا توجد تطابقات قوية»؟",
+      "category": "الذاكرة",
+      "body": "إذا سجّلت كل ما وجده Cortex أقل من ٧٢٪، فإنه يعرض «لا توجد تطابقات قوية». شيئان لتجربتهما: (١) أعد الصياغة بكلمات مختلفة — البحث الدلالي حساس للصياغة. (٢) بدّل من الوضع الدلالي إلى الهجين باستخدام القائمة المنسدلة — يتضمن الهجين مطابقات الكلمات المفتاحية التي تلتقط الحالات التي فات فيها البحث المعنوي. إذا كان رسمك فارغًا أو صغيرًا جدًا، فقد لا يكون هناك فعلًا شيء لتجده بعد."
+    },
+    "learning-create-goal": {
+      "title": "إنشاء هدف تعلّم",
+      "category": "التعلّم",
+      "body": "انتقل إلى «التعلّم» وانقر على «هدف جديد». أدخل عنوانًا (مثل «تعلّم Rust») ووصفًا اختياريًا يشرح لماذا تريده وما نقطة انطلاقك. يفكك Cortex الهدف إلى مراحل ومراحل رئيسية وإجراءات ملموسة — مُرسّخة في ما التقطته بالفعل. يستغرق التوليد ١٠–٣٠ ثانية. عند الانتهاء، تُفتح خطتك جاهزة للعمل عليها."
+    },
+    "learning-milestones": {
+      "title": "العمل على المراحل",
+      "category": "التعلّم",
+      "body": "في عرض تفاصيل الهدف، انقر على الدائرة بجانب أي مرحلة رئيسية لوضع علامة إتمام عليها. يحفظ Cortex تقدمك فورًا ويحرّك شريط تقدم المرحلة. انقر على عنوان المرحلة الرئيسية لتوسيع إجراءاتها المقترحة. عندما تكتمل كل المراحل الرئيسية في مرحلة، تكتمل المرحلة. عندما تكتمل كل المراحل الرئيسية، يكتمل الهدف ويحتفل Cortex بإشعار."
+    },
+    "learning-phases": {
+      "title": "كيف يبني Cortex خطة تعلّم",
+      "category": "التعلّم",
+      "body": "كل خطة لها ٣–٥ مراحل (الأساسيات، التطبيق، العمق، الإتقان، عادةً). تحتوي كل مرحلة على ٢–٤ مراحل رئيسية. تحتوي كل مرحلة رئيسية على ٢–٤ إجراءات ملموسة. تُبرَز المرحلة الحالية. يقترح شريط «أول إجراء اليوم» أعلى الخطة الشيء الأكثر نفعًا لفعله تاليًا — انقر عليه لوضع علامة البدء. يمكنك العودة إلى أي مرحلة في أي وقت."
+    },
+    "decisions-analyze": {
+      "title": "تحليل قرار",
+      "category": "القرارات",
+      "body": "انتقل إلى «القرارات» وانقر على «قرار جديد». صِف القرار في حقل السؤال، وأضف السياق إن كان مفيدًا، واضغط «تحليل». يبحث Cortex في معرفتك وقراراتك السابقة، ثم يعيد: صياغة للخيار الجوهري، ٢–٥ خيارات مع الإيجابيات والسلبيات، مقايضات، أنماطًا من قراراتك السابقة، نقاطًا عمياء يجب مراقبتها، وأسئلة تسألها لنفسك. يستغرق التحليل ١٠–٢٥ ثانية."
+    },
+    "decisions-commit": {
+      "title": "الالتزام بقرار",
+      "category": "القرارات",
+      "body": "بعد التحليل، انقر على «اتخذ القرار الآن». اختر أحد الخيارات المقترحة أو اكتب خيارك تحت «شيء آخر». أضف تعليلك وما تتوقع حدوثه — يستخدم Cortex هذا لاحقًا عند مراجعة النتيجة. اختر متى تراجع (٧ أو ١٤ أو ٣٠ أو ٦٠ أو ٩٠ يومًا) وانقر على «التزم». ينتقل القرار إلى عمود «مُقرَّرة» ويظهر في شريط «المراجعات المستحقة» عندما يأتي موعد المراجعة."
+    },
+    "decisions-outcome": {
+      "title": "تسجيل ما حدث فعلًا",
+      "category": "القرارات",
+      "body": "عندما يستحق قرار المراجعة، ستراه في الشريط الكهرماني «قرارات مستحقة». افتحه وانقر على «تسجيل النتيجة». صِف ما حدث فعلًا بكلماتك — الدقة هنا تعني دروسًا أفضل لاحقًا. يقارن Cortex توقعك بالواقع، ويستخرج درسًا، ويلاحظ ما أصابه تفكيرك وما فوّته، ويعطيك توصية لقرارات مستقبلية مشابهة."
+    },
+    "decisions-patterns": {
+      "title": "رؤية الأنماط في قراراتك",
+      "category": "القرارات",
+      "body": "انتقل إلى «القرارات» ← تبويب «الأنماط». يقرأ Cortex آخر ٢٠ قرارًا لك ويُبرز أنماطًا متكررة، ونقاط قوة في اتخاذ قرارك، ونقاطًا عمياء. كل نمط يُظهر ثقته (منخفضة / متوسطة / عالية) ويستشهد بالقرارات المحددة التي تدل عليه. هذا العرض أفضل بعد أن تلتزم وتراجع ٣–٥ قرارات على الأقل."
+    },
+    "decisions-review": {
+      "title": "مراجعة قرار",
+      "category": "القرارات",
+      "body": "عندما تلتزم بقرار، تختار نافذة مراجعة (٧ أو ١٤ أو ٣٠ أو ٦٠ أو ٩٠ يومًا). في ذلك اليوم، ينقل Cortex القرار إلى شريط المراجعات المستحقة على لوحة القرارات ويُظهره في بطاقة «قرارات مستحقة» على الصفحة الرئيسية. افتح القرار، انقر على «تسجيل النتيجة»، صِف ما حدث، ويستخرج Cortex الدرس."
+    },
+    "reflections-lessons": {
+      "title": "من أين تأتي الدروس",
+      "category": "التأملات",
+      "body": "عندما تسجّل نتيجة على قرار، يقارن Cortex توقعك بما حدث فعلًا ويستخرج درسًا. يصبح ذلك الدرس تأملًا من نوع «درس» ويُحفَظ أيضًا كعقدة معرفة — فيظهر في إجابات دردشتك وبحث ذاكرتك من ذلك الحين. الدروس هي الطريقة التي يساعدك بها Cortex على تراكم الحكمة بمرور الوقت."
+    },
+    "reflections-report": {
+      "title": "توليد تقرير تأمل",
+      "category": "التأملات",
+      "body": "انتقل إلى «التأملات» ← تبويب «التقرير الأسبوعي» وانقر على «توليد تقرير». اختر نافذة (٧ أو ٣٠ أو ٩٠ أو ١٨٠ يومًا). يقرأ Cortex قراراتك من تلك الفترة ويُنتج: ملخصًا، ثيمات، نقاط قوة، نقاطًا عمياء، ملاحظات نمو، وأسئلة للتأمل. تُحفظ التقارير تحت تبويب التقرير الأسبوعي ويمكن إعادة فتحها في أي وقت."
+    },
+    "reflections-insights": {
+      "title": "تبويب الرؤى",
+      "category": "التأملات",
+      "body": "«التأملات» ← «الرؤى» يمنحك ثلاث عروض سريعة: ملخص «هذا الشهر» (كم تأملًا أنشأت في آخر ٣٠ يومًا)، «أهم الدروس» (أكثر رؤاك المستقلة أهمية)، و«من قراراتك» (تأملات ترتد إلى خيارات محددة). استخدمه كطقس مراجعة شهري."
+    },
+    "identity-rebuild": {
+      "title": "إعادة بناء نموذج هويتك",
+      "category": "الهوية",
+      "body": "انتقل إلى «الهوية» وانقر على «إعادة بناء الهوية». يقرأ Cortex أفكارك الملتقطة الحديثة وأهدافك النشطة وقراراتك الأخيرة وتأملاتك — ويُنتج نموذجًا جديدًا لمن أنت: سردًا، قيمًا، أنماطًا، نقاط قوة، نقاطًا عمياء، ومجالات نمو. كل إعادة بناء تحفظ لقطة في خطك الزمني لترى كيف تغيّرت. تستغرق إعادات بناء الهوية ١٥–٤٠ ثانية."
+    },
+    "identity-values": {
+      "title": "ماذا تعني قائمة القيم",
+      "category": "الهوية",
+      "body": "تحت «الهوية» سترى القيم والأنماط ونقاط القوة والنقاط العمياء. كل عنصر له اسم، وتفسير لماذا استنتجه Cortex، ومستوى قوة (منخفض / متوسط / عالٍ). تُستنتج القيم من الذي تكتب عنه، لا من الذي تقول إنك تقدّره — سطر الدليل تحت كل واحدة يخبرك من أين جاءت. يمكنك أن تختلف مع أي منها؛ النموذج مرآة، لا حكم."
+    },
+    "identity-timeline": {
+      "title": "الخط الزمني لهويتك",
+      "category": "الهوية",
+      "body": "في كل مرة تعيد البناء، يحفظ Cortex لقطة. تعرض بطاقة «الخط الزمني» أسفل «الهوية» اللقطات ترتيبًا زمنيًا، كل واحدة موسومة بعنوان مرحلة مُولّد بالذكاء الاصطناعي — «ثيمة الانتباه تتوطد»، «وضع الحدود يظهر»، وهكذا. يحفظ Cortex أسماء العناصر عبر إعادات البناء لتتبع ما إذا كانت القيم والأنماط ذاتها تستمر عبر أشهر."
+    },
+    "identity-maturity": {
+      "title": "ماذا تعني درجة النضج",
+      "category": "الهوية",
+      "body": "نضج الهوية درجة من ٠ إلى ١٠٠ تعكس مدى ثراء وترابط رسمك البياني للمعرفة. تُحسَب من عدد عقدك، وعدد مفاهيمك، وأهدافك النشطة، وقراراتك، وتأملاتك، ولقطات هويتك. تصف المرحلة («ناشئ»، «في التكوين»، «في البناء»، «متجذّر»، «عميق») الطور. إنها إشارة إلى عمق الرسم، لا إلى القيمة الشخصية — الالتقاط والتأمل هما ما يحركانها."
+    },
+    "settings-language": {
+      "title": "تغيير لغة الواجهة",
+      "category": "الإعدادات",
+      "body": "الإعدادات ← عام ← اللغة. اختر أيًا من اللغات الست المدعومة: الإنجليزية، الإسبانية، الفرنسية، الألمانية، العربية (من اليمين إلى اليسار)، أو الكيسواحيلية. تتبدّل الواجهة بأكملها فورًا. يُحفظ اختيارك في ملف تعريف ارتباط. يستخدم Cortex اللغة الحالية أيضًا عند الإجابة عن الأسئلة — لذا فإن التبديل إلى الفرنسية يعني أن الدردشات والقرارات وخطط التعلّم والتأملات وإعادات بناء الهوية الجديدة ستُولَّد بالفرنسية."
+    },
+    "settings-theme": {
+      "title": "تغيير المظهر",
+      "category": "الإعدادات",
+      "body": "الإعدادات ← عام ← المظهر. ثلاثة خيارات: فاتح، داكن، أو النظام (يتابع نظام تشغيلك). يتذكر Cortex اختيارك. الداكن هو الافتراضي والتصميم مُحسَّن له — الفاتح قيد التطوير."
+    },
+    "settings-voice": {
+      "title": "اختيار صوت",
+      "category": "الإعدادات",
+      "body": "الإعدادات ← عام ← الصوت. اختر الصوت الافتراضي الذي يستخدمه Cortex لتشغيل التقاطات الصوت. الخيارات: Mira، Aria، Atlas، Lyra، Orion. يُؤثر التغيير في التشغيل داخل بطاقة «الالتقاط ← الصوت» وفي أي صوت تعيد تشغيله من التقاطاتك."
+    },
+    "settings-data": {
+      "title": "تصدير بياناتك أو حذفها",
+      "category": "الخصوصية والبيانات",
+      "body": "الإعدادات ← البيانات. يمكنك تصدير كل بياناتك كحزمة JSON (كل عقدة، قرار، هدف، وتأمل)، أو حذف كل الدردشات (يحافظ على التقاطاتك ورسمك البياني)، أو حذف حسابك بأكمله نهائيًا. الحذف لا رجعة فيه. معرفتك الملتقطة تبقى ملكك دائمًا."
+    },
+    "privacy-overview": {
+      "title": "الخصوصية وما يخزّنه Cortex",
+      "category": "الخصوصية والبيانات",
+      "body": "يخزّن Cortex كل ما تلتقطه في قاعدة بيانات Postgres الخاصة بك ورسم Neo4j البياني المملوك لحسابك. لا شيء يُشارَك مع مستخدمين آخرين. لا يدرّب Cortex أي نموذج على محتواك — تُستخدم التقاطاتك فقط للإجابة عن أسئلتك. التصدير والحذف بنقرة واحدة من الإعدادات ← البيانات. إدارة الحساب (البريد الإلكتروني، كلمة المرور، الجلسات) يتولاها Clerk."
+    },
+    "existing-data-language": {
+      "title": "لماذا لا يزال بعض محتواي القديم بالإنجليزية؟",
+      "category": "استكشاف الأخطاء",
+      "body": "يبقى المحتوى الذي أنشأته قبل التبديل إلى لغة جديدة باللغة التي أُنشئ بها أصلًا. تترجم الواجهة فورًا، وأي إجابات دردشة أو قرارات أو خطط تعلّم أو تأملات أو إعادات بناء هوية جديدة تصدر بلغتك الحالية. في «الهوية»، انقر على «ترجم إلى اللغة الحالية» لإعادة توليد النموذج وترجمة أسماء عناصره. في القرارات والأهداف، تُولَّد الخطة مرة واحدة — لإعادة توليدها بلغة جديدة، استخدم زر «ترجم» حيثما توفر."
+    },
+    "mic-denied": {
+      "title": "تم رفض الوصول إلى الميكروفون",
+      "category": "استكشاف الأخطاء",
+      "body": "إذا حجب Chrome أو Firefox الوصول إلى الميكروفون، سترى «تم رفض الوصول إلى الميكروفون». انقر على أيقونة القفل في شريط العنوان ← إعدادات الموقع ← الميكروفون ← السماح. ثم أعد تحميل الصفحة. على macOS، تحقق أيضًا من إعدادات النظام ← الخصوصية والأمان ← الميكروفون وتأكد من وضع علامة على متصفحك. لا يسجّل Cortex أبدًا دون نقرك الصريح."
+    },
+    "no-microphone": {
+      "title": "لم يتم اكتشاف ميكروفون",
+      "category": "استكشاف الأخطاء",
+      "body": "إذا قال Cortex «لم يُعثر على ميكروفون»، فتحقق من توصيل ميكروفون (أو من تفعيل ميكروفون حاسوبك المدمج في إعدادات نظامك). أعد تحميل الصفحة بعد التوصيل. على بعض أجهزة Windows، يكون الميكروفون معطّلًا افتراضيًا — انتقل إلى الإعدادات ← الخصوصية ← الميكروفون وفعّل الوصول لتطبيقات سطح المكتب ولمتصفحك."
+    },
+    "extraction-failed": {
+      "title": "فشل استخراج المحتوى",
+      "category": "استكشاف الأخطاء",
+      "body": "إذا لم يستطع Cortex استخراج محتوى قابل للقراءة من رابط أو ملف، سترى شارة حالة «جزئي» على العقدة الناتجة. الأسباب الشائعة: الصفحة تتطلب تسجيل دخول، هي JavaScript فقط، خلف جدار دفع، أو صيغة الملف غير مدعومة بالكامل. العقدة ما زالت موجودة — لديك الرابط أو اسم الملف محفوظًا كإشارة مرجعية — لكن النص الكامل لم يُقرأ. جرّب مصدرًا آخر أو الصق النص يدويًا."
+    },
+    "extension-troubleshoot": {
+      "title": "الإضافة لا تتصل",
+      "category": "استكشاف الأخطاء",
+      "body": "إذا أظهرت الإضافة «غير متصلة» بعد لصق الرمز، فالسبب الأرجح أن رمز الاتصال انتهت صلاحيته قبل استخدامه. تنتهي صلاحية الرموز بعد بضع دقائق. عد إلى الإعدادات ← الإضافة، انقر على «إعادة الإنشاء»، والصق الرمز الجديد فورًا. إذا استمر الفشل، انقر بالزر الأيمن على أيقونة الإضافة ← خيارات لإعادة فتح صفحة الإعدادات وأعد اللصق. تأكد من أن عنوان API في ملف .env.local يطابق الذي بُنيت به الإضافة."
+    },
+    "connect-code-expired": {
+      "title": "انتهت صلاحية رمز الاتصال",
+      "category": "استكشاف الأخطاء",
+      "body": "رموز الاتصال هي رموز تسجيل دخول Clerk لمرة واحدة، صالحة لبضع دقائق. إذا لم تلصق رمزك في الوقت المناسب، عد إلى الإعدادات ← الإضافة، انقر على «إعادة الإنشاء»، والصق الرمز الجديد في صفحة خيارات الإضافة فورًا. الرمز القديم ميت — لا سبيل لإحيائه، وهذا مقصود (إنه ضمان أمني)."
+    },
+    "how-answers-work": {
+      "title": "كيف يقرر Cortex ما يقوله",
+      "category": "كيف يعمل Cortex",
+      "body": "عندما تطرح سؤالًا في الدردشة، يقوم Cortex بما يلي: (١) يبحث في معرفتك الملتقطة باستخدام التشابه الدلالي، (٢) يرسل أفضل النتائج إلى نموذج لغوي مع system prompt صارم يقول «رسّخ إجابتك في معرفة المستخدم عندما يمكن، ووسّم المعرفة العامة بوضوح عندما لا يمكن»، (٣) يعيد الرد مع العقد المحددة التي استقى منها. لهذا لا يختلق Cortex أبدًا حقائق عنك — يمكنه فقط أن يستشهد بما التقطته فعلًا."
+    }
+  },
+  "sw": {
+    "what-is-cortex": {
+      "title": "Cortex ni nini",
+      "category": "Kuanza",
+      "body": "Cortex ni mfumo wa utambuzi wa kibinafsi — akili ya nje inayokua nawe. Unanasa mawazo, viungo, faili, na vidokezo vya sauti; Cortex huchota dhana, huziunganisha katika grafu ya maarifa, na hukuruhusu kufikiri na grafu hiyo kupitia gumzo, maamuzi, malengo ya kujifunza, na tafakari. Kila kitu unachonasa kinabaki chako. Cortex hujibu maswali kwa kutaja maarifa yako mwenyewe yaliyonaswa, na hurukia maarifa ya jumla tu pale grafu yako haijashughulikia mada (na huweka alama wazi kwenye majibu hayo)."
+    },
+    "first-capture": {
+      "title": "Kunasa wazo lako la kwanza",
+      "category": "Kuanza",
+      "body": "Nenda kwenye Kunasa kwenye upau wa kando. Una njia tatu za kunasa: (1) Andika wazo moja kwa moja kwenye kisanduku kikuu, ongeza kichwa cha hiari, na ubonyeze Kunasa au Cmd/Ctrl+Enter. (2) Bofya kipini ili kuambatisha faili, picha, au PDF — Cortex huchota maandishi kiotomatiki. (3) Tumia kadi ya Sauti kurekodi sauti yako; Cortex huandika kwa Whisper na hukuruhusu kukagua maandishi kabla ya kuhifadhi. Kila kunasa huwa nodi katika grafu yako ya maarifa."
+    },
+    "first-chat": {
+      "title": "Kumuuliza Cortex swali lako la kwanza",
+      "category": "Kuanza",
+      "body": "Fungua Gumzo kwenye upau wa kando. Andika swali lako chini na ubonyeze Enter. Cortex hutafuta kwanza kwenye maarifa yako yaliyonaswa, huweka jibu lake katika kile ulichonasa, na kutaja nodi maalum kwa kichwa chao kwenye mabano ya mraba. Ikiwa grafu yako haishughulikii swali, Cortex husema hivyo kwa ufupi kisha hujibu kutoka maarifa ya jumla, likiwa na alama wazi. Kila jibu linaonyesha orodha ya vyanzo kutoka akili yako vilivyotumika."
+    },
+    "keyboard-shortcuts": {
+      "title": "Njia za mkato za kibodi",
+      "category": "Kuanza",
+      "body": "Cmd/Ctrl+K hufungua palette ya amri (tafuta + tembea + badilisha lugha). / hulenga utafutaji wa ukurasa kwenye Kumbukumbu, Kujifunza, Maamuzi, na Tafakari. Vitufe vya mishale hutembea kwenye matokeo. Enter hufungua kipengele kilichoangaziwa. Esc husafisha utafutaji au hufunga palette. Cmd/Ctrl+Enter hutuma ingizo la sasa. Cmd/Ctrl+, hufungua Mipangilio kutoka mahali popote."
+    },
+    "install-extension": {
+      "title": "Kusakinisha kiendelezi cha kivinjari",
+      "category": "Kiendelezi cha kivinjari",
+      "body": "Nenda kwenye Mipangilio → Kiendelezi. Bofya Tengeneza msimbo wa kuunganisha. Msimbo ni tokeni ya kuingia ya Clerk ya matumizi ya mara moja, inayofaa kwa dakika chache — inakili. Sakinisha kiendelezi cha Cortex kutoka Chrome Web Store au nyongeza za Firefox, fungua ukurasa wake wa chaguzi (bofya kwa kulia aikoni ya kiendelezi → Chaguzi), na ubandike msimbo. Kiendelezi kisha huonyesha barua pepe yako ili ujue kimeunganishwa. Kuanzia hapo, unaweza kunasa ukurasa wowote, nukuu, au wazo moja kwa moja kutoka kivinjari bila kubadilisha vichupo."
+    },
+    "extension-usage": {
+      "title": "Kutumia kiendelezi cha kivinjari",
+      "category": "Kiendelezi cha kivinjari",
+      "body": "Bofya kwa kulia ukurasa wowote → Capture to Cortex kuhifadhi ukurasa mzima. Chagua maandishi kwanza → Capture to Cortex kuhifadhi uteuzi pekee. Bofya kwa kulia kiungo chochote → Capture link to Cortex kunasa makala iliyounganishwa. Kiendelezi pia kina paneli ya kando na popup yenye utafutaji wa kumbukumbu — bofya aikoni ya kiendelezi kuifungua. Kila kitu unachonasa kupitia kiendelezi huonekana katika Cortex katika sekunde chache."
+    },
+    "capture-file": {
+      "title": "Kunasa faili",
+      "category": "Kunasa",
+      "body": "Katika Kunasa, bofya kipini → Pakia faili. Cortex inaauni PDF, DOCX, XLSX, CSV, maandishi ya kawaida, picha, sauti, na video (hadi MB 100). Maandishi huchotwa kiotomatiki. Ikiwa uchotaji unashindwa, nodi inayotokana bado ipo — utaona beji ya hali ya 'sehemu' na ujumbe mfupi wa hitilafu. Unaweza pia kuburuta faili kwenye kisanduku cha kunasa au kuibandika kutoka ubao wa kunakili."
+    },
+    "capture-voice": {
+      "title": "Kunasa kwa sauti",
+      "category": "Kunasa",
+      "body": "Katika Kunasa, sogeza hadi kadi ya Sauti. Chagua lugha (au iache kwenye Utambuzi wa Kiotomatiki) na ubofye Rekodi. Cortex hurekodi hadi dakika 5, huonyesha wimbi la sauti la moja kwa moja, na hukuruhusu kusimamisha au kuacha. Unapoacha, huandika kwa Whisper na huonyesha maandishi kwa ukaguzi. Hariri maandishi ikiwa unataka — maandishi yaliyohaririwa huhifadhiwa kama nodi za maandishi. Rekodi zisizohaririwa huhifadhiwa kama nodi za sauti ili uhifadhi sauti ya awali."
+    },
+    "capture-url": {
+      "title": "Kunasa kiungo",
+      "category": "Kunasa",
+      "body": "Katika Kunasa, bofya kipini → Ongeza kiungo, au ubandike URL moja kwa moja kwenye kisanduku kikuu cha maandishi. Cortex huleta ukurasa, huchota maandishi ya makala na mawazo makuu, na kuongeza kama nodi. Viungo vya YouTube pia huandikwa. Ikiwa ukurasa hauna maudhui yanayosomeka (ukuta wa malipo, JavaScript pekee), uchotaji unashindwa lakini kiungo bado huhifadhiwa kama alamisho ili ukipate baadaye."
+    },
+    "voice-language": {
+      "title": "Kurekodi kwa lugha nyingine isipokuwa Kiingereza",
+      "category": "Kunasa",
+      "body": "Kwenye kadi ya Kunasa → Sauti, bofya menyu kunjuzi ya lugha karibu na kitufe cha Rekodi. Chagua Utambuzi wa Kiotomatiki kumruhusu Whisper aamue, au chagua lugha maalum (Kiingereza, Kifaransa, Kihispania, Kijerumani, Kireno, Kiitaliano). Whisper ni sahihi kwa zote. Ikiwa sauti yako ni ya lugha nyingi, Utambuzi wa Kiotomatiki kwa kawaida hushughulikia vizuri ile inayotawala."
+    },
+    "chat-sources": {
+      "title": "Majibu ya Cortex yanatoka wapi?",
+      "category": "Gumzo",
+      "body": "Kila jibu la Cortex hufuata mmoja wa mifumo miwili. Ikiwa maarifa yako yaliyonaswa yanashughulikia swali, Cortex huweka jibu lake ndani yake na kutaja nodi maalum kwa kichwa chao kwenye [mabano ya mraba]. Ikiwa grafu yako haishughulikii, Cortex husema hivyo kwa ufupi, kisha hujibu kutoka maarifa ya jumla na kuweka alama wazi sehemu hizo. Chini ya kila jibu, bofya 'vyanzo {N} kutoka akili yako' kuona nodi zipi zilitumika. Bofya chanzo chochote kuifungua kwenye paneli ya kando."
+    },
+    "chat-edit": {
+      "title": "Kuhariri ujumbe",
+      "category": "Gumzo",
+      "body": "Elea juu ya ujumbe wowote wa mtumiaji na ubofye aikoni ya penseli. Hariri maandishi na ubonyeze Enter (au Shift+Enter kwa mstari mpya). Cortex huchukua uhariri wako kama ujumbe mpya na hujibu tena. Ni ujumbe wa mwisho wa mtumiaji pekee kwenye mazungumzo unaoweza kuhaririwa — jumbe za awali zimefungwa kwa sababu kuziendesha tena kutabatilisha muktadha ambao msaidizi alikuwa ameutumia."
+    },
+    "chat-regenerate": {
+      "title": "Kuzalisha jibu upya",
+      "category": "Gumzo",
+      "body": "Elea juu ya jibu la mwisho la msaidizi na ubofye aikoni ya kusasisha. Cortex huendesha swali lilelile na maarifa yale yale na kuzalisha jibu jipya. Hii ni muhimu wakati jibu la kwanza limekosa kitu au unapotaka mtazamo tofauti. Majibu ya awali ya msaidizi hayawezi kuzalishwa upya kwa sababu mazungumzo yamesonga mbele."
+    },
+    "chat-copy": {
+      "title": "Kunakili jibu",
+      "category": "Gumzo",
+      "body": "Elea juu ya ujumbe wowote na ubofye aikoni ya kunakili. Maandishi ya ujumbe hunakiliwa kwenye ubao wa kunakili kama markdown tupu — tayari kubandikwa kwenye programu nyingine. Utaona arifa ya 'Imenakiliwa kwenye ubao wa kunakili'."
+    },
+    "memory-search": {
+      "title": "Kutafuta kwenye kumbukumbu yako",
+      "category": "Kumbukumbu",
+      "body": "Nenda kwenye Kumbukumbu. Andika swali au maelezo — Cortex hutafuta kwa maana, sio kwa maneno muhimu pekee. Hali mbili: Kisemantiki (maana pekee, bora kwa maswali ya dhana) na Mseto (maana + mechi za maneno muhimu, bora unapokumbuka neno mahususi). Badilisha kwa kutumia menyu kunjuzi karibu na kisanduku cha utafutaji. Matokeo yanaonyesha pete ya alama ya mechi: Nguvu (>75%), Nzuri (60–75%), Dhaifu, au Neno Muhimu Pekee."
+    },
+    "memory-filters": {
+      "title": "Kuchuja matokeo ya kumbukumbu kwa aina",
+      "category": "Kumbukumbu",
+      "body": "Chini ya upau wa utafutaji unaweza kuchuja matokeo kwa aina: Zote, Mawazo, Dhana, Maamuzi, au Tafakari. Bofya chip yoyote kupunguza mwonekano. Chip huonyesha hesabu ya matokeo yanayolingana na aina hiyo. Kwa kuchanganya na utafutaji, hii hukuruhusu kupata, tuseme, maamuzi kuhusu mada pekee."
+    },
+    "memory-reindex": {
+      "title": "Kufaharisha grafu yako upya",
+      "category": "Kumbukumbu",
+      "body": "Ikiwa utafutaji unakosa kunasa za hivi karibuni au unaonekana umepitwa na wakati, bofya Faharisha Upya juu kulia mwa Kumbukumbu. Cortex huzalisha upya embeddings kwa kila nodi inayohitaji. Kwa kawaida huchukua chini ya dakika moja kwa nodi mia chache. Utapata arifa ikikamilika ikikuambia ni nodi ngapi zimefaharishwa. Kufaharisha upya hakufuti kitu — hujenga upya faharasa ya utafutaji pekee."
+    },
+    "memory-weak-matches": {
+      "title": "Kwa nini utafutaji unasema «hakuna mechi kali»?",
+      "category": "Kumbukumbu",
+      "body": "Ikiwa kila kitu Cortex alichokipata kilipata alama chini ya 72%, huonyesha 'Hakuna mechi kali'. Mambo mawili ya kujaribu: (1) Rudia kusema kwa maneno tofauti — utafutaji wa kisemantiki ni nyeti kwa maneno. (2) Badilisha kutoka Kisemantiki kwenda Mseto kwa kutumia menyu kunjuzi — Mseto hujumuisha mechi za maneno muhimu, zinazokamata hali ambazo utafutaji wa maana ulikosa. Ikiwa grafu yako ni tupu au ndogo sana, kuna uwezekano kweli hakuna cha kupata bado."
+    },
+    "learning-create-goal": {
+      "title": "Kuunda lengo la kujifunza",
+      "category": "Kujifunza",
+      "body": "Nenda kwenye Kujifunza na ubofye Lengo jipya. Weka kichwa (k.m. 'Kujifunza Rust') na maelezo ya hiari yanayoeleza kwa nini unalitaka na mahali unapoanzia. Cortex hutenganisha lengo katika awamu, hatua, na vitendo halisi — vikiwa vimewekwa katika kile ulichonasa tayari. Uzalishaji huchukua sekunde 10–30. Ukikamilika, mpango wako unafunguka tayari kufanyiwa kazi."
+    },
+    "learning-milestones": {
+      "title": "Kufanya kazi kwa hatua",
+      "category": "Kujifunza",
+      "body": "Katika mwonekano wa maelezo ya lengo, bofya duara karibu na hatua yoyote kuiweka kama imekamilika. Cortex huhifadhi maendeleo yako mara moja na kuhuisha upau wa maendeleo wa awamu. Bofya kichwa cha hatua kupanua vitendo vyake vilivyopendekezwa. Hatua zote za awamu zikikamilika, awamu imekamilika. Hatua zote zikikamilika, lengo limekamilika na Cortex husherehekea kwa arifa."
+    },
+    "learning-phases": {
+      "title": "Jinsi Cortex inaunda mpango wa kujifunza",
+      "category": "Kujifunza",
+      "body": "Kila mpango una awamu 3–5 (Misingi, Utumiaji, Kina, Umahiri, kwa kawaida). Kila awamu ina hatua 2–4. Kila hatua ina vitendo halisi 2–4. Awamu ya sasa imeangaziwa. Bango la 'Kitendo cha kwanza leo' juu ya mpango hupendekeza kitu kimoja chenye manufaa zaidi cha kufanya kinachofuata — bofya ili kuweka alama ya kuanza. Unaweza kurudi kwenye awamu yoyote wakati wowote."
+    },
+    "decisions-analyze": {
+      "title": "Kuchanganua uamuzi",
+      "category": "Maamuzi",
+      "body": "Nenda kwenye Maamuzi na ubofye Uamuzi mpya. Eleza uamuzi kwenye sehemu ya swali, ongeza muktadha ikiwa unasaidia, na ubonyeze Changanua. Cortex hutafuta kwenye maarifa yako na maamuzi yako ya awali, kisha hurudisha: ufafanuzi wa chaguo kuu, chaguo 2–5 zenye faida na hasara, ubadilishanaji, mifumo kutoka maamuzi yako ya awali, sehemu za kipofu za kuangalia, na maswali ya kujiuliza. Uchanganuzi huchukua sekunde 10–25."
+    },
+    "decisions-commit": {
+      "title": "Kujitolea kwa uamuzi",
+      "category": "Maamuzi",
+      "body": "Baada ya uchanganuzi, bofya Amua sasa. Chagua moja ya chaguo zilizopendekezwa au andika yako chini ya 'Kitu kingine'. Ongeza hoja yako na kile unachotarajia kitokee — Cortex hutumia hii baadaye wakati wa kukagua matokeo. Chagua lini kukagua (siku 7, 14, 30, 60, au 90) na ubofye Jitolee. Uamuzi huhamia kwenye safu ya Uliamuliwa na huonekana kwenye reli yako ya Ukaguzi unaostahili wakati tarehe ya ukaguzi inafika."
+    },
+    "decisions-outcome": {
+      "title": "Kurekodi kilichotokea kweli",
+      "category": "Maamuzi",
+      "body": "Uamuzi unapostahili ukaguzi, utauona kwenye reli ya kahawia 'maamuzi yanayostahili'. Ufungue na ubofye Rekodi matokeo. Eleza kilichotokea kweli kwa maneno yako mwenyewe — usahihi hapa unamaanisha masomo bora baadaye. Cortex hulinganisha matarajio yako na ukweli, huchota somo, hubaini kile mawazo yako yalichopata na kile yalichokosa, na kukupa pendekezo kwa maamuzi yajayo yanayofanana."
+    },
+    "decisions-patterns": {
+      "title": "Kuona mifumo katika maamuzi yako",
+      "category": "Maamuzi",
+      "body": "Nenda kwenye Maamuzi → kichupo cha Mifumo. Cortex husoma maamuzi yako 20 ya mwisho na kuibua mifumo inayojirudia, nguvu katika kufanya maamuzi yako, na sehemu za kipofu. Kila mfumo huonyesha uhakika wake (chini / kati / juu) na kutaja maamuzi maalum yaliyoushuhudia. Mwonekano huu ni bora baada ya kuwa umejitolea na kukagua maamuzi angalau 3–5."
+    },
+    "decisions-review": {
+      "title": "Kupitia uamuzi",
+      "category": "Maamuzi",
+      "body": "Unapojitolea kwa uamuzi, huchagua kipindi cha ukaguzi (siku 7, 14, 30, 60, au 90). Siku hiyo, Cortex huhamisha uamuzi kwenye reli yako ya Ukaguzi unaostahili kwenye ubao wa Maamuzi na kuuonyesha kwenye kadi ya 'Maamuzi yanayostahili' kwenye ukurasa wa Nyumbani. Ufungue uamuzi, ubofye Rekodi matokeo, eleza kilichotokea, na Cortex huchota somo."
+    },
+    "reflections-lessons": {
+      "title": "Masomo yanatoka wapi",
+      "category": "Tafakari",
+      "body": "Unaporekodi matokeo kwenye uamuzi, Cortex hulinganisha matarajio yako na kilichotokea kweli na huchota somo. Somo hilo huwa Tafakari ya aina ya 'somo' na pia huhifadhiwa kama nodi ya maarifa — kwa hivyo huonekana kwenye majibu yako ya gumzo na utafutaji wa kumbukumbu kuanzia hapo. Masomo ni njia ambayo Cortex hukusaidia kukusanya hekima kwa muda."
+    },
+    "reflections-report": {
+      "title": "Kuzalisha ripoti ya tafakari",
+      "category": "Tafakari",
+      "body": "Nenda kwenye Tafakari → kichupo cha Ripoti ya kila wiki na ubofye Zalisha ripoti. Chagua kipindi (siku 7, 30, 90, au 180). Cortex husoma maamuzi yako kutoka kipindi hicho na kuzalisha: muhtasari, mada, nguvu, sehemu za kipofu, uchunguzi wa ukuaji, na maswali ya kutafakari. Ripoti huhifadhiwa chini ya kichupo cha Ripoti ya kila wiki na zinaweza kufunguliwa tena wakati wowote."
+    },
+    "reflections-insights": {
+      "title": "Kichupo cha maarifa",
+      "category": "Tafakari",
+      "body": "Tafakari → Maarifa hukupa mwonekano mitatu kwa mtazamo mmoja: muhtasari wa Mwezi huu (tafakari ngapi umeunda katika siku 30 zilizopita), Masomo Makuu (maarifa yako muhimu zaidi yanayojitegemea), na Kutoka maamuzi yako (tafakari zinazorudi kwenye chaguo maalum). Itumie kama tambiko la ukaguzi wa kila mwezi."
+    },
+    "identity-rebuild": {
+      "title": "Kujenga upya modeli ya utambulisho wako",
+      "category": "Utambulisho",
+      "body": "Nenda kwenye Utambulisho na ubofye Jenga upya utambulisho. Cortex husoma mawazo yako ya hivi karibuni yaliyonaswa, malengo yako yanayotumika, maamuzi yako ya hivi karibuni, na tafakari zako — na kuzalisha modeli mpya ya wewe ni nani: simulizi, maadili, mifumo, nguvu, sehemu za kipofu, na maeneo ya ukuaji. Kila ujenzi upya huhifadhi picha kwenye ratiba yako ili uone jinsi umebadilika. Ujenzi upya wa utambulisho huchukua sekunde 15–40."
+    },
+    "identity-values": {
+      "title": "Orodha ya maadili inamaanisha nini",
+      "category": "Utambulisho",
+      "body": "Chini ya Utambulisho utaona Maadili, Mifumo, Nguvu, na Sehemu za Kipofu. Kila kipengele kina jina, maelezo ya kwa nini Cortex alikifikiria, na kiwango cha nguvu (chini / kati / juu). Maadili hufikiriwa kutoka kile unachoandika kuhusu, sio kile unachosema unathamini — mstari wa ushahidi chini ya kila moja hukuambia kilitoka wapi. Unaweza kutokubaliana na yoyote; modeli ni kioo, sio hukumu."
+    },
+    "identity-timeline": {
+      "title": "Ratiba ya utambulisho wako",
+      "category": "Utambulisho",
+      "body": "Kila unapojenga upya, Cortex huhifadhi picha. Kadi ya Ratiba chini ya Utambulisho huzionyesha kwa mpangilio wa nyakati, kila moja ikiwa na kichwa cha hatua kilichozalishwa na AI — 'Mada ya umakini inaimarika', 'Kuweka mipaka kunaibuka', na kadhalika. Cortex huhifadhi majina ya vitu katika ujenzi upya ili ufuatilie kama maadili na mifumo hiyo inaendelea kwa miezi."
+    },
+    "identity-maturity": {
+      "title": "Alama ya ukomavu inamaanisha nini",
+      "category": "Utambulisho",
+      "body": "Ukomavu wa Utambulisho ni alama ya 0–100 inayoakisi jinsi grafu yako ya maarifa ilivyo tajiri na iliyounganishwa. Inahesabiwa kutoka idadi yako ya nodi, idadi ya dhana, malengo yanayotumika, maamuzi, tafakari, na picha za utambulisho. Ngazi ('Inayoibuka', 'Inayoundwa', 'Inayojengwa', 'Inayojikita', 'Kina') inaeleza hatua. Ni ishara ya kina cha grafu, sio thamani ya kibinafsi — kunasa na kutafakari ni kile kinachoihamisha."
+    },
+    "settings-language": {
+      "title": "Kubadilisha lugha ya kiolesura",
+      "category": "Mipangilio",
+      "body": "Mipangilio → Jumla → Lugha. Chagua mojawapo ya lugha sita zinazotumika: Kiingereza, Kihispania, Kifaransa, Kijerumani, Kiarabu (kulia kwenda kushoto), au Kiswahili. Kiolesura kizima hubadilika mara moja. Chaguo lako huhifadhiwa kwenye kuki. Cortex pia hutumia lugha ya sasa wakati wa kujibu maswali — kwa hivyo kubadilisha kwenda Kifaransa kunamaanisha gumzo jipya, maamuzi, mipango ya kujifunza, tafakari, na ujenzi upya wa utambulisho zitazalishwa kwa Kifaransa."
+    },
+    "settings-theme": {
+      "title": "Kubadilisha mandhari",
+      "category": "Mipangilio",
+      "body": "Mipangilio → Jumla → Mandhari. Chaguo tatu: Nuru, Giza, au Mfumo (hufuata mfumo wako wa uendeshaji). Cortex hukumbuka chaguo lako. Giza ni chaguo-msingi na muundo umeimarishwa kwa ajili yake — Nuru ni kazi inayoendelea."
+    },
+    "settings-voice": {
+      "title": "Kuchagua sauti",
+      "category": "Mipangilio",
+      "body": "Mipangilio → Jumla → Sauti. Chagua sauti chaguo-msingi ambayo Cortex hutumia kwa uchezaji wa kunasa kwa sauti. Chaguo: Mira, Aria, Atlas, Lyra, Orion. Kubadilisha hii huathiri uchezaji kwenye kadi ya Kunasa → Sauti na sauti yoyote unayoicheza tena kutoka kunasa zako."
+    },
+    "settings-data": {
+      "title": "Kuhamisha au kufuta data yako",
+      "category": "Faragha na data",
+      "body": "Mipangilio → Data. Unaweza kuhamisha data yako yote kama kifurushi cha JSON (kila nodi, uamuzi, lengo, na tafakari), kufuta gumzo zote (huweka kunasa zako na grafu yako salama), au kufuta akaunti yako yote kabisa. Kufuta hakuwezi kurudishwa. Maarifa yako yaliyonaswa daima ni yako."
+    },
+    "privacy-overview": {
+      "title": "Faragha na kile Cortex huhifadhi",
+      "category": "Faragha na data",
+      "body": "Cortex huhifadhi kila kitu unachonasa kwenye hifadhidata yako ya Postgres na grafu ya Neo4j inayomilikiwa na akaunti yako. Hakuna kinachoshirikiwa na watumiaji wengine. Cortex haifundishi modeli yoyote kwa maudhui yako — kunasa zako hutumika tu kujibu maswali yako mwenyewe. Uhamishaji na ufutaji ni mbofyo mmoja kwenye Mipangilio → Data. Usimamizi wa akaunti (barua pepe, nenosiri, vipindi) unashughulikiwa na Clerk."
+    },
+    "existing-data-language": {
+      "title": "Kwa nini baadhi ya maudhui yangu ya zamani bado ni ya Kiingereza?",
+      "category": "Utatuzi wa matatizo",
+      "body": "Maudhui uliyozalisha kabla ya kubadilisha kwenda lugha mpya hubaki katika lugha iliyoumbwa awali. Kiolesura hutafsiriwa mara moja, na majibu yoyote mapya ya gumzo, maamuzi, mipango ya kujifunza, tafakari, au ujenzi upya wa utambulisho hutoka kwa lugha yako ya sasa. Kwa Utambulisho, bofya 'Tafsiri kwa lugha ya sasa' kuzalisha upya modeli na kutafsiri majina ya vipengele vyake. Kwa maamuzi na malengo, mpango huzalishwa mara moja — kuzalisha upya kwa lugha mpya, tumia kitufe cha Tafsiri inapopatikana."
+    },
+    "mic-denied": {
+      "title": "Ufikiaji wa maikrofoni umekataliwa",
+      "category": "Utatuzi wa matatizo",
+      "body": "Ikiwa Chrome au Firefox inazuia ufikiaji wa maikrofoni, utaona 'Ufikiaji wa maikrofoni umekataliwa'. Bofya aikoni ya kufuli kwenye upau wa anwani → Mipangilio ya tovuti → Maikrofoni → Ruhusu. Kisha pakia upya ukurasa. Kwenye macOS, angalia pia Mipangilio ya Mfumo → Faragha na usalama → Maikrofoni na uthibitishe kuwa kivinjari chako kimewekwa alama. Cortex hairekodi kamwe bila mbofyo wako wa wazi."
+    },
+    "no-microphone": {
+      "title": "Hakuna maikrofoni iliyotambuliwa",
+      "category": "Utatuzi wa matatizo",
+      "body": "Ikiwa Cortex inasema 'Hakuna maikrofoni iliyopatikana', angalia kuwa maikrofoni imeunganishwa (au kwamba maikrofoni iliyojengwa ndani ya kompyuta yako imewashwa kwenye mipangilio ya mfumo wako wa uendeshaji). Onyesha upya ukurasa baada ya kuunganisha moja. Kwenye baadhi ya mashine za Windows, maikrofoni imezimwa kwa chaguo-msingi — nenda kwenye Mipangilio → Faragha → Maikrofoni na uwashe ufikiaji kwa programu za mezani na kwa kivinjari chako."
+    },
+    "extraction-failed": {
+      "title": "Uchimbaji wa maudhui umeshindwa",
+      "category": "Utatuzi wa matatizo",
+      "body": "Ikiwa Cortex hawezi kuchota maudhui yanayosomeka kutoka URL au faili, utaona beji ya hali ya 'sehemu' kwenye nodi inayotokana. Sababu za kawaida: ukurasa unahitaji kuingia, ni JavaScript pekee, uko nyuma ya ukuta wa malipo, au muundo wa faili hauwezi kutumika kikamilifu. Nodi bado ipo — una kiungo au jina la faili lililohifadhiwa kama alamisho — lakini maandishi kamili hayakuweza kusomwa. Jaribu chanzo tofauti au bandika maandishi kwa mkono."
+    },
+    "extension-troubleshoot": {
+      "title": "Kiendelezi hakiunganishi",
+      "category": "Utatuzi wa matatizo",
+      "body": "Ikiwa kiendelezi kinaonyesha 'hakijaunganishwa' baada ya kubandika msimbo, sababu inayowezekana zaidi ni kwamba msimbo wa kuunganisha uliisha muda kabla ya kutumia. Misimbo huisha baada ya dakika chache. Rudi kwenye Mipangilio → Kiendelezi, bofya Zalisha upya, na ubandike msimbo mpya mara moja. Ikiwa bado inashindwa, bofya kwa kulia aikoni ya kiendelezi → Chaguzi kufungua tena ukurasa wa mipangilio na ubandike tena. Hakikisha URL ya API kwenye .env.local yako inalingana na ile kiendelezi kilijengwa nayo."
+    },
+    "connect-code-expired": {
+      "title": "Msimbo wangu wa kuunganisha umeisha muda",
+      "category": "Utatuzi wa matatizo",
+      "body": "Misimbo ya kuunganisha ni tokeni za kuingia za Clerk za matumizi ya mara moja, zinazofaa kwa dakika chache. Ikiwa hukubandika yako kwa wakati, rudi kwenye Mipangilio → Kiendelezi, bofya Zalisha upya, na ubandike msimbo mpya kwenye ukurasa wa chaguzi za kiendelezi mara moja. Msimbo wa zamani umekufa — hakuna njia ya kuufufua, na ni kwa muundo (ni dhamana ya usalama)."
+    },
+    "how-answers-work": {
+      "title": "Cortex huamua kusema nini",
+      "category": "Jinsi Cortex inavyofanya kazi",
+      "body": "Unapouliza swali kwenye gumzo, Cortex: (1) hutafuta kwenye maarifa yako yaliyonaswa kwa kutumia ufanano wa kisemantiki, (2) hutuma matokeo bora kwa modeli ya lugha pamoja na system prompt kali inayosema 'weka jibu lako katika maarifa ya mtumiaji inapowezekana, na weka alama wazi kwenye maarifa ya jumla isipowezekana', (3) hurudisha jibu pamoja na nodi maalum alizotumia. Ndiyo sababu Cortex hakuna wakati wowote huvumbua ukweli kukuhusu — anaweza kutaja tu kile ulichonasa kweli."
+    }
+  }
+}

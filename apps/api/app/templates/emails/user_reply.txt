@@ -1,0 +1,22 @@
+USER REPLIED
+============
+
+{% if filer %}{{ filer.name or filer.email }}{% else %}A user{% endif %} replied to a ticket.
+
+Their reply:
+------------
+{{ reply.content }}
+
+Ticket summary
+--------------
+Subject:  {{ ticket.subject }}
+Category: {{ ticket.category }}
+Priority: {{ ticket.priority }}
+Status:   {{ ticket.status }}
+{% if filer %}From:     {{ filer.name ~ " <" ~ filer.email ~ ">" if filer.name else filer.email }}{% endif %}
+
+Reply in admin: {{ web_url }}/admin/tickets/{{ ticket.id }}
+
+---
+You're receiving this because you're an admin or agent in Cortex.
+Manage notification preferences: {{ web_url }}/admin/settings/prefs

@@ -1,0 +1,20 @@
+NEW SUPPORT TICKET
+==================
+
+{% if filer %}{{ filer.name or filer.email }} just filed a ticket.{% else %}A user just filed a ticket.{% endif %}
+
+Subject:  {{ ticket.subject }}
+Category: {{ ticket.category }}
+Priority: {{ ticket.priority }}
+Status:   {{ ticket.status }}
+{% if filer %}From:     {{ filer.name ~ " <" ~ filer.email ~ ">" if filer.name else filer.email }}{% endif %}
+
+Description:
+------------
+{{ ticket.description }}
+
+Open in admin: {{ web_url }}/admin/tickets/{{ ticket.id }}
+
+---
+You're receiving this because you're an admin or agent in Cortex.
+Manage notification preferences: {{ web_url }}/admin/settings/prefs
