@@ -1,0 +1,7 @@
+{
+  "name": "cortex-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter web run build"
+  }
+}
