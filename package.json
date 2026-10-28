@@ -1,0 +1,10 @@
+{
+  "name": "cortex-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter web run build"
+  },
+  "devDependencies": {
+    "next": "16.3.4"
+  }
+}
