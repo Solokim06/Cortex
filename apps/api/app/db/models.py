@@ -1,3 +1,4 @@
+import secrets
 from datetime import datetime
 from uuid import uuid4
 
@@ -1109,7 +1110,11 @@ class UserNotificationPrefs(Base):
     )
     # 32-char opaque token used in unsubscribe links
     unsubscribe_token: Mapped[str] = mapped_column(
-        String(64), unique=True, nullable=False, index=True
+        String(64),
+        unique=True,
+        nullable=False,
+        index=True,
+        default=lambda: secrets.token_urlsafe(32),
     )
 
     # ---- Proactive insights (all optional, default off) ----
