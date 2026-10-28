@@ -498,7 +498,7 @@ class UserModel(Base):
     )
     # JSONB struct of the six profile fields. Empty dict on first pass.
     profile: Mapped[dict] = mapped_column(
-        "profile", JSON, default=dict, server_default="{}"
+        "profile", JSON, default=dict, server_default="{}", nullable=True
     )
     # Idempotency guard: number of user messages seen at last update.
     source_message_count: Mapped[int] = mapped_column(
@@ -933,19 +933,19 @@ class AdminNotificationPrefs(Base):
         primary_key=True,
     )
     email_on_new_ticket: Mapped[bool] = mapped_column(
-        Boolean, nullable=False, default=True, server_default="true"
+        Boolean, nullable=False, default=True, server_default="true", index=False
     )
     email_on_assignment: Mapped[bool] = mapped_column(
-        Boolean, nullable=False, default=True, server_default="true"
+        Boolean, nullable=False, default=True, server_default="true", index=False
     )
     email_on_user_reply: Mapped[bool] = mapped_column(
-        Boolean, nullable=False, default=True, server_default="true"
+        Boolean, nullable=False, default=True, server_default="true", index=False
     )
     email_on_sla_breach: Mapped[bool] = mapped_column(
-        Boolean, nullable=False, default=True, server_default="true"
+        Boolean, nullable=False, default=True, server_default="true", index=False
     )
     email_digest_daily: Mapped[bool] = mapped_column(
-        Boolean, nullable=False, default=False, server_default="false"
+        Boolean, nullable=False, default=True, server_default="true", index=False
     )
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
