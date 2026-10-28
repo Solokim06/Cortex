@@ -1,4 +1,5 @@
 import asyncio
+import os
 import sys
 
 # Neo4j's async driver + ProactorEventLoop on Windows triggers
@@ -166,12 +167,16 @@ app = FastAPI(
 )
 
 # CORS: allow the web app + browser extensions.
+# Read origins from env (comma-separated). Fallback to localhost + settings.web_url.
+_cors_env = os.getenv("CORS_ORIGINS", "").strip()
+if _cors_env:
+    _allowed_origins = [o.strip() for o in _cors_env.split(",") if o.strip()]
+else:
+    _allowed_origins = ["http://localhost:3000", settings.web_url]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        settings.web_url,
-    ],
+    allow_origins=_allowed_origins,
     allow_origin_regex=r"^(chrome|moz)-extension://[a-zA-Z0-9-]+$",
     allow_credentials=True,
     allow_methods=["*"],
@@ -195,6 +200,10 @@ from app.services.consent import set_ai_consent_header as _set_ai_header
 
 @app.middleware("http")
 async def _ai_consent_middleware(request: _StarletteRequest, call_next):
+    # Bypass preflight: OPTIONS requests don't carry app headers,
+    # and touching contextvars here can 400 before CORS responds.
+    if request.method == "OPTIONS":
+        return await call_next(request)
     _set_ai_header(request.headers.get("x-ai-consent"))
     return await call_next(request)
 
