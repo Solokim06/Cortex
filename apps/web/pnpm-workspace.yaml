@@ -1,6 +1,0 @@
-allowBuilds:
-  '@clerk/shared': false
-  '@parcel/watcher': true
-  '@swc/core': true
-  sharp: true
-  unrs-resolver: false
