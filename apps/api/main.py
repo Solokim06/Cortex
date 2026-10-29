@@ -177,12 +177,10 @@ else:
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_allowed_origins,
-    allow_origin_regex=r"^(chrome|moz)-extension://[a-zA-Z0-9-]+$",
+    allow_origin_regex=r"^(https://.*\.vercel\.app|http://localhost:\d+|chrome-extension://[a-zA-Z0-9-]+|moz-extension://[a-zA-Z0-9-]+)$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=[
-        # Starlette's CORSMiddleware refuses to wildcard headers when
-        # allow_credentials=True, so we list them explicitly.
         "Authorization",
         "Content-Type",
         "Accept",
