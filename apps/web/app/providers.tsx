@@ -20,7 +20,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (!("serviceWorker" in navigator)) return;
-    if (process.env.NODE_ENV !== "production") return;
+    
+    // Safe environment guard avoiding process polyfill lookup issues in Turbopack
+    try {
+      if (process.env.NODE_ENV !== "production") return;
+    } catch {
+      return;
+    }
 
     navigator.serviceWorker.register("/sw.js").catch((err) => {
       // Silent fallback: no SW is a valid app state (everything still works,
